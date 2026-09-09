@@ -20,7 +20,7 @@ function synchronize(){return locked(()=>{
  git(['fetch','origin','main']);const upstream=git(['rev-parse','origin/main']);
  try{git(['merge-base','--is-ancestor',upstream,before]);}catch{throw Error('Remote main has diverged/advanced; reconcile it manually. No reset or force push was performed.');}
  const pending=git(['rev-list',upstream+'..'+before]).split('\n').filter(Boolean);
- for(const commit of pending){const changed=git(['diff-tree','--no-commit-id','--name-only','-r',commit]).split('\n').filter(Boolean);if(changed.some(p=>!R.AUTO(p)))throw Error('Unpushed engineering commit detected; publish it manually once before enabling course sync');}
+ for(const commit of pending){const changed=git(['diff-tree','-m','--no-commit-id','--name-only','-r',commit]).split('\n').filter(Boolean);if(changed.some(p=>!R.AUTO(p)))throw Error('Unpushed engineering commit detected; publish it manually once before enabling course sync');}
  const indexFile=path.join(dir,'publish-index-'+process.pid),env={GIT_INDEX_FILE:indexFile};
  try{
   git(['read-tree',before],{env});const blobs=[];

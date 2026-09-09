@@ -10,6 +10,11 @@ assert.throws(()=>R.validate(edit(w=>w.days[0].vocabulary[0].word.tts='')),/tts/
 assert.throws(()=>R.validate(edit(w=>w.days[0].reading.questions[0].answer='INVALID')),/answer/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].review.intervals[0].vocabularyIds.push('missing-reference'))),/unresolved/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].vocabulary.push(w.days[0].vocabulary[0]))),/duplicate card/);
+// Future navigation and validation fixture: existing teaching text copied only in memory, never published.
+const future=JSON.parse(files['data/week02.json']);future.week=3;future.id='week03';future.dayRange={start:15,end:21};
+future.days=future.days.map(d=>{const old=d.day,newDay=old+7,oldId=d.id,newId='day'+String(newDay).padStart(3,'0');d=JSON.parse(JSON.stringify(d).replaceAll(oldId,newId));d.day=newDay;d.week=3;for(const r of d.review.intervals){r.sourceDay+=7;if(r.sourceDayId)r.sourceDayId='day'+String(r.sourceDay).padStart(3,'0');}return d;});
+const withFuture={...files,'data/week03.json':JSON.stringify(future)};assert.equal(R.validate(withFuture).weeks.length,3);
+assert.equal(JSON.parse(R.metadata(withFuture)['data/index.json']).weeks[2].days[0],'day015');
 // Isolated local remote exercises real Git without publishing test content to GitHub.
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'n2-infra-')),repo=path.join(temp,'repo'),remote=path.join(temp,'remote.git');fs.mkdirSync(repo);
 const run=(cmd,args,cwd=repo,ok=true)=>{const r=cp.spawnSync(cmd,args,{cwd,encoding:'utf8',windowsHide:true,env:{...process.env,NODE_PATH:path.join(R.ROOT,'node_modules'),GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:path.join(temp,'empty-config'),GIT_TERMINAL_PROMPT:'0'}});if(ok&&r.status!==0)throw Error(r.stdout+r.stderr);return r;};
