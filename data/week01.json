@@ -1,0 +1,5894 @@
+{
+  "schemaVersion": "2.1.0",
+  "week": 1,
+  "dayRange": [
+    1,
+    7
+  ],
+  "legacyDayIds": [
+    "day001"
+  ],
+  "sourcePolicy": "Import existing formal Day 2–7 as Day 002–007; preserve original lessons and record editorial corrections explicitly.",
+  "days": [
+    {
+      "id": "day002",
+      "day": 2,
+      "week": 1,
+      "date": "2026-08-28",
+      "title": "信息判断与依据",
+      "schemaVersion": "2.1.0",
+      "source": {
+        "url": "https://app.notion.com/p/3ce150b34222813fa66fdeb9378472f8?pvs=204",
+        "title": "2️⃣ Day 2｜N2 双人冲刺",
+        "archive": "docs/course-sources/day002.md"
+      },
+      "goalsZh": [
+        "完成 Day 1 的 D+1复习，并增加15个新词、4个新语法。",
+        "第一次进行60秒计时短阅读。",
+        "预计时间：约110分钟。"
+      ],
+      "scheduledMinutes": 110,
+      "sourceEstimatedMinutes": 110,
+      "counts": {
+        "newVocabulary": 15,
+        "reviewVocabulary": 0
+      },
+      "modules": [
+        {
+          "durationMinutes": 15,
+          "type": "review"
+        },
+        {
+          "type": "source",
+          "title": "正式重点复习",
+          "durationMinutes": 0,
+          "blocks": [
+            {
+              "text": "先遮住读音，轮流读并解释：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "維持　改善　避ける　省く　補う　伴う　傾向　影響　状況　対象　適切　明らか　比較　判断　取り組む",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "改善",
+                  "tts": "かいぜん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "避ける",
+                  "tts": "さける",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "省く",
+                  "tts": "はぶく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "補う",
+                  "tts": "おぎなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "伴う",
+                  "tts": "ともなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "傾向",
+                  "tts": "けいこう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "影響",
+                  "tts": "えいきょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "状況",
+                  "tts": "じょうきょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "対象",
+                  "tts": "たいしょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "適切",
+                  "tts": "てきせつ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "明らか",
+                  "tts": "あきらか",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "比較",
+                  "tts": "ひかく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "判断",
+                  "tts": "はんだん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り組む",
+                  "tts": "とりくむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "核对：維持（いじ）／改善（かいぜん）／避（さ）ける／省（はぶ）く／補（おぎな）う／伴（ともな）う／傾向（けいこう）／影響（えいきょう）／状況（じょうきょう）／対象（たいしょう）／適切（てきせつ）／明（あき）らか／比較（ひかく）／判断（はんだん）／取（と）り組（く）む。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持（いじ）／改善（かいぜん）／避（さ）ける／省（はぶ）く／補（おぎな）う／伴（ともな）う／傾向（けいこう）／影響（えいきょう）／状況（じょうきょう）／対象（たいしょう）／適切（てきせつ）／明（あき）らか／比較（ひかく）／判断（はんだん）／取（と）り組（く）む。",
+                  "tts": "維持／改善／避ける／省く／補う／伴う／傾向／影響／状況／対象／適切／明らか／比較／判断／取り組む。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "改善",
+                  "tts": "かいぜん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "傾向",
+                  "tts": "けいこう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "影響",
+                  "tts": "えいきょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "状況",
+                  "tts": "じょうきょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "対象",
+                  "tts": "たいしょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "適切",
+                  "tts": "てきせつ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "比較",
+                  "tts": "ひかく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "判断",
+                  "tts": "はんだん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "再随机互测：～わけではない／～に違（ちが）いない／～に伴（ともな）って／～一方（いっぽう）で。要求10秒内造句。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～わけではない／～に違（ちが）いない／～に伴（ともな）って／～一方（いっぽう）で。",
+                  "tts": "わけではない／に違いない／に伴って／一方で。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "一方",
+                  "tts": "いっぽう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～わけではない",
+                  "tts": "わけではない",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ],
+          "withinPreviousModule": true
+        },
+        {
+          "durationMinutes": 25,
+          "type": "vocabulary"
+        },
+        {
+          "type": "source",
+          "title": "词汇辨析",
+          "durationMinutes": 0,
+          "withinPreviousModule": true,
+          "blocks": [
+            {
+              "text": "容易混淆： 占（し）める＝占据；示（しめ）す＝显示、表示。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "占（し）める",
+                  "tts": "占める",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "示（しめ）す",
+                  "tts": "示す",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "durationMinutes": 20,
+          "type": "grammar"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "reading"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "speaking"
+        },
+        {
+          "durationMinutes": 10,
+          "type": "recap"
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "day002-v1",
+          "knowledgeId": "v-確認",
+          "mode": "new",
+          "word": {
+            "display": "確認",
+            "tts": "かくにん",
+            "lang": "ja-JP",
+            "translationZh": "确认"
+          },
+          "reading": "かくにん",
+          "collocations": [
+            {
+              "id": "day002-c1",
+              "text": {
+                "display": "内容（ないよう）を確認（かくにん）する",
+                "tts": "内容を確認する",
+                "lang": "ja-JP",
+                "translationZh": "确认内容"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v2",
+          "knowledgeId": "v-認める",
+          "mode": "new",
+          "word": {
+            "display": "認める",
+            "tts": "みとめる",
+            "lang": "ja-JP",
+            "translationZh": "承认、认可"
+          },
+          "reading": "みとめる",
+          "collocations": []
+        },
+        {
+          "id": "day002-v3",
+          "knowledgeId": "v-求める",
+          "mode": "new",
+          "word": {
+            "display": "求める",
+            "tts": "もとめる",
+            "lang": "ja-JP",
+            "translationZh": "寻求、要求"
+          },
+          "reading": "もとめる",
+          "collocations": [
+            {
+              "id": "day002-c2",
+              "text": {
+                "display": "解決策（かいけつさく）を求（もと）める",
+                "tts": "解決策を求める",
+                "lang": "ja-JP",
+                "translationZh": "寻求解决方案"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v4",
+          "knowledgeId": "v-防ぐ",
+          "mode": "new",
+          "word": {
+            "display": "防ぐ",
+            "tts": "ふせぐ",
+            "lang": "ja-JP",
+            "translationZh": "防止"
+          },
+          "reading": "ふせぐ",
+          "collocations": [
+            {
+              "id": "day002-c3",
+              "text": {
+                "display": "事故（じこ）を防（ふせ）ぐ",
+                "tts": "事故を防ぐ",
+                "lang": "ja-JP",
+                "translationZh": "防止事故"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v5",
+          "knowledgeId": "v-含む",
+          "mode": "new",
+          "word": {
+            "display": "含む",
+            "tts": "ふくむ",
+            "lang": "ja-JP",
+            "translationZh": "包含"
+          },
+          "reading": "ふくむ",
+          "collocations": [
+            {
+              "id": "day002-c4",
+              "text": {
+                "display": "水分（すいぶん）を含（ふく）む",
+                "tts": "水分を含む",
+                "lang": "ja-JP",
+                "translationZh": "含有水分"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v6",
+          "knowledgeId": "v-限る",
+          "mode": "new",
+          "word": {
+            "display": "限る",
+            "tts": "かぎる",
+            "lang": "ja-JP",
+            "translationZh": "限定"
+          },
+          "reading": "かぎる",
+          "collocations": []
+        },
+        {
+          "id": "day002-v7",
+          "knowledgeId": "v-異なる",
+          "mode": "new",
+          "word": {
+            "display": "異なる",
+            "tts": "ことなる",
+            "lang": "ja-JP",
+            "translationZh": "不同"
+          },
+          "reading": "ことなる",
+          "collocations": [
+            {
+              "id": "day002-c5",
+              "text": {
+                "display": "結果（けっか）が異（こと）なる",
+                "tts": "結果が異なる",
+                "lang": "ja-JP",
+                "translationZh": "结果不同"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v8",
+          "knowledgeId": "v-優れる",
+          "mode": "new",
+          "word": {
+            "display": "優れる",
+            "tts": "すぐれる",
+            "lang": "ja-JP",
+            "translationZh": "优秀、出色"
+          },
+          "reading": "すぐれる",
+          "collocations": []
+        },
+        {
+          "id": "day002-v9",
+          "knowledgeId": "v-達する",
+          "mode": "new",
+          "word": {
+            "display": "達する",
+            "tts": "たっする",
+            "lang": "ja-JP",
+            "translationZh": "达到"
+          },
+          "reading": "たっする",
+          "collocations": [
+            {
+              "id": "day002-c7",
+              "text": {
+                "display": "目標（もくひょう）に達（たっ）する",
+                "tts": "目標に達する",
+                "lang": "ja-JP",
+                "translationZh": "达到目标"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v10",
+          "knowledgeId": "v-占める",
+          "mode": "new",
+          "word": {
+            "display": "占める",
+            "tts": "しめる",
+            "lang": "ja-JP",
+            "translationZh": "占据、占比"
+          },
+          "reading": "しめる",
+          "collocations": [
+            {
+              "id": "day002-c8",
+              "text": {
+                "display": "全体（ぜんたい）の半分（はんぶん）を占（し）める",
+                "tts": "全体の半分を占める",
+                "lang": "ja-JP",
+                "translationZh": "占整体的一半"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v11",
+          "knowledgeId": "v-得る",
+          "mode": "new",
+          "word": {
+            "display": "得る",
+            "tts": "える",
+            "lang": "ja-JP",
+            "translationZh": "获得"
+          },
+          "reading": "える",
+          "collocations": [
+            {
+              "id": "day002-c9",
+              "text": {
+                "display": "情報（じょうほう）を得（え）る",
+                "tts": "情報を得る",
+                "lang": "ja-JP",
+                "translationZh": "获得信息"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v12",
+          "knowledgeId": "v-生じる",
+          "mode": "new",
+          "word": {
+            "display": "生じる",
+            "tts": "しょうじる",
+            "lang": "ja-JP",
+            "translationZh": "产生、发生"
+          },
+          "reading": "しょうじる",
+          "collocations": [
+            {
+              "id": "day002-c10",
+              "text": {
+                "display": "問題（もんだい）が生（しょう）じる",
+                "tts": "問題が生じる",
+                "lang": "ja-JP",
+                "translationZh": "产生问题"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v13",
+          "knowledgeId": "v-示す",
+          "mode": "new",
+          "word": {
+            "display": "示す",
+            "tts": "しめす",
+            "lang": "ja-JP",
+            "translationZh": "表示、显示"
+          },
+          "reading": "しめす",
+          "collocations": [
+            {
+              "id": "day002-c11",
+              "text": {
+                "display": "結果（けっか）を示（しめ）す",
+                "tts": "結果を示す",
+                "lang": "ja-JP",
+                "translationZh": "显示结果"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day002-v14",
+          "knowledgeId": "v-基づく",
+          "mode": "new",
+          "word": {
+            "display": "基づく",
+            "tts": "もとづく",
+            "lang": "ja-JP",
+            "translationZh": "基于、根据"
+          },
+          "reading": "もとづく",
+          "collocations": []
+        },
+        {
+          "id": "day002-v15",
+          "knowledgeId": "v-応じる",
+          "mode": "new",
+          "word": {
+            "display": "応じる",
+            "tts": "おうじる",
+            "lang": "ja-JP",
+            "translationZh": "根据、响应"
+          },
+          "reading": "おうじる",
+          "collocations": []
+        }
+      ],
+      "collocations": [
+        {
+          "id": "day002-c1",
+          "text": {
+            "display": "内容（ないよう）を確認（かくにん）する",
+            "tts": "内容を確認する",
+            "lang": "ja-JP",
+            "translationZh": "确认内容"
+          }
+        },
+        {
+          "id": "day002-c2",
+          "text": {
+            "display": "解決策（かいけつさく）を求（もと）める",
+            "tts": "解決策を求める",
+            "lang": "ja-JP",
+            "translationZh": "寻求解决方案"
+          }
+        },
+        {
+          "id": "day002-c3",
+          "text": {
+            "display": "事故（じこ）を防（ふせ）ぐ",
+            "tts": "事故を防ぐ",
+            "lang": "ja-JP",
+            "translationZh": "防止事故"
+          }
+        },
+        {
+          "id": "day002-c4",
+          "text": {
+            "display": "水分（すいぶん）を含（ふく）む",
+            "tts": "水分を含む",
+            "lang": "ja-JP",
+            "translationZh": "含有水分"
+          }
+        },
+        {
+          "id": "day002-c5",
+          "text": {
+            "display": "結果（けっか）が異（こと）なる",
+            "tts": "結果が異なる",
+            "lang": "ja-JP",
+            "translationZh": "结果不同"
+          }
+        },
+        {
+          "id": "day002-c6",
+          "text": {
+            "display": "能力（のうりょく）が優（すぐ）れている",
+            "tts": "能力が優れている",
+            "lang": "ja-JP",
+            "translationZh": "能力出色"
+          }
+        },
+        {
+          "id": "day002-c7",
+          "text": {
+            "display": "目標（もくひょう）に達（たっ）する",
+            "tts": "目標に達する",
+            "lang": "ja-JP",
+            "translationZh": "达到目标"
+          }
+        },
+        {
+          "id": "day002-c8",
+          "text": {
+            "display": "全体（ぜんたい）の半分（はんぶん）を占（し）める",
+            "tts": "全体の半分を占める",
+            "lang": "ja-JP",
+            "translationZh": "占整体的一半"
+          }
+        },
+        {
+          "id": "day002-c9",
+          "text": {
+            "display": "情報（じょうほう）を得（え）る",
+            "tts": "情報を得る",
+            "lang": "ja-JP",
+            "translationZh": "获得信息"
+          }
+        },
+        {
+          "id": "day002-c10",
+          "text": {
+            "display": "問題（もんだい）が生（しょう）じる",
+            "tts": "問題が生じる",
+            "lang": "ja-JP",
+            "translationZh": "产生问题"
+          }
+        },
+        {
+          "id": "day002-c11",
+          "text": {
+            "display": "結果（けっか）を示（しめ）す",
+            "tts": "結果を示す",
+            "lang": "ja-JP",
+            "translationZh": "显示结果"
+          }
+        }
+      ],
+      "grammar": [
+        {
+          "id": "day002-g1",
+          "knowledgeId": "g-に基づいて",
+          "mode": "new",
+          "form": {
+            "display": "～に基（もと）づいて",
+            "tts": "に基づいて",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "基于……；根据……",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "調査（ちょうさ）の結果（けっか）に基（もと）づいて、新（あたら）しい計画（けいかく）を作（つく）りました。",
+              "tts": "調査の結果に基づいて、新しい計画を作りました。",
+              "lang": "ja-JP",
+              "translationZh": "根据调查结果制定了新的计划。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day002-g2",
+          "knowledgeId": "g-に応じて",
+          "mode": "new",
+          "form": {
+            "display": "～に応（おう）じて",
+            "tts": "に応じて",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "根据……；按照……",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "利用者（りようしゃ）の年齢（ねんれい）に応（おう）じて、サービスの内容（ないよう）を変（か）える必要（ひつよう）があります。",
+              "tts": "利用者の年齢に応じて、サービスの内容を変える必要があります。",
+              "lang": "ja-JP",
+              "translationZh": "有必要根据使用者的年龄改变服务内容。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day002-g3",
+          "knowledgeId": "g-おそれがある",
+          "mode": "new",
+          "form": {
+            "display": "～おそれがある",
+            "tts": "おそれがある",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "恐怕会……；存在……的危险／可能性。",
+          "explanationZh": "通常用于不好的事情。",
+          "examples": [
+            {
+              "display": "大雨（おおあめ）が続（つづ）くと、川（かわ）の水（みず）があふれるおそれがあります。",
+              "tts": "大雨が続くと、川の水があふれるおそれがあります。",
+              "lang": "ja-JP",
+              "translationZh": "如果持续下大雨，河水有泛滥的危险。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day002-g4",
+          "knowledgeId": "g-にすぎない",
+          "mode": "new",
+          "form": {
+            "display": "～にすぎない",
+            "tts": "にすぎない",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "只不过……；仅仅……",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "この数字（すうじ）は一（ひと）つの目安（めやす）にすぎません。",
+              "tts": "この数字は一つの目安にすぎません。",
+              "lang": "ja-JP",
+              "translationZh": "这个数字只不过是一个参考标准。"
+            },
+            {
+              "display": "私（わたし）は自分（じぶん）の意見（いけん）を言（い）ったにすぎない。",
+              "tts": "私は自分の意見を言ったにすぎない。",
+              "lang": "ja-JP",
+              "translationZh": "我只不过表达了自己的意见而已。"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "review": {
+        "instructionsZh": "按 D+1 / D+3 复习；3秒说出读音与意思。记录真实红黄绿，再做原正式课程中的重点抽测。D+7 从 Day 008 起到期。",
+        "intervals": [
+          {
+            "offsetDays": 1,
+            "sourceDay": 1,
+            "vocabularyIds": [
+              "v-維持",
+              "v-改善",
+              "v-避ける",
+              "v-省く",
+              "v-補う",
+              "v-伴う",
+              "v-傾向",
+              "v-影響",
+              "v-状況",
+              "v-対象",
+              "v-適切",
+              "v-明らか",
+              "v-比較",
+              "v-判断",
+              "v-取り組む",
+              "v-一方"
+            ],
+            "grammarIds": [
+              "g-わけではない",
+              "g-に違いない",
+              "g-に伴って",
+              "g-一方で"
+            ]
+          }
+        ]
+      },
+      "reading": {
+        "id": "day002-reading",
+        "timeLimitSeconds": 60,
+        "text": {
+          "display": "最近（さいきん）は、インターネットを使（つか）って簡単（かんたん）に情報（じょうほう）を得（え）ることができる。しかし、インターネットに書（か）かれている情報（じょうほう）がすべて正（ただ）しいわけではない。情報（じょうほう）の量（りょう）が増（ふ）える一方（いっぽう）で、利用者（りようしゃ）自身（じしん）がその内容（ないよう）が正（ただ）しいかどうかを判断（はんだん）する能力（のうりょく）も求（もと）められている。",
+          "tts": "最近は、インターネットを使って簡単に情報を得ることができる。しかし、インターネットに書かれている情報がすべて正しいわけではない。情報の量が増える一方で、利用者自身がその内容が正しいかどうかを判断する能力も求められている。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "questions": [
+          {
+            "id": "day002-rq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "作者（さくしゃ）が一番（いちばん）言（い）いたいことは何（なん）ですか。",
+              "tts": "作者が一番言いたいことは何ですか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "インターネットを使（つか）わないほうがいい。",
+                  "tts": "インターネットを使わないほうがいい。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "インターネットの情報（じょうほう）はほとんど間違（まちが）っている。",
+                  "tts": "インターネットの情報はほとんど間違っている。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "情報（じょうほう）が増（ふ）える中（なか）で、自分（じぶん）で正（ただ）しさを判断（はんだん）する必要（ひつよう）がある。",
+                  "tts": "情報が増える中で、自分で正しさを判断する必要がある。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "C",
+            "explanationZh": "答案：C。"
+          }
+        ],
+        "secondPass": [
+          "核对原文依据",
+          "点击日语听读",
+          "不看原文复述"
+        ]
+      },
+      "speaking": {
+        "id": "day002-speaking",
+        "prompt": {
+          "display": "インターネットの情報（じょうほう）を信（しん）じてもいいですか。",
+          "tts": "インターネットの情報を信じてもいいですか。",
+          "lang": "ja-JP",
+          "translationZh": "网络上的信息可以相信吗？"
+        },
+        "instructionsZh": "每个人说2分钟，对方至少追问3次。至少主动使用3个：～わけではない／～一方（いっぽう）で／～に基（もと）づいて／～に応（おう）じて／～にすぎない。",
+        "models": [
+          {
+            "display": "インターネットに書（か）いてあることが全部（ぜんぶ）正（ただ）しいわけではありません。",
+            "tts": "インターネットに書いてあることが全部正しいわけではありません。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "私（わたし）は一（ひと）つの情報（じょうほう）だけに基（もと）づいて判断（はんだん）しないようにしています。",
+            "tts": "私は一つの情報だけに基づいて判断しないようにしています。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "インターネットは便利（べんり）な一方（いっぽう）で、間違（まちが）った情報（じょうほう）もあります。",
+            "tts": "インターネットは便利な一方で、間違った情報もあります。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ],
+        "followUps": []
+      },
+      "recap": {
+        "instructionsZh": "将错误分为：\n🔴 A：完全不会\n🟡 B：认识，但反应慢\n🟢 C：立即反应\n明天：🔴全部复习；🟡抽查一半；🟢暂时不看。\nDay 2完成后累计：30个核心词汇＋8个N2语法。"
+      }
+    },
+    {
+      "id": "day003",
+      "day": 3,
+      "week": 1,
+      "date": "2026-08-29",
+      "title": "城市暑热与多种对策",
+      "schemaVersion": "2.1.0",
+      "source": {
+        "url": "https://app.notion.com/p/3ce150b34222812ea314e6ae8dca591d?pvs=204",
+        "title": "3️⃣ Day 3｜N2 双人冲刺",
+        "archive": "docs/course-sources/day003.md"
+      },
+      "goalsZh": [
+        "第一次周末训练：Day 1–2回收 → 少量新知识 → 第一次90秒计时阅读＋听说结合训练。",
+        "预计时间：约140分钟。",
+        "完成后累计：42个词＋12个N2语法。"
+      ],
+      "scheduledMinutes": 150,
+      "sourceEstimatedMinutes": 140,
+      "counts": {
+        "newVocabulary": 12,
+        "reviewVocabulary": 0
+      },
+      "modules": [
+        {
+          "durationMinutes": 20,
+          "type": "review"
+        },
+        {
+          "type": "source",
+          "title": "正式重点复习",
+          "durationMinutes": 0,
+          "blocks": [
+            {
+              "text": "两个人先不看读音，轮流读下面15个词，要求3秒内读出＋说出意思：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "維持　省く　補う　伴う　傾向　取り組む　認める　防ぐ　異なる　優れる　占める　生じる　示す　基づく　応じる",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "省く",
+                  "tts": "はぶく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "補う",
+                  "tts": "おぎなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "伴う",
+                  "tts": "ともなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "傾向",
+                  "tts": "けいこう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り組む",
+                  "tts": "とりくむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "認める",
+                  "tts": "みとめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "防ぐ",
+                  "tts": "ふせぐ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "異なる",
+                  "tts": "ことなる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "優れる",
+                  "tts": "すぐれる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "占める",
+                  "tts": "しめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "生じる",
+                  "tts": "しょうじる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "示す",
+                  "tts": "しめす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "基づく",
+                  "tts": "もとづく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "応じる",
+                  "tts": "おうじる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "核对：維持（いじ）／省（はぶ）く／補（おぎな）う／伴（ともな）う／傾向（けいこう）／取（と）り組（く）む／認（みと）める／防（ふせ）ぐ／異（こと）なる／優（すぐ）れる／占（し）める／生（しょう）じる／示（しめ）す／基（もと）づく／応（おう）じる。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持（いじ）／省（はぶ）く／補（おぎな）う／伴（ともな）う／傾向（けいこう）／取（と）り組（く）む／認（みと）める／防（ふせ）ぐ／異（こと）なる／優（すぐ）れる／占（し）める／生（しょう）じる／示（しめ）す／基（もと）づく／応（おう）じる。",
+                  "tts": "維持／省く／補う／伴う／傾向／取り組む／認める／防ぐ／異なる／優れる／占める／生じる／示す／基づく／応じる。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "傾向",
+                  "tts": "けいこう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "计分：○＝3秒内正确；△＝超过3秒；×＝不会／读错。△和×今晚最后再测。",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "再抽查前8个语法：～わけではない／～に違（ちが）いない／～に伴（ともな）って／～一方（いっぽう）で／～に基（もと）づいて／～に応（おう）じて／～おそれがある／～にすぎない。一个人说中文意思，另一个人说日语结构。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～わけではない／～に違（ちが）いない／～に伴（ともな）って／～一方（いっぽう）で／～に基（もと）づいて／～に応（おう）じて／～おそれがある／～にすぎない。",
+                  "tts": "わけではない／に違いない／に伴って／一方で／に基づいて／に応じて／おそれがある／にすぎない。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "一方",
+                  "tts": "いっぽう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～わけではない",
+                  "tts": "わけではない",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～おそれがある",
+                  "tts": "おそれがある",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～にすぎない",
+                  "tts": "にすぎない",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ],
+          "withinPreviousModule": true
+        },
+        {
+          "durationMinutes": 25,
+          "type": "vocabulary"
+        },
+        {
+          "type": "source",
+          "title": "词汇辨析",
+          "durationMinutes": 0,
+          "withinPreviousModule": true,
+          "blocks": [
+            {
+              "text": "容易混淆： 減少（げんしょう）和現象（げんしょう）读音完全相同。例：人口の減少／自然現象。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "減少（げんしょう）和現象（げんしょう）",
+                  "tts": "減少和現象",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "減少",
+                  "tts": "げんしょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "現象",
+                  "tts": "げんしょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "durationMinutes": 25,
+          "type": "grammar"
+        },
+        {
+          "durationMinutes": 25,
+          "type": "reading"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "listening"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "speaking"
+        },
+        {
+          "durationMinutes": 15,
+          "type": "recap"
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "day003-v1",
+          "knowledgeId": "v-原因",
+          "mode": "new",
+          "word": {
+            "display": "原因",
+            "tts": "げんいん",
+            "lang": "ja-JP",
+            "translationZh": "原因"
+          },
+          "reading": "げんいん",
+          "collocations": [
+            {
+              "id": "day003-c1",
+              "text": {
+                "display": "原因（げんいん）を調（しら）べる",
+                "tts": "原因を調べる",
+                "lang": "ja-JP",
+                "translationZh": "调查原因"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v2",
+          "knowledgeId": "v-結果",
+          "mode": "new",
+          "word": {
+            "display": "結果",
+            "tts": "けっか",
+            "lang": "ja-JP",
+            "translationZh": "结果"
+          },
+          "reading": "けっか",
+          "collocations": []
+        },
+        {
+          "id": "day003-v3",
+          "knowledgeId": "v-増加",
+          "mode": "new",
+          "word": {
+            "display": "増加",
+            "tts": "ぞうか",
+            "lang": "ja-JP",
+            "translationZh": "增加"
+          },
+          "reading": "ぞうか",
+          "collocations": [
+            {
+              "id": "day003-c2",
+              "text": {
+                "display": "人口（じんこう）が増加（ぞうか）する",
+                "tts": "人口が増加する",
+                "lang": "ja-JP",
+                "translationZh": "人口增加"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v4",
+          "knowledgeId": "v-減少",
+          "mode": "new",
+          "word": {
+            "display": "減少",
+            "tts": "げんしょう",
+            "lang": "ja-JP",
+            "translationZh": "减少"
+          },
+          "reading": "げんしょう",
+          "collocations": [
+            {
+              "id": "day003-c3",
+              "text": {
+                "display": "人口（じんこう）が減少（げんしょう）する",
+                "tts": "人口が減少する",
+                "lang": "ja-JP",
+                "translationZh": "人口减少"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v5",
+          "knowledgeId": "v-程度",
+          "mode": "new",
+          "word": {
+            "display": "程度",
+            "tts": "ていど",
+            "lang": "ja-JP",
+            "translationZh": "程度"
+          },
+          "reading": "ていど",
+          "collocations": []
+        },
+        {
+          "id": "day003-v6",
+          "knowledgeId": "v-範囲",
+          "mode": "new",
+          "word": {
+            "display": "範囲",
+            "tts": "はんい",
+            "lang": "ja-JP",
+            "translationZh": "范围"
+          },
+          "reading": "はんい",
+          "collocations": []
+        },
+        {
+          "id": "day003-v7",
+          "knowledgeId": "v-現象",
+          "mode": "new",
+          "word": {
+            "display": "現象",
+            "tts": "げんしょう",
+            "lang": "ja-JP",
+            "translationZh": "现象"
+          },
+          "reading": "げんしょう",
+          "collocations": []
+        },
+        {
+          "id": "day003-v8",
+          "knowledgeId": "v-解決",
+          "mode": "new",
+          "word": {
+            "display": "解決",
+            "tts": "かいけつ",
+            "lang": "ja-JP",
+            "translationZh": "解决"
+          },
+          "reading": "かいけつ",
+          "collocations": [
+            {
+              "id": "day003-c4",
+              "text": {
+                "display": "問題（もんだい）を解決（かいけつ）する",
+                "tts": "問題を解決する",
+                "lang": "ja-JP",
+                "translationZh": "解决问题"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v9",
+          "knowledgeId": "v-防止",
+          "mode": "new",
+          "word": {
+            "display": "防止",
+            "tts": "ぼうし",
+            "lang": "ja-JP",
+            "translationZh": "防止"
+          },
+          "reading": "ぼうし",
+          "collocations": [
+            {
+              "id": "day003-c5",
+              "text": {
+                "display": "事故（じこ）を防止（ぼうし）する",
+                "tts": "事故を防止する",
+                "lang": "ja-JP",
+                "translationZh": "防止事故"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v10",
+          "knowledgeId": "v-予測",
+          "mode": "new",
+          "word": {
+            "display": "予測",
+            "tts": "よそく",
+            "lang": "ja-JP",
+            "translationZh": "预测"
+          },
+          "reading": "よそく",
+          "collocations": [
+            {
+              "id": "day003-c6",
+              "text": {
+                "display": "将来（しょうらい）を予測（よそく）する",
+                "tts": "将来を予測する",
+                "lang": "ja-JP",
+                "translationZh": "预测未来"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v11",
+          "knowledgeId": "v-及ぼす",
+          "mode": "new",
+          "word": {
+            "display": "及ぼす",
+            "tts": "およぼす",
+            "lang": "ja-JP",
+            "translationZh": "造成、带来、施加"
+          },
+          "reading": "およぼす",
+          "collocations": [
+            {
+              "id": "day003-c7",
+              "text": {
+                "display": "影響（えいきょう）を及（およ）ぼす",
+                "tts": "影響を及ぼす",
+                "lang": "ja-JP",
+                "translationZh": "造成影响"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day003-v12",
+          "knowledgeId": "v-確かめる",
+          "mode": "new",
+          "word": {
+            "display": "確かめる",
+            "tts": "たしかめる",
+            "lang": "ja-JP",
+            "translationZh": "确认、查明"
+          },
+          "reading": "たしかめる",
+          "collocations": [
+            {
+              "id": "day003-c8",
+              "text": {
+                "display": "本当（ほんとう）かどうか確（たし）かめる",
+                "tts": "本当かどうか確かめる",
+                "lang": "ja-JP",
+                "translationZh": "确认是否属实"
+              }
+            }
+          ]
+        }
+      ],
+      "collocations": [
+        {
+          "id": "day003-c1",
+          "text": {
+            "display": "原因（げんいん）を調（しら）べる",
+            "tts": "原因を調べる",
+            "lang": "ja-JP",
+            "translationZh": "调查原因"
+          }
+        },
+        {
+          "id": "day003-c2",
+          "text": {
+            "display": "人口（じんこう）が増加（ぞうか）する",
+            "tts": "人口が増加する",
+            "lang": "ja-JP",
+            "translationZh": "人口增加"
+          }
+        },
+        {
+          "id": "day003-c3",
+          "text": {
+            "display": "人口（じんこう）が減少（げんしょう）する",
+            "tts": "人口が減少する",
+            "lang": "ja-JP",
+            "translationZh": "人口减少"
+          }
+        },
+        {
+          "id": "day003-c4",
+          "text": {
+            "display": "問題（もんだい）を解決（かいけつ）する",
+            "tts": "問題を解決する",
+            "lang": "ja-JP",
+            "translationZh": "解决问题"
+          }
+        },
+        {
+          "id": "day003-c5",
+          "text": {
+            "display": "事故（じこ）を防止（ぼうし）する",
+            "tts": "事故を防止する",
+            "lang": "ja-JP",
+            "translationZh": "防止事故"
+          }
+        },
+        {
+          "id": "day003-c6",
+          "text": {
+            "display": "将来（しょうらい）を予測（よそく）する",
+            "tts": "将来を予測する",
+            "lang": "ja-JP",
+            "translationZh": "预测未来"
+          }
+        },
+        {
+          "id": "day003-c7",
+          "text": {
+            "display": "影響（えいきょう）を及（およ）ぼす",
+            "tts": "影響を及ぼす",
+            "lang": "ja-JP",
+            "translationZh": "造成影响"
+          }
+        },
+        {
+          "id": "day003-c8",
+          "text": {
+            "display": "本当（ほんとう）かどうか確（たし）かめる",
+            "tts": "本当かどうか確かめる",
+            "lang": "ja-JP",
+            "translationZh": "确认是否属实"
+          }
+        }
+      ],
+      "grammar": [
+        {
+          "id": "day003-g1",
+          "knowledgeId": "g-につれて",
+          "mode": "new",
+          "form": {
+            "display": "～につれて",
+            "tts": "につれて",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "随着……；伴随着……",
+          "explanationZh": "A逐渐变化，B也随之变化。",
+          "examples": [
+            {
+              "display": "気温（きおん）が上（あ）がるにつれて、冷房（れいぼう）を使（つか）う人（ひと）が増（ふ）えてきた。",
+              "tts": "気温が上がるにつれて、冷房を使う人が増えてきた。",
+              "lang": "ja-JP",
+              "translationZh": "随着气温升高，使用空调的人逐渐增加了。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day003-g2",
+          "knowledgeId": "g-に対して",
+          "mode": "new",
+          "form": {
+            "display": "～に対（たい）して",
+            "tts": "に対して",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "对于……；针对……；与……相对。",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "この問題（もんだい）に対（たい）して、多（おお）くの人（ひと）が関心（かんしん）を持（も）っている。",
+              "tts": "この問題に対して、多くの人が関心を持っている。",
+              "lang": "ja-JP",
+              "translationZh": "很多人对这个问题很关心。"
+            }
+          ],
+          "notes": [
+            {
+              "explanationZh": "搭配： 関心（かんしん）を持（も）つ＝感兴趣、关心。",
+              "texts": []
+            }
+          ]
+        },
+        {
+          "id": "day003-g3",
+          "knowledgeId": "g-ことから",
+          "mode": "new",
+          "form": {
+            "display": "～ことから",
+            "tts": "ことから",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "因为……；从……可以判断……",
+          "explanationZh": "常见逻辑为「观察到A → 从A推断B」。",
+          "examples": [
+            {
+              "display": "道路（どうろ）が濡（ぬ）れていることから、昨夜（さくや）雨（あめ）が降（ふ）ったことが分（わ）かる。",
+              "tts": "道路が濡れていることから、昨夜雨が降ったことが分かる。",
+              "lang": "ja-JP",
+              "translationZh": "从道路是湿的这一点，可以判断昨晚下过雨。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day003-g4",
+          "knowledgeId": "g-とは限らない",
+          "mode": "new",
+          "form": {
+            "display": "～とは限（かぎ）らない",
+            "tts": "とは限らない",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "未必……；不一定……",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "値段（ねだん）が高（たか）い商品（しょうひん）が、必（かなら）ずしも品質（ひんしつ）が良（よ）いとは限（かぎ）らない。",
+              "tts": "値段が高い商品が、必ずしも品質が良いとは限らない。",
+              "lang": "ja-JP",
+              "translationZh": "价格高的商品，质量未必就一定好。"
+            },
+            {
+              "display": "必ずしもそうとは限らない。",
+              "tts": "必ずしもそうとは限らない。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          ],
+          "notes": [
+            {
+              "explanationZh": "整体记忆： 必（かなら）ずしも～とは限（かぎ）らない＝未必……。",
+              "texts": []
+            }
+          ]
+        }
+      ],
+      "review": {
+        "instructionsZh": "按 D+1 / D+3 复习；3秒说出读音与意思。记录真实红黄绿，再做原正式课程中的重点抽测。D+7 从 Day 008 起到期。",
+        "intervals": [
+          {
+            "offsetDays": 1,
+            "sourceDay": 2,
+            "vocabularyIds": [
+              "v-確認",
+              "v-認める",
+              "v-求める",
+              "v-防ぐ",
+              "v-含む",
+              "v-限る",
+              "v-異なる",
+              "v-優れる",
+              "v-達する",
+              "v-占める",
+              "v-得る",
+              "v-生じる",
+              "v-示す",
+              "v-基づく",
+              "v-応じる"
+            ],
+            "grammarIds": [
+              "g-に基づいて",
+              "g-に応じて",
+              "g-おそれがある",
+              "g-にすぎない"
+            ]
+          }
+        ]
+      },
+      "reading": {
+        "id": "day003-reading",
+        "timeLimitSeconds": 90,
+        "text": {
+          "display": "最近（さいきん）、都市（とし）では夏（なつ）の気温（きおん）が以前（いぜん）より高（たか）くなる傾向（けいこう）がある。気温（きおん）が上（あ）がるにつれて、冷房（れいぼう）の利用（りよう）も増加（ぞうか）している。しかし、冷房（れいぼう）を使（つか）えば、すべての問題（もんだい）が解決（かいけつ）するわけではない。電力（でんりょく）の使用量（しようりょう）が増（ふ）える一方（いっぽう）で、屋外（おくがい）に熱（ねつ）を放出（ほうしゅつ）するという問題（もんだい）も生（しょう）じる。そのため、建物（たてもの）の設計（せっけい）や緑（みどり）の利用（りよう）など、さまざまな方法（ほうほう）に基（もと）づいて暑（あつ）さへの対策（たいさく）を考（かんが）える必要（ひつよう）がある。",
+          "tts": "最近、都市では夏の気温が以前より高くなる傾向がある。気温が上がるにつれて、冷房の利用も増加している。しかし、冷房を使えば、すべての問題が解決するわけではない。電力の使用量が増える一方で、屋外に熱を放出するという問題も生じる。そのため、建物の設計や緑の利用など、さまざまな方法に基づいて暑さへの対策を考える必要がある。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "questions": [
+          {
+            "id": "day003-rq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "作者（さくしゃ）が最（もっと）も言（い）いたいことは何（なん）ですか。",
+              "tts": "作者が最も言いたいことは何ですか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "冷房（れいぼう）は使（つか）わないほうがよい。",
+                  "tts": "冷房は使わないほうがよい。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "都市（とし）の気温（きおん）は冷房（れいぼう）だけで下（さ）げられる。",
+                  "tts": "都市の気温は冷房だけで下げられる。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "暑（あつ）さの問題（もんだい）には複数（ふくすう）の方法（ほうほう）で対応（たいおう）する必要（ひつよう）がある。",
+                  "tts": "暑さの問題には複数の方法で対応する必要がある。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "C",
+            "explanationZh": "答案：C。 两个人分别解释为什么A、B不对。"
+          }
+        ],
+        "secondPass": [
+          "核对原文依据",
+          "点击日语听读",
+          "不看原文复述"
+        ]
+      },
+      "listening": {
+        "id": "day003-listening",
+        "instructionsZh": "先只听纯日语材料两遍，再复述；最后才看带假名原文。",
+        "tts": "最近、健康のために歩く人が増えています。歩くことは特別な道具を必要とせず、誰でも簡単に始めることができます。一方で、無理に長い時間歩けばいいというわけではありません。自分の体力に応じて運動することが大切です。",
+        "question": null,
+        "questions": [],
+        "segments": [
+          {
+            "text": {
+              "display": "最近（さいきん）、健康（けんこう）のために歩（ある）く人（ひと）が増（ふ）えています。歩（ある）くことは特別（とくべつ）な道具（どうぐ）を必要（ひつよう）とせず、誰（だれ）でも簡単（かんたん）に始（はじ）めることができます。一方（いっぽう）で、無理（むり）に長（なが）い時間（じかん）歩（ある）けばいいというわけではありません。自分（じぶん）の体力（たいりょく）に応（おう）じて運動（うんどう）することが大切（たいせつ）です。",
+              "tts": "最近、健康のために歩く人が増えています。歩くことは特別な道具を必要とせず、誰でも簡単に始めることができます。一方で、無理に長い時間歩けばいいというわけではありません。自分の体力に応じて運動することが大切です。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          }
+        ],
+        "retellingInstructionsZh": "先只听纯日语材料两遍，再复述；最后才看带假名原文。",
+        "followUps": [
+          {
+            "display": "どうして歩（ある）く人（ひと）が増（ふ）えていますか。",
+            "tts": "どうして歩く人が増えていますか。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "歩（ある）くために特別（とくべつ）な道具（どうぐ）は必要（ひつよう）ですか。",
+            "tts": "歩くために特別な道具は必要ですか。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "どのように運動（うんどう）したほうがいいですか。",
+            "tts": "どのように運動したほうがいいですか。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ]
+      },
+      "speaking": {
+        "id": "day003-speaking",
+        "prompt": {
+          "display": "暑（あつ）い夏（なつ）を快適（かいてき）に過（す）ごすために、何（なに）が必要（ひつよう）だと思（おも）いますか。",
+          "tts": "暑い夏を快適に過ごすために、何が必要だと思いますか。",
+          "lang": "ja-JP",
+          "translationZh": "为了舒适度过炎热夏季，需要什么？"
+        },
+        "instructionsZh": "每个人3分钟，对方至少追问3次。必须主动使用至少4个：～につれて／～一方（いっぽう）で／～わけではない／～に応（おう）じて／～に基（もと）づいて／～とは限（かぎ）らない。",
+        "models": [
+          {
+            "display": "気温（きおん）が上（あ）がるにつれて、エアコンを使（つか）う時間（じかん）も長（なが）くなります。",
+            "tts": "気温が上がるにつれて、エアコンを使う時間も長くなります。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "でも、エアコンを使（つか）えば快適（かいてき）になるとは限（かぎ）りません。",
+            "tts": "でも、エアコンを使えば快適になるとは限りません。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ],
+        "followUps": []
+      },
+      "recap": {
+        "instructionsZh": "前三天内容按：🔴完全不会／🟡反应超过3秒／🟢立即会 分类。\n重点检查：省く／補う／伴う／取り組む／異なる／優れる／占める／生じる／及ぼす／確かめる，以及累计12个语法。\n最后两个人各随机抽 10词＋5语法 考对方。"
+      }
+    },
+    {
+      "id": "day004",
+      "day": 4,
+      "week": 1,
+      "date": "2026-08-30",
+      "title": "灾害对策与语法辨析",
+      "schemaVersion": "2.1.0",
+      "source": {
+        "url": "https://app.notion.com/p/3ce150b3422281c7a91cc61a5e82fd51?pvs=204",
+        "title": "4️⃣ Day 4｜N2 双人冲刺",
+        "archive": "docs/course-sources/day004.md"
+      },
+      "goalsZh": [
+        "第一个周末综合回收日。",
+        "前三天累计42个词＋12个语法，今天减少新知识，重点放在D+1/D+3复习、易混语法辨析、计时阅读和N2听力即时应答。",
+        "预计时间：约140分钟。"
+      ],
+      "scheduledMinutes": 155,
+      "sourceEstimatedMinutes": 140,
+      "counts": {
+        "newVocabulary": 10,
+        "reviewVocabulary": 0
+      },
+      "modules": [
+        {
+          "durationMinutes": 20,
+          "type": "review"
+        },
+        {
+          "type": "source",
+          "title": "正式重点复习",
+          "durationMinutes": 0,
+          "blocks": [
+            {
+              "text": "第一轮不要看读音。两个人轮流完成，每个词要求3秒内说出「读音＋意思」：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "維持　省く　補う　伴う　取り組む　認める　防ぐ　異なる　優れる　占める　生じる　示す　基づく　応じる　及ぼす　確かめる　範囲　現象　予測　程度",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "省く",
+                  "tts": "はぶく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "補う",
+                  "tts": "おぎなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "伴う",
+                  "tts": "ともなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り組む",
+                  "tts": "とりくむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "認める",
+                  "tts": "みとめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "防ぐ",
+                  "tts": "ふせぐ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "異なる",
+                  "tts": "ことなる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "優れる",
+                  "tts": "すぐれる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "占める",
+                  "tts": "しめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "生じる",
+                  "tts": "しょうじる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "示す",
+                  "tts": "しめす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "基づく",
+                  "tts": "もとづく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "応じる",
+                  "tts": "おうじる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "程度",
+                  "tts": "ていど",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "範囲",
+                  "tts": "はんい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "現象",
+                  "tts": "げんしょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "予測",
+                  "tts": "よそく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "及ぼす",
+                  "tts": "およぼす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "確かめる",
+                  "tts": "たしかめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "核对：維持（いじ）／省（はぶ）く／補（おぎな）う／伴（ともな）う／取（と）り組（く）む／認（みと）める／防（ふせ）ぐ／異（こと）なる／優（すぐ）れる／占（し）める／生（しょう）じる／示（しめ）す／基（もと）づく／応（おう）じる／及（およ）ぼす／確（たし）かめる／範囲（はんい）／現象（げんしょう）／予測（よそく）／程度（ていど）。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持（いじ）／省（はぶ）く／補（おぎな）う／伴（ともな）う／取（と）り組（く）む／認（みと）める／防（ふせ）ぐ／異（こと）なる／優（すぐ）れる／占（し）める／生（しょう）じる／示（しめ）す／基（もと）づく／応（おう）じる／及（およ）ぼす／確（たし）かめる／範囲（はんい）／現象（げんしょう）／予測（よそく）／程度（ていど）。",
+                  "tts": "維持／省く／補う／伴う／取り組む／認める／防ぐ／異なる／優れる／占める／生じる／示す／基づく／応じる／及ぼす／確かめる／範囲／現象／予測／程度。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "程度",
+                  "tts": "ていど",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "範囲",
+                  "tts": "はんい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "現象",
+                  "tts": "げんしょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "予測",
+                  "tts": "よそく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "○＝3秒内正确；△＝反应慢；×＝错误。结束前重点回收△和×。",
+              "heading": false,
+              "japanese": []
+            }
+          ],
+          "withinPreviousModule": true
+        },
+        {
+          "durationMinutes": 20,
+          "type": "vocabulary"
+        },
+        {
+          "type": "source",
+          "title": "词汇辨析",
+          "durationMinutes": 0,
+          "withinPreviousModule": true,
+          "blocks": [
+            {
+              "text": "易混说明： 抑（おさ）える≠押（お）さえる。前者常表示“抑制、控制”，如費用（ひよう）を抑（おさ）える。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "抑（おさ）える",
+                  "tts": "抑える",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "押（お）さえる。",
+                  "tts": "押さえる。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "如費用（ひよう）を抑（おさ）える。",
+                  "tts": "如費用を抑える。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "durationMinutes": 20,
+          "type": "grammar"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "source",
+          "title": "易混语法辨析｜20分钟",
+          "blocks": [
+            {
+              "text": "比较：～に伴（ともな）って／～につれて／～に応（おう）じて。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に伴（ともな）って／～につれて／～に応（おう）じて。",
+                  "tts": "に伴って／につれて／に応じて。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～につれて",
+                  "tts": "につれて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "～につれて： A逐渐变化，B也自然逐渐变化。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～につれて",
+                  "tts": "につれて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "気温（きおん）が上（あ）がるにつれて、冷房（れいぼう）の利用（りよう）が増（ふ）える。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "気温（きおん）が上（あ）がるにつれて、冷房（れいぼう）の利用（りよう）が増（ふ）える。",
+                  "tts": "気温が上がるにつれて、冷房の利用が増える。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "～に伴って： A发生变化或事件，同时伴随B；更正式、书面。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に伴って",
+                  "tts": "に伴って",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "人口（じんこう）の増加（ぞうか）に伴（ともな）って、住宅（じゅうたく）の需要（じゅよう）も増（ふ）えた。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "人口（じんこう）の増加（ぞうか）に伴（ともな）って、住宅（じゅうたく）の需要（じゅよう）も増（ふ）えた。",
+                  "tts": "人口の増加に伴って、住宅の需要も増えた。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "増加",
+                  "tts": "ぞうか",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "需要",
+                  "tts": "じゅよう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "～に応じて： 根据A的情况，相应调整B。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に応じて",
+                  "tts": "に応じて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "気温（きおん）に応（おう）じて、窓（まど）の開（あ）け方（かた）を変（か）える。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "気温（きおん）に応（おう）じて、窓（まど）の開（あ）け方（かた）を変（か）える。",
+                  "tts": "気温に応じて、窓の開け方を変える。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "気温が上がるにつれて、冷房の利用が増える。人口の増加に伴って、住宅の需要も増えた。気温に応じて、窓の開け方を変える。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "気温が上がるにつれて、冷房の利用が増える。人口の増加に伴って、住宅の需要も増えた。気温に応じて、窓の開け方を変える。",
+                  "tts": "気温が上がるにつれて、冷房の利用が増える。人口の増加に伴って、住宅の需要も増えた。気温に応じて、窓の開け方を変える。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "増加",
+                  "tts": "ぞうか",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "需要",
+                  "tts": "じゅよう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "双人抢答",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "1. 年齢（ねんれい）が上（あ）がる（　　　）、体力（たいりょ）が低下（ていか）する。→ につれて",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "年齢（ねんれい）が上（あ）がる",
+                  "tts": "年齢が上がる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "、体力（たいりょ）が低下（ていか）する。",
+                  "tts": "、体力が低下する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "2. 天気（てんき）（　　　）、計画（けいかく）を変（か）える。→ に応じて",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "天気（てんき）",
+                  "tts": "天気",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "、計画（けいかく）を変（か）える。",
+                  "tts": "、計画を変える。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "3. 人口（じんこう）の増加（ぞうか）（　　　）、交通問題（こうつうもんだい）も増（ふ）えた。→ に伴って",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "人口（じんこう）の増加（ぞうか）",
+                  "tts": "人口の増加",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "、交通問題（こうつうもんだい）も増（ふ）えた。",
+                  "tts": "、交通問題も増えた。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "増加",
+                  "tts": "ぞうか",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "两个人各自再出3道题考对方。",
+              "heading": false,
+              "japanese": []
+            }
+          ]
+        },
+        {
+          "durationMinutes": 20,
+          "type": "responses",
+          "id": "day004-responses",
+          "tasks": [
+            {
+              "prompt": {
+                "display": "この資料、今日中に確認してもらえませんか。",
+                "tts": "この資料、今日中に確認してもらえませんか。",
+                "lang": "ja-JP",
+                "translationZh": null
+              },
+              "answer": {
+                "display": "はい、分かりました。今日中に確認します。",
+                "tts": "はい、分かりました。今日中に確認します。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "prompt": {
+                "display": "会議の時間、三時に変更になったって聞いた？",
+                "tts": "会議の時間、三時に変更になったって聞いた？",
+                "lang": "ja-JP",
+                "translationZh": null
+              },
+              "answer": {
+                "display": "え、本当？知らなかった。",
+                "tts": "え、本当？知らなかった。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "prompt": {
+                "display": "明日の発表、もう準備できた？",
+                "tts": "明日の発表、もう準備できた？",
+                "lang": "ja-JP",
+                "translationZh": null
+              },
+              "answer": {
+                "display": "まだ。今晩準備するつもり。",
+                "tts": "まだ。今晩準備するつもり。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            }
+          ],
+          "instructionsZh": "先听题目，立即用日语回答，再查看原正式示范。两人交换角色。"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "reading"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "speaking"
+        },
+        {
+          "durationMinutes": 15,
+          "type": "recap"
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "day004-v1",
+          "knowledgeId": "v-対策",
+          "mode": "new",
+          "word": {
+            "display": "対策",
+            "tts": "たいさく",
+            "lang": "ja-JP",
+            "translationZh": "对策"
+          },
+          "reading": "たいさく",
+          "collocations": [
+            {
+              "id": "day004-c1",
+              "text": {
+                "display": "対策（たいさく）を考（かんが）える",
+                "tts": "対策を考える",
+                "lang": "ja-JP",
+                "translationZh": "考虑对策"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v2",
+          "knowledgeId": "v-条件",
+          "mode": "new",
+          "word": {
+            "display": "条件",
+            "tts": "じょうけん",
+            "lang": "ja-JP",
+            "translationZh": "条件"
+          },
+          "reading": "じょうけん",
+          "collocations": [
+            {
+              "id": "day004-c2",
+              "text": {
+                "display": "条件（じょうけん）を満（み）たす",
+                "tts": "条件を満たす",
+                "lang": "ja-JP",
+                "translationZh": "满足条件"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v3",
+          "knowledgeId": "v-効果",
+          "mode": "new",
+          "word": {
+            "display": "効果",
+            "tts": "こうか",
+            "lang": "ja-JP",
+            "translationZh": "效果"
+          },
+          "reading": "こうか",
+          "collocations": [
+            {
+              "id": "day004-c3",
+              "text": {
+                "display": "効果（こうか）が得（え）られる",
+                "tts": "効果が得られる",
+                "lang": "ja-JP",
+                "translationZh": "能够取得效果"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v4",
+          "knowledgeId": "v-負担",
+          "mode": "new",
+          "word": {
+            "display": "負担",
+            "tts": "ふたん",
+            "lang": "ja-JP",
+            "translationZh": "负担"
+          },
+          "reading": "ふたん",
+          "collocations": [
+            {
+              "id": "day004-c4",
+              "text": {
+                "display": "負担（ふたん）を減（へ）らす",
+                "tts": "負担を減らす",
+                "lang": "ja-JP",
+                "translationZh": "减轻负担"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v5",
+          "knowledgeId": "v-目的",
+          "mode": "new",
+          "word": {
+            "display": "目的",
+            "tts": "もくてき",
+            "lang": "ja-JP",
+            "translationZh": "目的"
+          },
+          "reading": "もくてき",
+          "collocations": [
+            {
+              "id": "day004-c5",
+              "text": {
+                "display": "目的（もくてき）を達成（たっせい）する",
+                "tts": "目的を達成する",
+                "lang": "ja-JP",
+                "translationZh": "达成目的"
+              }
+            },
+            {
+              "id": "day004-c6",
+              "text": {
+                "display": "目的（もくてき）に応（おう）じて手段（しゅだん）を選（えら）ぶ",
+                "tts": "目的に応じて手段を選ぶ",
+                "lang": "ja-JP",
+                "translationZh": "根据目的选择手段"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v6",
+          "knowledgeId": "v-手段",
+          "mode": "new",
+          "word": {
+            "display": "手段",
+            "tts": "しゅだん",
+            "lang": "ja-JP",
+            "translationZh": "手段"
+          },
+          "reading": "しゅだん",
+          "collocations": [
+            {
+              "id": "day004-c6",
+              "text": {
+                "display": "目的（もくてき）に応（おう）じて手段（しゅだん）を選（えら）ぶ",
+                "tts": "目的に応じて手段を選ぶ",
+                "lang": "ja-JP",
+                "translationZh": "根据目的选择手段"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v7",
+          "knowledgeId": "v-適用",
+          "mode": "new",
+          "word": {
+            "display": "適用",
+            "tts": "てきよう",
+            "lang": "ja-JP",
+            "translationZh": "适用"
+          },
+          "reading": "てきよう",
+          "collocations": []
+        },
+        {
+          "id": "day004-v8",
+          "knowledgeId": "v-考慮",
+          "mode": "new",
+          "word": {
+            "display": "考慮",
+            "tts": "こうりょ",
+            "lang": "ja-JP",
+            "translationZh": "考虑"
+          },
+          "reading": "こうりょ",
+          "collocations": [
+            {
+              "id": "day004-c7",
+              "text": {
+                "display": "状況（じょうきょう）を考慮（こうりょ）する",
+                "tts": "状況を考慮する",
+                "lang": "ja-JP",
+                "translationZh": "考虑实际情况"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v9",
+          "knowledgeId": "v-抑える",
+          "mode": "new",
+          "word": {
+            "display": "抑える",
+            "tts": "おさえる",
+            "lang": "ja-JP",
+            "translationZh": "抑制、控制"
+          },
+          "reading": "おさえる",
+          "collocations": [
+            {
+              "id": "day004-c8",
+              "text": {
+                "display": "温度（おんど）の上昇（じょうしょう）を抑（おさ）える",
+                "tts": "温度の上昇を抑える",
+                "lang": "ja-JP",
+                "translationZh": "抑制温度上升"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day004-v10",
+          "knowledgeId": "v-備える",
+          "mode": "new",
+          "word": {
+            "display": "備える",
+            "tts": "そなえる",
+            "lang": "ja-JP",
+            "translationZh": "准备、防备、具备"
+          },
+          "reading": "そなえる",
+          "collocations": [
+            {
+              "id": "day004-c9",
+              "text": {
+                "display": "災害（さいがい）に備（そな）える",
+                "tts": "災害に備える",
+                "lang": "ja-JP",
+                "translationZh": "为灾害做好准备"
+              }
+            }
+          ]
+        }
+      ],
+      "collocations": [
+        {
+          "id": "day004-c1",
+          "text": {
+            "display": "対策（たいさく）を考（かんが）える",
+            "tts": "対策を考える",
+            "lang": "ja-JP",
+            "translationZh": "考虑对策"
+          }
+        },
+        {
+          "id": "day004-c2",
+          "text": {
+            "display": "条件（じょうけん）を満（み）たす",
+            "tts": "条件を満たす",
+            "lang": "ja-JP",
+            "translationZh": "满足条件"
+          }
+        },
+        {
+          "id": "day004-c3",
+          "text": {
+            "display": "効果（こうか）が得（え）られる",
+            "tts": "効果が得られる",
+            "lang": "ja-JP",
+            "translationZh": "能够取得效果"
+          }
+        },
+        {
+          "id": "day004-c4",
+          "text": {
+            "display": "負担（ふたん）を減（へ）らす",
+            "tts": "負担を減らす",
+            "lang": "ja-JP",
+            "translationZh": "减轻负担"
+          }
+        },
+        {
+          "id": "day004-c5",
+          "text": {
+            "display": "目的（もくてき）を達成（たっせい）する",
+            "tts": "目的を達成する",
+            "lang": "ja-JP",
+            "translationZh": "达成目的"
+          }
+        },
+        {
+          "id": "day004-c6",
+          "text": {
+            "display": "目的（もくてき）に応（おう）じて手段（しゅだん）を選（えら）ぶ",
+            "tts": "目的に応じて手段を選ぶ",
+            "lang": "ja-JP",
+            "translationZh": "根据目的选择手段"
+          }
+        },
+        {
+          "id": "day004-c7",
+          "text": {
+            "display": "状況（じょうきょう）を考慮（こうりょ）する",
+            "tts": "状況を考慮する",
+            "lang": "ja-JP",
+            "translationZh": "考虑实际情况"
+          }
+        },
+        {
+          "id": "day004-c8",
+          "text": {
+            "display": "温度（おんど）の上昇（じょうしょう）を抑（おさ）える",
+            "tts": "温度の上昇を抑える",
+            "lang": "ja-JP",
+            "translationZh": "抑制温度上升"
+          }
+        },
+        {
+          "id": "day004-c9",
+          "text": {
+            "display": "災害（さいがい）に備（そな）える",
+            "tts": "災害に備える",
+            "lang": "ja-JP",
+            "translationZh": "为灾害做好准备"
+          }
+        }
+      ],
+      "grammar": [
+        {
+          "id": "day004-g1",
+          "knowledgeId": "g-に比べて",
+          "mode": "new",
+          "form": {
+            "display": "～に比（くら）べて",
+            "tts": "に比べて",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "与……相比。",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "去年（きょねん）に比（くら）べて、今年（ことし）の夏（なつ）は気温（きおん）が高（たか）い。",
+              "tts": "去年に比べて、今年の夏は気温が高い。",
+              "lang": "ja-JP",
+              "translationZh": "与去年相比，今年夏天气温较高。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day004-g2",
+          "knowledgeId": "g-によって",
+          "mode": "new",
+          "form": {
+            "display": "～によって",
+            "tts": "によって",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "根据……而不同。；由于／通过……。",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "地域（ちいき）によって、生活（せいかつ）の習慣（しゅうかん）が異（こと）なる。",
+              "tts": "地域によって、生活の習慣が異なる。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            {
+              "display": "インターネットによって、世界中（せかいじゅう）の情報（じょうほう）を簡単（かんたん）に得（え）られるようになった。",
+              "tts": "インターネットによって、世界中の情報を簡単に得られるようになった。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day004-g3",
+          "knowledgeId": "g-上で",
+          "mode": "new",
+          "form": {
+            "display": "～上（うえ）で",
+            "tts": "上で",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "在……之后／在做……方面。",
+          "explanationZh": "今天重点掌握 Vた＋上で＝认真完成A之后，以此为前提再做B。",
+          "examples": [
+            {
+              "display": "十分（じゅうぶん）に内容（ないよう）を確認（かくにん）した上（うえ）で、判断（はんだん）してください。",
+              "tts": "十分に内容を確認した上で、判断してください。",
+              "lang": "ja-JP",
+              "translationZh": "请在充分确认内容之后再作判断。"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "review": {
+        "instructionsZh": "按 D+1 / D+3 复习；3秒说出读音与意思。记录真实红黄绿，再做原正式课程中的重点抽测。D+7 从 Day 008 起到期。",
+        "intervals": [
+          {
+            "offsetDays": 1,
+            "sourceDay": 3,
+            "vocabularyIds": [
+              "v-原因",
+              "v-結果",
+              "v-増加",
+              "v-減少",
+              "v-程度",
+              "v-範囲",
+              "v-現象",
+              "v-解決",
+              "v-防止",
+              "v-予測",
+              "v-及ぼす",
+              "v-確かめる",
+              "v-必ずしも"
+            ],
+            "grammarIds": [
+              "g-につれて",
+              "g-に対して",
+              "g-ことから",
+              "g-とは限らない"
+            ]
+          },
+          {
+            "offsetDays": 3,
+            "sourceDay": 1,
+            "vocabularyIds": [
+              "v-維持",
+              "v-改善",
+              "v-避ける",
+              "v-省く",
+              "v-補う",
+              "v-伴う",
+              "v-傾向",
+              "v-影響",
+              "v-状況",
+              "v-対象",
+              "v-適切",
+              "v-明らか",
+              "v-比較",
+              "v-判断",
+              "v-取り組む",
+              "v-一方"
+            ],
+            "grammarIds": [
+              "g-わけではない",
+              "g-に違いない",
+              "g-に伴って",
+              "g-一方で"
+            ]
+          }
+        ]
+      },
+      "reading": {
+        "id": "day004-reading",
+        "timeLimitSeconds": 90,
+        "text": {
+          "display": "災害（さいがい）への対策（たいさく）を考（かんが）える場合（ばあい）、すべての地域（ちいき）で同（おな）じ方法（ほうほう）を使（つか）えばよいとは限（かぎ）らない。地域（ちいき）によって、人口（じんこう）や建物（たてもの）、自然環境（しぜんかんきょう）などの条件（じょうけん）が異（こと）なるからである。そのため、それぞれの地域（ちいき）の状況（じょうきょう）を十分（じゅうぶん）に調査（ちょうさ）した上（うえ）で、適切（てきせつ）な対策（たいさく）を選（えら）ぶ必要（ひつよう）がある。",
+          "tts": "災害への対策を考える場合、すべての地域で同じ方法を使えばよいとは限らない。地域によって、人口や建物、自然環境などの条件が異なるからである。そのため、それぞれの地域の状況を十分に調査した上で、適切な対策を選ぶ必要がある。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "questions": [
+          {
+            "id": "day004-rq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "作者（さくしゃ）の考（かんが）えに最（もっと）も近（ちか）いものはどれですか。",
+              "tts": "作者の考えに最も近いものはどれですか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "災害対策（さいがいたいさく）は全国（ぜんこく）で同（おな）じにするべきだ。",
+                  "tts": "災害対策は全国で同じにするべきだ。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "地域（ちいき）の状況（じょうきょう）を調（しら）べてから対策（たいさく）を決（き）めるべきだ。",
+                  "tts": "地域の状況を調べてから対策を決めるべきだ。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "自然環境（しぜんかんきょう）だけを調（しら）べればよい。",
+                  "tts": "自然環境だけを調べればよい。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "B",
+            "explanationZh": "答案：B。"
+          }
+        ],
+        "secondPass": [
+          "核对原文依据",
+          "点击日语听读",
+          "不看原文复述"
+        ]
+      },
+      "speaking": {
+        "id": "day004-speaking",
+        "prompt": {
+          "display": "災害（さいがい）に備（そな）えるために、何（なに）をしたほうがいいと思（おも）いますか。",
+          "tts": "災害に備えるために、何をしたほうがいいと思いますか。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "instructionsZh": "每个人3分钟，对方至少追问3次。至少主动使用4个：～によって／～に応じて／～とは限らない／～上で／～に基づいて／～おそれがある。",
+        "models": [
+          {
+            "display": "地域によって、必要な対策は異なると思います。災害が起こるおそれがあるので、普段から水や食べ物を準備しておいたほうがいいです。",
+            "tts": "地域によって、必要な対策は異なると思います。災害が起こるおそれがあるので、普段から水や食べ物を準備しておいたほうがいいです。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ],
+        "followUps": []
+      },
+      "recap": {
+        "instructionsZh": "目前累计：52个词＋15个N2语法。\n今晚不把52词全部重背，只处理今天测试中的△和×。\n两个人各自随机抽10词＋5语法考对方。\n词汇要求：看汉字→3秒内读音→中文意思→最好说一个搭配。\n语法要求：看到结构→立即知道意思→10秒内造句。"
+      }
+    },
+    {
+      "id": "day005",
+      "day": 5,
+      "week": 1,
+      "date": "2026-08-31",
+      "title": "学习效率与任务听力",
+      "schemaVersion": "2.1.0",
+      "source": {
+        "url": "https://app.notion.com/p/3ce150b3422281dc8fc4fbd1fe0c375a?pvs=204",
+        "title": "5️⃣ Day 5｜N2 双人冲刺",
+        "archive": "docs/course-sources/day005.md"
+      },
+      "goalsZh": [
+        "8月最后一天，也是9月正式冲刺前的最后一个过渡日。",
+        "恢复工作日强度，重点为：旧知识回收→14个新词→4个新语法→N2听力→双人口语输出。",
+        "从今天开始正式加入：学习时看假名，测试时只看汉字。",
+        "预计时间：约110分钟。"
+      ],
+      "scheduledMinutes": 110,
+      "sourceEstimatedMinutes": 110,
+      "counts": {
+        "newVocabulary": 13,
+        "reviewVocabulary": 1
+      },
+      "modules": [
+        {
+          "durationMinutes": 15,
+          "type": "review"
+        },
+        {
+          "type": "source",
+          "title": "正式重点复习",
+          "durationMinutes": 0,
+          "blocks": [
+            {
+              "text": "测试版：两个人轮流完成，每个词3秒内说出「读音＋意思」。",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "省く　補う　伴う　取り組む　認める　異なる　優れる　占める　生じる　及ぼす　確かめる　抑える　備える　考慮　範囲",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "省く",
+                  "tts": "はぶく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "補う",
+                  "tts": "おぎなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "伴う",
+                  "tts": "ともなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り組む",
+                  "tts": "とりくむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "認める",
+                  "tts": "みとめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "異なる",
+                  "tts": "ことなる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "優れる",
+                  "tts": "すぐれる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "占める",
+                  "tts": "しめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "生じる",
+                  "tts": "しょうじる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "範囲",
+                  "tts": "はんい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "及ぼす",
+                  "tts": "およぼす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "確かめる",
+                  "tts": "たしかめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "考慮",
+                  "tts": "こうりょ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "抑える",
+                  "tts": "おさえる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "備える",
+                  "tts": "そなえる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "核对：省（はぶ）く／補（おぎな）う／伴（ともな）う／取（と）り組（く）む／認（みと）める／異（こと）なる／優（すぐ）れる／占（し）める／生（しょう）じる／及（およ）ぼす／確（たし）かめる／抑（おさ）える／備（そな）える／考慮（こうりょ）／範囲（はんい）。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "省（はぶ）く／補（おぎな）う／伴（ともな）う／取（と）り組（く）む／認（みと）める／異（こと）なる／優（すぐ）れる／占（し）める／生（しょう）じる／及（およ）ぼす／確（たし）かめる／抑（おさ）える／備（そな）える／考慮（こうりょ）／範囲（はんい）。",
+                  "tts": "省く／補う／伴う／取り組む／認める／異なる／優れる／占める／生じる／及ぼす／確かめる／抑える／備える／考慮／範囲。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "範囲",
+                  "tts": "はんい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "考慮",
+                  "tts": "こうりょ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "○＝3秒内答出；△＝答对但超过3秒；×＝错误。△和×今晚重新测试。",
+              "heading": false,
+              "japanese": []
+            }
+          ],
+          "withinPreviousModule": true
+        },
+        {
+          "durationMinutes": 25,
+          "type": "vocabulary"
+        },
+        {
+          "type": "source",
+          "title": "词汇辨析",
+          "durationMinutes": 0,
+          "withinPreviousModule": true,
+          "blocks": [
+            {
+              "text": "> 注：原正式版列表中「達成」重复出现了一次，因此实际新增为14个词，不额外补词，把时间留给旧词回收。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "達成",
+                  "tts": "たっせい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "重点： 促（うなが）す。属于很容易“认识汉字但不会读”的词。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "促（うなが）す。",
+                  "tts": "促す。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "durationMinutes": 25,
+          "type": "grammar"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "listening"
+        },
+        {
+          "durationMinutes": 10,
+          "type": "responses",
+          "id": "day005-responses",
+          "tasks": [
+            {
+              "prompt": {
+                "display": "悪いけど、この資料をコピーしておいてくれない？",
+                "tts": "悪いけど、この資料をコピーしておいてくれない？",
+                "lang": "ja-JP",
+                "translationZh": null
+              },
+              "answer": {
+                "display": "はい、分（わ）かりました。何部（なんぶ）必要（ひつよう）ですか。",
+                "tts": "はい、分かりました。何部必要ですか。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "prompt": {
+                "display": "今日の飲み会、参加できそう？",
+                "tts": "今日の飲み会、参加できそう？",
+                "lang": "ja-JP",
+                "translationZh": null
+              },
+              "answer": {
+                "display": "すみません、今日（きょう）はちょっと難（むずか）しそうです。",
+                "tts": "すみません、今日はちょっと難しそうです。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "prompt": {
+                "display": "窓、開けてもいい？",
+                "tts": "窓、開けてもいい？",
+                "lang": "ja-JP",
+                "translationZh": null
+              },
+              "answer": {
+                "display": "うん、いいよ。／ごめん、ちょっと寒（さむ）いから、閉（し）めたままにしてくれる？",
+                "tts": "うん、いいよ。／ごめん、ちょっと寒いから、閉めたままにしてくれる？",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            }
+          ],
+          "instructionsZh": "先听题目，立即用日语回答，再查看原正式示范。两人交换角色。"
+        },
+        {
+          "durationMinutes": 10,
+          "type": "speaking"
+        },
+        {
+          "durationMinutes": 5,
+          "type": "recap"
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "day005-v1",
+          "knowledgeId": "v-実施",
+          "mode": "new",
+          "word": {
+            "display": "実施",
+            "tts": "じっし",
+            "lang": "ja-JP",
+            "translationZh": "实施"
+          },
+          "reading": "じっし",
+          "collocations": [
+            {
+              "id": "day005-c1",
+              "text": {
+                "display": "計画（けいかく）を実施（じっし）する",
+                "tts": "計画を実施する",
+                "lang": "ja-JP",
+                "translationZh": "实施计划"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v2",
+          "knowledgeId": "v-検討",
+          "mode": "new",
+          "word": {
+            "display": "検討",
+            "tts": "けんとう",
+            "lang": "ja-JP",
+            "translationZh": "研究、讨论、考虑"
+          },
+          "reading": "けんとう",
+          "collocations": [
+            {
+              "id": "day005-c2",
+              "text": {
+                "display": "対策（たいさく）を検討（けんとう）する",
+                "tts": "対策を検討する",
+                "lang": "ja-JP",
+                "translationZh": "研究、考虑对策"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v3",
+          "knowledgeId": "v-把握",
+          "mode": "new",
+          "word": {
+            "display": "把握",
+            "tts": "はあく",
+            "lang": "ja-JP",
+            "translationZh": "掌握、了解"
+          },
+          "reading": "はあく",
+          "collocations": [
+            {
+              "id": "day005-c3",
+              "text": {
+                "display": "状況（じょうきょう）を把握（はあく）する",
+                "tts": "状況を把握する",
+                "lang": "ja-JP",
+                "translationZh": "掌握情况"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v4",
+          "knowledgeId": "v-継続",
+          "mode": "new",
+          "word": {
+            "display": "継続",
+            "tts": "けいぞく",
+            "lang": "ja-JP",
+            "translationZh": "继续、持续"
+          },
+          "reading": "けいぞく",
+          "collocations": [
+            {
+              "id": "day005-c4",
+              "text": {
+                "display": "調査（ちょうさ）を継続（けいぞく）する",
+                "tts": "調査を継続する",
+                "lang": "ja-JP",
+                "translationZh": "继续调查"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v5",
+          "knowledgeId": "v-達成",
+          "mode": "new",
+          "word": {
+            "display": "達成",
+            "tts": "たっせい",
+            "lang": "ja-JP",
+            "translationZh": "达成"
+          },
+          "reading": "たっせい",
+          "collocations": [
+            {
+              "id": "day005-c5",
+              "text": {
+                "display": "目標（もくひょう）を達成（たっせい）する",
+                "tts": "目標を達成する",
+                "lang": "ja-JP",
+                "translationZh": "达成目标"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v6",
+          "knowledgeId": "v-改める",
+          "mode": "new",
+          "word": {
+            "display": "改める",
+            "tts": "あらためる",
+            "lang": "ja-JP",
+            "translationZh": "改变、改正、重新"
+          },
+          "reading": "あらためる",
+          "collocations": [
+            {
+              "id": "day005-c6",
+              "text": {
+                "display": "方法（ほうほう）を改（あらた）める",
+                "tts": "方法を改める",
+                "lang": "ja-JP",
+                "translationZh": "改变方法"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v7",
+          "knowledgeId": "v-促す",
+          "mode": "new",
+          "word": {
+            "display": "促す",
+            "tts": "うながす",
+            "lang": "ja-JP",
+            "translationZh": "促进、催促"
+          },
+          "reading": "うながす",
+          "collocations": [
+            {
+              "id": "day005-c7",
+              "text": {
+                "display": "利用（りよう）を促（うなが）す",
+                "tts": "利用を促す",
+                "lang": "ja-JP",
+                "translationZh": "促进使用"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v8",
+          "knowledgeId": "v-防止",
+          "mode": "review",
+          "word": {
+            "display": "防止",
+            "tts": "ぼうし",
+            "lang": "ja-JP",
+            "translationZh": "防止"
+          },
+          "reading": "ぼうし",
+          "collocations": [
+            {
+              "id": "day005-c8",
+              "text": {
+                "display": "事故（じこ）を防止（ぼうし）する",
+                "tts": "事故を防止する",
+                "lang": "ja-JP",
+                "translationZh": "防止事故"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v9",
+          "knowledgeId": "v-削減",
+          "mode": "new",
+          "word": {
+            "display": "削減",
+            "tts": "さくげん",
+            "lang": "ja-JP",
+            "translationZh": "削减"
+          },
+          "reading": "さくげん",
+          "collocations": [
+            {
+              "id": "day005-c9",
+              "text": {
+                "display": "費用（ひよう）を削減（さくげん）する",
+                "tts": "費用を削減する",
+                "lang": "ja-JP",
+                "translationZh": "削减费用"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v10",
+          "knowledgeId": "v-拡大",
+          "mode": "new",
+          "word": {
+            "display": "拡大",
+            "tts": "かくだい",
+            "lang": "ja-JP",
+            "translationZh": "扩大"
+          },
+          "reading": "かくだい",
+          "collocations": [
+            {
+              "id": "day005-c10",
+              "text": {
+                "display": "対象（たいしょう）を拡大（かくだい）する",
+                "tts": "対象を拡大する",
+                "lang": "ja-JP",
+                "translationZh": "扩大对象范围"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v11",
+          "knowledgeId": "v-縮小",
+          "mode": "new",
+          "word": {
+            "display": "縮小",
+            "tts": "しゅくしょう",
+            "lang": "ja-JP",
+            "translationZh": "缩小"
+          },
+          "reading": "しゅくしょう",
+          "collocations": [
+            {
+              "id": "day005-c11",
+              "text": {
+                "display": "規模（きぼ）を縮小（しゅくしょう）する",
+                "tts": "規模を縮小する",
+                "lang": "ja-JP",
+                "translationZh": "缩小规模"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v12",
+          "knowledgeId": "v-導入",
+          "mode": "new",
+          "word": {
+            "display": "導入",
+            "tts": "どうにゅう",
+            "lang": "ja-JP",
+            "translationZh": "引进、导入"
+          },
+          "reading": "どうにゅう",
+          "collocations": [
+            {
+              "id": "day005-c12",
+              "text": {
+                "display": "新（あたら）しい制度（せいど）を導入（どうにゅう）する",
+                "tts": "新しい制度を導入する",
+                "lang": "ja-JP",
+                "translationZh": "引入新制度"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v13",
+          "knowledgeId": "v-従う",
+          "mode": "new",
+          "word": {
+            "display": "従う",
+            "tts": "したがう",
+            "lang": "ja-JP",
+            "translationZh": "遵从；随着"
+          },
+          "reading": "したがう",
+          "collocations": [
+            {
+              "id": "day005-c13",
+              "text": {
+                "display": "指示（しじ）に従（したが）う",
+                "tts": "指示に従う",
+                "lang": "ja-JP",
+                "translationZh": "遵从指示"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day005-v14",
+          "knowledgeId": "v-効率",
+          "mode": "new",
+          "word": {
+            "display": "効率",
+            "tts": "こうりつ",
+            "lang": "ja-JP",
+            "translationZh": "效率"
+          },
+          "reading": "こうりつ",
+          "collocations": []
+        }
+      ],
+      "collocations": [
+        {
+          "id": "day005-c1",
+          "text": {
+            "display": "計画（けいかく）を実施（じっし）する",
+            "tts": "計画を実施する",
+            "lang": "ja-JP",
+            "translationZh": "实施计划"
+          }
+        },
+        {
+          "id": "day005-c2",
+          "text": {
+            "display": "対策（たいさく）を検討（けんとう）する",
+            "tts": "対策を検討する",
+            "lang": "ja-JP",
+            "translationZh": "研究、考虑对策"
+          }
+        },
+        {
+          "id": "day005-c3",
+          "text": {
+            "display": "状況（じょうきょう）を把握（はあく）する",
+            "tts": "状況を把握する",
+            "lang": "ja-JP",
+            "translationZh": "掌握情况"
+          }
+        },
+        {
+          "id": "day005-c4",
+          "text": {
+            "display": "調査（ちょうさ）を継続（けいぞく）する",
+            "tts": "調査を継続する",
+            "lang": "ja-JP",
+            "translationZh": "继续调查"
+          }
+        },
+        {
+          "id": "day005-c5",
+          "text": {
+            "display": "目標（もくひょう）を達成（たっせい）する",
+            "tts": "目標を達成する",
+            "lang": "ja-JP",
+            "translationZh": "达成目标"
+          }
+        },
+        {
+          "id": "day005-c6",
+          "text": {
+            "display": "方法（ほうほう）を改（あらた）める",
+            "tts": "方法を改める",
+            "lang": "ja-JP",
+            "translationZh": "改变方法"
+          }
+        },
+        {
+          "id": "day005-c7",
+          "text": {
+            "display": "利用（りよう）を促（うなが）す",
+            "tts": "利用を促す",
+            "lang": "ja-JP",
+            "translationZh": "促进使用"
+          }
+        },
+        {
+          "id": "day005-c8",
+          "text": {
+            "display": "事故（じこ）を防止（ぼうし）する",
+            "tts": "事故を防止する",
+            "lang": "ja-JP",
+            "translationZh": "防止事故"
+          }
+        },
+        {
+          "id": "day005-c9",
+          "text": {
+            "display": "費用（ひよう）を削減（さくげん）する",
+            "tts": "費用を削減する",
+            "lang": "ja-JP",
+            "translationZh": "削减费用"
+          }
+        },
+        {
+          "id": "day005-c10",
+          "text": {
+            "display": "対象（たいしょう）を拡大（かくだい）する",
+            "tts": "対象を拡大する",
+            "lang": "ja-JP",
+            "translationZh": "扩大对象范围"
+          }
+        },
+        {
+          "id": "day005-c11",
+          "text": {
+            "display": "規模（きぼ）を縮小（しゅくしょう）する",
+            "tts": "規模を縮小する",
+            "lang": "ja-JP",
+            "translationZh": "缩小规模"
+          }
+        },
+        {
+          "id": "day005-c12",
+          "text": {
+            "display": "新（あたら）しい制度（せいど）を導入（どうにゅう）する",
+            "tts": "新しい制度を導入する",
+            "lang": "ja-JP",
+            "translationZh": "引入新制度"
+          }
+        },
+        {
+          "id": "day005-c13",
+          "text": {
+            "display": "指示（しじ）に従（したが）う",
+            "tts": "指示に従う",
+            "lang": "ja-JP",
+            "translationZh": "遵从指示"
+          }
+        }
+      ],
+      "grammar": [
+        {
+          "id": "day005-g1",
+          "knowledgeId": "g-にしたがって",
+          "mode": "new",
+          "form": {
+            "display": "～にしたがって",
+            "tts": "にしたがって",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "随着……；按照……。",
+          "explanationZh": "A逐渐变化，B也跟着变化；与「～につれて」非常接近。",
+          "examples": [
+            {
+              "display": "気温（きおん）が上（あ）がるにしたがって、電力（でんりょく）の使用量（しようりょう）も増（ふ）えていく。",
+              "tts": "気温が上がるにしたがって、電力の使用量も増えていく。",
+              "lang": "ja-JP",
+              "translationZh": "随着气温升高，用电量也逐渐增加。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day005-g2",
+          "knowledgeId": "g-ために",
+          "mode": "new",
+          "form": {
+            "display": "～ために",
+            "tts": "ために",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "为了……（目的）。；因为……（原因）。",
+          "explanationZh": "N2常考它究竟表示目的还是原因。",
+          "examples": [
+            {
+              "display": "日本（にほん）で働（はたら）くために、日本語（にほんご）を勉強（べんきょう）しています。",
+              "tts": "日本で働くために、日本語を勉強しています。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            {
+              "display": "大雨（おおあめ）のために、電車（でんしゃ）が遅（おく）れました。",
+              "tts": "大雨のために、電車が遅れました。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day005-g3",
+          "knowledgeId": "g-ことによって",
+          "mode": "new",
+          "form": {
+            "display": "～ことによって",
+            "tts": "ことによって",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "通过……；由于……而……。",
+          "explanationZh": "",
+          "examples": [
+            {
+              "display": "毎日（まいにち）日本語（にほんご）を聞（き）くことによって、少（すこ）しずつ聞（き）き取（と）れるようになった。",
+              "tts": "毎日日本語を聞くことによって、少しずつ聞き取れるようになった。",
+              "lang": "ja-JP",
+              "translationZh": "通过每天听日语，逐渐变得能够听懂了。"
+            }
+          ],
+          "notes": [
+            {
+              "explanationZh": "重点词： 聞（き）き取（と）る＝听懂、听清楚。",
+              "texts": []
+            }
+          ]
+        },
+        {
+          "id": "day005-g4",
+          "knowledgeId": "g-だけでなく",
+          "mode": "new",
+          "form": {
+            "display": "～だけでなく",
+            "tts": "だけでなく",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "不仅……而且……。",
+          "explanationZh": "最好整体记成「Aだけでなく、Bも……」。",
+          "examples": [
+            {
+              "display": "この方法（ほうほう）は費用（ひよう）を削減（さくげん）できるだけでなく、エネルギーの使用量（しようりょう）も抑（おさ）えることができる。",
+              "tts": "この方法は費用を削減できるだけでなく、エネルギーの使用量も抑えることができる。",
+              "lang": "ja-JP",
+              "translationZh": "这种方法不仅能够削减费用，还能够降低能源使用量。"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "review": {
+        "instructionsZh": "按 D+1 / D+3 复习；3秒说出读音与意思。记录真实红黄绿，再做原正式课程中的重点抽测。D+7 从 Day 008 起到期。",
+        "intervals": [
+          {
+            "offsetDays": 1,
+            "sourceDay": 4,
+            "vocabularyIds": [
+              "v-対策",
+              "v-条件",
+              "v-効果",
+              "v-負担",
+              "v-目的",
+              "v-手段",
+              "v-適用",
+              "v-考慮",
+              "v-抑える",
+              "v-備える"
+            ],
+            "grammarIds": [
+              "g-に比べて",
+              "g-によって",
+              "g-上で"
+            ]
+          },
+          {
+            "offsetDays": 3,
+            "sourceDay": 2,
+            "vocabularyIds": [
+              "v-確認",
+              "v-認める",
+              "v-求める",
+              "v-防ぐ",
+              "v-含む",
+              "v-限る",
+              "v-異なる",
+              "v-優れる",
+              "v-達する",
+              "v-占める",
+              "v-得る",
+              "v-生じる",
+              "v-示す",
+              "v-基づく",
+              "v-応じる"
+            ],
+            "grammarIds": [
+              "g-に基づいて",
+              "g-に応じて",
+              "g-おそれがある",
+              "g-にすぎない"
+            ]
+          }
+        ]
+      },
+      "listening": {
+        "id": "day005-listening",
+        "instructionsZh": "今天练N2重要能力：不要试图听懂每个词，而是抓“最后决定做什么”。",
+        "tts": "明日の会議で使う資料なんだけど、まだ全部できていないんだ。私は午前中、別の仕事があるから、悪いけどグラフの部分を作ってもらえない？文章のところは私が午後までに完成させるから。",
+        "question": {
+          "id": "day005-lq1",
+          "type": "single_choice",
+          "prompt": {
+            "display": "頼（たの）まれた人（ひと）は何（なに）をしますか。",
+            "tts": "頼まれた人は何をしますか。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "display": "会議（かいぎ）に出（で）る。",
+                "tts": "会議に出る。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "display": "グラフを作（つく）る。",
+                "tts": "グラフを作る。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "display": "文章（ぶんしょう）を書く。",
+                "tts": "文章を書く。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            }
+          ],
+          "answer": "B",
+          "explanationZh": "答案：B。"
+        },
+        "questions": [
+          {
+            "id": "day005-lq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "頼（たの）まれた人（ひと）は何（なに）をしますか。",
+              "tts": "頼まれた人は何をしますか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "会議（かいぎ）に出（で）る。",
+                  "tts": "会議に出る。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "グラフを作（つく）る。",
+                  "tts": "グラフを作る。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "文章（ぶんしょう）を書く。",
+                  "tts": "文章を書く。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "B",
+            "explanationZh": "答案：B。"
+          }
+        ],
+        "segments": [
+          {
+            "text": {
+              "display": "明日（あした）の会議（かいぎ）で使（つか）う資料（しりょう）なんだけど、まだ全部（ぜんぶ）できていないんだ。私（わたし）は午前中（ごぜんちゅう）、別（べつ）の仕事（しごと）があるから、悪（わる）いけどグラフの部分（ぶぶん）を作（つく）ってもらえない？文章（ぶんしょう）のところは私（わたし）が午後（ごご）までに完成（かんせい）させるから。",
+              "tts": "明日の会議で使う資料なんだけど、まだ全部できていないんだ。私は午前中、別の仕事があるから、悪いけどグラフの部分を作ってもらえない？文章のところは私が午後までに完成させるから。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          }
+        ],
+        "retellingInstructionsZh": "听力抓手： ～てもらえない？＝“能不能帮我……？” 出现时立刻提高注意力。",
+        "followUps": []
+      },
+      "speaking": {
+        "id": "day005-speaking",
+        "prompt": {
+          "display": "日本語（にほんご）が上手（じょうず）になるために、何（なに）が一番（いちばん）重要（じゅうよう）だと思（おも）いますか。",
+          "tts": "日本語が上手になるために、何が一番重要だと思いますか。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "instructionsZh": "每个人2分钟。必须主动使用至少3个：～ために／～ことによって／～だけでなく／～につれて或～にしたがって／～一方で。",
+        "models": [
+          {
+            "display": "日本語（にほんご）が上手（じょうず）になるために、毎日（まいにち）日本語（にほんご）を使（つか）うことが大切（たいせつ）だと思（おも）います。",
+            "tts": "日本語が上手になるために、毎日日本語を使うことが大切だと思います。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "単語（たんご）を覚（おぼ）えるだけでなく、実際（じっさい）に話（はな）すことも必要（ひつよう）です。",
+            "tts": "単語を覚えるだけでなく、実際に話すことも必要です。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          {
+            "display": "毎日（まいにち）練習（れんしゅう）することによって、少（すこ）しずつ日本語（にほんご）に慣（な）れていくと思（おも）います。",
+            "tts": "毎日練習することによって、少しずつ日本語に慣れていくと思います。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ],
+        "followUps": []
+      },
+      "recap": {
+        "instructionsZh": "只重新测试开头标记为△／×的词，不重背全部词。\n两个人随机互考今天4个语法：～にしたがって／～ために／～ことによって／～だけでなく。\n要求：看到语法→立即说意思→10秒内造句。\n今天结束后累计约66个核心词＋19个语法。\n从明天起正式进入9月基础强化期，开始稳定加入D+1、D+3、D+7间隔复习。"
+      }
+    },
+    {
+      "id": "day006",
+      "day": 6,
+      "week": 1,
+      "date": "2026-09-01",
+      "title": "工作方式与效率",
+      "schemaVersion": "2.1.0",
+      "source": {
+        "url": "https://app.notion.com/p/3ce150b3422281dd9b9ce60983bf6b95?pvs=204",
+        "title": "🇯🇵 Day 006｜N2 双人冲刺",
+        "archive": "docs/course-sources/day006.md"
+      },
+      "goalsZh": [
+        "目标：进入9月基础强化期，但先控制新知识量，优先回收 Day 001–005 的易混词和语法。",
+        "预计时间：约115分钟。",
+        "重点：旧词快速提取、近义语法辨析、12个新词、3个N2语法、90秒阅读、任务型听力、双人口语。"
+      ],
+      "scheduledMinutes": 120,
+      "sourceEstimatedMinutes": 115,
+      "counts": {
+        "newVocabulary": 12,
+        "reviewVocabulary": 0
+      },
+      "modules": [
+        {
+          "durationMinutes": 20,
+          "type": "review"
+        },
+        {
+          "type": "source",
+          "title": "正式重点复习",
+          "durationMinutes": 0,
+          "blocks": [
+            {
+              "text": "词汇无注音测试",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "两人轮流看汉字，3秒内完成“读音＋中文意思”：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "省く　補う　伴う　取り組む　占める　示す　生じる　及ぼす　抑える　備える　促す　把握　検討　導入",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "省く",
+                  "tts": "はぶく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "補う",
+                  "tts": "おぎなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "伴う",
+                  "tts": "ともなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り組む",
+                  "tts": "とりくむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "占める",
+                  "tts": "しめる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "生じる",
+                  "tts": "しょうじる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "示す",
+                  "tts": "しめす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "及ぼす",
+                  "tts": "およぼす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "抑える",
+                  "tts": "おさえる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "備える",
+                  "tts": "そなえる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "検討",
+                  "tts": "けんとう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "把握",
+                  "tts": "はあく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "促す",
+                  "tts": "うながす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "導入",
+                  "tts": "どうにゅう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "核对重点：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "省（はぶ）く＝省略",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "省（はぶ）く",
+                  "tts": "省く",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "補（おぎな）う＝弥补",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "補（おぎな）う",
+                  "tts": "補う",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "伴（ともな）う＝伴随",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "伴（ともな）う",
+                  "tts": "伴う",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "占（し）める＝占据；示（しめ）す＝显示",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "占（し）める",
+                  "tts": "占める",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "示（しめ）す",
+                  "tts": "示す",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "生（しょう）じる＝产生",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "生（しょう）じる",
+                  "tts": "生じる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "及（およ）ぼす＝造成、施加",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "及（およ）ぼす",
+                  "tts": "及ぼす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "抑（おさ）える＝抑制",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "抑（おさ）える",
+                  "tts": "抑える",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "備（そな）える＝准备、防备",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "備（そな）える",
+                  "tts": "備える",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "促（うなが）す＝促进、催促",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "促（うなが）す",
+                  "tts": "促す",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "把握（はあく）＝掌握",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "把握（はあく）",
+                  "tts": "把握",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "把握",
+                  "tts": "はあく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "评分：🟢3秒内正确；🟡正确但慢；🔴不会、读错或理解错。🟡🔴进入 Day 007。",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "语法三组辨析",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "1. ～につれて／～に伴って／～にしたがって：都可表达随变化而变化；～に伴って也常用于伴随某事件或变化产生另一变化。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "したがって",
+                  "tts": "したがって",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～に伴って",
+                  "tts": "に伴って",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～につれて",
+                  "tts": "につれて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～にしたがって",
+                  "tts": "にしたがって",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "2. ～わけではない／～とは限らない：前者否定某种理解或结论；后者强调“未必总是如此”。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "否定",
+                  "tts": "ひてい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～わけではない",
+                  "tts": "わけではない",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～とは限らない",
+                  "tts": "とは限らない",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "3. ～に応じて／～に基づいて：前者是根据情况相应调整；后者是以资料、规则、事实等为依据。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に基づいて",
+                  "tts": "に基づいて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～に応じて",
+                  "tts": "に応じて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ],
+          "withinPreviousModule": true
+        },
+        {
+          "durationMinutes": 25,
+          "type": "vocabulary"
+        },
+        {
+          "type": "source",
+          "title": "词汇辨析",
+          "durationMinutes": 0,
+          "withinPreviousModule": true,
+          "blocks": [
+            {
+              "text": "易混说明",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "削減（さくげん）する偏正式、书面；削（けず）る使用范围更广。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "削減（さくげん）する",
+                  "tts": "削減する",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "削（けず）る",
+                  "tts": "削る",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "削減",
+                  "tts": "さくげん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "導入（どうにゅう）する和取（と）り入（い）れる都可表示引进；前者更正式，后者也有“吸收意见、方法”的感觉。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "導入（どうにゅう）する和取（と）り入（い）れる",
+                  "tts": "導入する和取り入れる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "導入",
+                  "tts": "どうにゅう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "占（し）める“占据”与占（うらな）う“占卜/预测”读音完全不同。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "占（し）める",
+                  "tts": "占める",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "与占（うらな）う",
+                  "tts": "与占う",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "durationMinutes": 25,
+          "type": "grammar"
+        },
+        {
+          "durationMinutes": 20,
+          "type": "reading"
+        },
+        {
+          "durationMinutes": 15,
+          "type": "listening"
+        },
+        {
+          "durationMinutes": 10,
+          "type": "speaking"
+        },
+        {
+          "durationMinutes": 5,
+          "type": "recap"
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "day006-v1",
+          "knowledgeId": "v-維持費",
+          "mode": "new",
+          "word": {
+            "display": "維持費",
+            "tts": "いじひ",
+            "lang": "ja-JP",
+            "translationZh": "维护费用"
+          },
+          "reading": "いじひ",
+          "collocations": []
+        },
+        {
+          "id": "day006-v2",
+          "knowledgeId": "v-普及",
+          "mode": "new",
+          "word": {
+            "display": "普及",
+            "tts": "ふきゅう",
+            "lang": "ja-JP",
+            "translationZh": "普及"
+          },
+          "reading": "ふきゅう",
+          "collocations": []
+        },
+        {
+          "id": "day006-v3",
+          "knowledgeId": "v-需要",
+          "mode": "new",
+          "word": {
+            "display": "需要",
+            "tts": "じゅよう",
+            "lang": "ja-JP",
+            "translationZh": "需求"
+          },
+          "reading": "じゅよう",
+          "collocations": [
+            {
+              "id": "day006-c1",
+              "text": {
+                "display": "需要（じゅよう）が増（ふ）える",
+                "tts": "需要が増える",
+                "lang": "ja-JP",
+                "translationZh": "需求增加"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v4",
+          "knowledgeId": "v-供給",
+          "mode": "new",
+          "word": {
+            "display": "供給",
+            "tts": "きょうきゅう",
+            "lang": "ja-JP",
+            "translationZh": "供给"
+          },
+          "reading": "きょうきゅう",
+          "collocations": [
+            {
+              "id": "day006-c2",
+              "text": {
+                "display": "電力（でんりょく）を供給（きょうきゅう）する",
+                "tts": "電力を供給する",
+                "lang": "ja-JP",
+                "translationZh": "供应电力"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v5",
+          "knowledgeId": "v-削る",
+          "mode": "new",
+          "word": {
+            "display": "削る",
+            "tts": "けずる",
+            "lang": "ja-JP",
+            "translationZh": "削减；削、刮"
+          },
+          "reading": "けずる",
+          "collocations": [
+            {
+              "id": "day006-c3",
+              "text": {
+                "display": "費用（ひよう）を削（けず）る",
+                "tts": "費用を削る",
+                "lang": "ja-JP",
+                "translationZh": "削减费用"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v6",
+          "knowledgeId": "v-占う",
+          "mode": "new",
+          "word": {
+            "display": "占う",
+            "tts": "うらなう",
+            "lang": "ja-JP",
+            "translationZh": "占卜；预测"
+          },
+          "reading": "うらなう",
+          "collocations": []
+        },
+        {
+          "id": "day006-v7",
+          "knowledgeId": "v-見込む",
+          "mode": "new",
+          "word": {
+            "display": "見込む",
+            "tts": "みこむ",
+            "lang": "ja-JP",
+            "translationZh": "预期；估计；看中"
+          },
+          "reading": "みこむ",
+          "collocations": []
+        },
+        {
+          "id": "day006-v8",
+          "knowledgeId": "v-見直す",
+          "mode": "new",
+          "word": {
+            "display": "見直す",
+            "tts": "みなおす",
+            "lang": "ja-JP",
+            "translationZh": "重新审视；重新评价"
+          },
+          "reading": "みなおす",
+          "collocations": [
+            {
+              "id": "day006-c5",
+              "text": {
+                "display": "制度（せいど）を見直（みなお）す",
+                "tts": "制度を見直す",
+                "lang": "ja-JP",
+                "translationZh": "重新审视制度"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v9",
+          "knowledgeId": "v-取り入れる",
+          "mode": "new",
+          "word": {
+            "display": "取り入れる",
+            "tts": "とりいれる",
+            "lang": "ja-JP",
+            "translationZh": "采用；引进；吸收"
+          },
+          "reading": "とりいれる",
+          "collocations": [
+            {
+              "id": "day006-c6",
+              "text": {
+                "display": "新（あたら）しい技術（ぎじゅつ）を取（と）り入（い）れる",
+                "tts": "新しい技術を取り入れる",
+                "lang": "ja-JP",
+                "translationZh": "采用新技术"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v10",
+          "knowledgeId": "v-取り除く",
+          "mode": "new",
+          "word": {
+            "display": "取り除く",
+            "tts": "とりのぞく",
+            "lang": "ja-JP",
+            "translationZh": "去除"
+          },
+          "reading": "とりのぞく",
+          "collocations": [
+            {
+              "id": "day006-c7",
+              "text": {
+                "display": "原因（げんいん）を取（と）り除（のぞ）く",
+                "tts": "原因を取り除く",
+                "lang": "ja-JP",
+                "translationZh": "消除原因"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v11",
+          "knowledgeId": "v-著しい",
+          "mode": "new",
+          "word": {
+            "display": "著しい",
+            "tts": "いちじるしい",
+            "lang": "ja-JP",
+            "translationZh": "显著的"
+          },
+          "reading": "いちじるしい",
+          "collocations": [
+            {
+              "id": "day006-c8",
+              "text": {
+                "display": "著（いちじる）しい変化（へんか）",
+                "tts": "著しい変化",
+                "lang": "ja-JP",
+                "translationZh": "显著变化"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day006-v12",
+          "knowledgeId": "v-乏しい",
+          "mode": "new",
+          "word": {
+            "display": "乏しい",
+            "tts": "とぼしい",
+            "lang": "ja-JP",
+            "translationZh": "缺乏的；贫乏的"
+          },
+          "reading": "とぼしい",
+          "collocations": [
+            {
+              "id": "day006-c9",
+              "text": {
+                "display": "経験（けいけん）が乏（とぼ）しい",
+                "tts": "経験が乏しい",
+                "lang": "ja-JP",
+                "translationZh": "经验不足"
+              }
+            }
+          ]
+        }
+      ],
+      "collocations": [
+        {
+          "id": "day006-c1",
+          "text": {
+            "display": "需要（じゅよう）が増（ふ）える",
+            "tts": "需要が増える",
+            "lang": "ja-JP",
+            "translationZh": "需求增加"
+          }
+        },
+        {
+          "id": "day006-c2",
+          "text": {
+            "display": "電力（でんりょく）を供給（きょうきゅう）する",
+            "tts": "電力を供給する",
+            "lang": "ja-JP",
+            "translationZh": "供应电力"
+          }
+        },
+        {
+          "id": "day006-c3",
+          "text": {
+            "display": "費用（ひよう）を削（けず）る",
+            "tts": "費用を削る",
+            "lang": "ja-JP",
+            "translationZh": "削减费用"
+          }
+        },
+        {
+          "id": "day006-c4",
+          "text": {
+            "display": "効果（こうか）が見込（みこ）まれる",
+            "tts": "効果が見込まれる",
+            "lang": "ja-JP",
+            "translationZh": "预期会有效果"
+          }
+        },
+        {
+          "id": "day006-c5",
+          "text": {
+            "display": "制度（せいど）を見直（みなお）す",
+            "tts": "制度を見直す",
+            "lang": "ja-JP",
+            "translationZh": "重新审视制度"
+          }
+        },
+        {
+          "id": "day006-c6",
+          "text": {
+            "display": "新（あたら）しい技術（ぎじゅつ）を取（と）り入（い）れる",
+            "tts": "新しい技術を取り入れる",
+            "lang": "ja-JP",
+            "translationZh": "采用新技术"
+          }
+        },
+        {
+          "id": "day006-c7",
+          "text": {
+            "display": "原因（げんいん）を取（と）り除（のぞ）く",
+            "tts": "原因を取り除く",
+            "lang": "ja-JP",
+            "translationZh": "消除原因"
+          }
+        },
+        {
+          "id": "day006-c8",
+          "text": {
+            "display": "著（いちじる）しい変化（へんか）",
+            "tts": "著しい変化",
+            "lang": "ja-JP",
+            "translationZh": "显著变化"
+          }
+        },
+        {
+          "id": "day006-c9",
+          "text": {
+            "display": "経験（けいけん）が乏（とぼ）しい",
+            "tts": "経験が乏しい",
+            "lang": "ja-JP",
+            "translationZh": "经验不足"
+          }
+        }
+      ],
+      "grammar": [
+        {
+          "id": "day006-g1",
+          "knowledgeId": "g-に応じた",
+          "mode": "new",
+          "form": {
+            "display": "～に応じた",
+            "tts": "に応じた",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "与……相应的；符合……的。",
+          "explanationZh": "由已学的「～に応じて」扩展而来，直接修饰名词时常用「～に応じた＋名词」。",
+          "examples": [
+            {
+              "display": "利用者（りようしゃ）の目的（もくてき）に応（おう）じたサービスを提供（ていきょう）する必要（ひつよう）があります。",
+              "tts": "利用者の目的に応じたサービスを提供する必要があります。",
+              "lang": "ja-JP",
+              "translationZh": "有必要提供符合使用者目的的服务。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day006-g2",
+          "knowledgeId": "g-に加えて",
+          "mode": "new",
+          "form": {
+            "display": "～に加えて",
+            "tts": "に加えて",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "加上……；除……之外还……。",
+          "explanationZh": "用于在已有事项A上追加B，书面语和N2阅读中常见。",
+          "examples": [
+            {
+              "display": "費用（ひよう）の削減（さくげん）に加（くわ）えて、安全性（あんぜんせい）も考慮（こうりょ）しなければなりません。",
+              "tts": "費用の削減に加えて、安全性も考慮しなければなりません。",
+              "lang": "ja-JP",
+              "translationZh": "除了削减费用之外，还必须考虑安全性。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day006-g3",
+          "knowledgeId": "g-にかかわらず",
+          "mode": "new",
+          "form": {
+            "display": "～にかかわらず",
+            "tts": "にかかわらず",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "不论……；不管……。",
+          "explanationZh": "表示后项不受前项条件影响。常见搭配：年齢にかかわらず、経験の有無にかかわらず。",
+          "examples": [
+            {
+              "display": "年齢（ねんれい）にかかわらず、誰（だれ）でもこの制度（せいど）を利用（りよう）できます。",
+              "tts": "年齢にかかわらず、誰でもこの制度を利用できます。",
+              "lang": "ja-JP",
+              "translationZh": "不论年龄，任何人都可以使用这项制度。"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "review": {
+        "instructionsZh": "按 D+1 / D+3 复习；3秒说出读音与意思。记录真实红黄绿，再做原正式课程中的重点抽测。D+7 从 Day 008 起到期。",
+        "intervals": [
+          {
+            "offsetDays": 1,
+            "sourceDay": 5,
+            "vocabularyIds": [
+              "v-実施",
+              "v-検討",
+              "v-把握",
+              "v-継続",
+              "v-達成",
+              "v-改める",
+              "v-促す",
+              "v-削減",
+              "v-拡大",
+              "v-縮小",
+              "v-導入",
+              "v-従う",
+              "v-効率"
+            ],
+            "grammarIds": [
+              "g-にしたがって",
+              "g-ために",
+              "g-ことによって",
+              "g-だけでなく"
+            ]
+          },
+          {
+            "offsetDays": 3,
+            "sourceDay": 3,
+            "vocabularyIds": [
+              "v-原因",
+              "v-結果",
+              "v-増加",
+              "v-減少",
+              "v-程度",
+              "v-範囲",
+              "v-現象",
+              "v-解決",
+              "v-防止",
+              "v-予測",
+              "v-及ぼす",
+              "v-確かめる",
+              "v-必ずしも"
+            ],
+            "grammarIds": [
+              "g-につれて",
+              "g-に対して",
+              "g-ことから",
+              "g-とは限らない"
+            ]
+          }
+        ]
+      },
+      "reading": {
+        "id": "day006-reading",
+        "timeLimitSeconds": 90,
+        "text": {
+          "display": "最近（さいきん）、多（おお）くの企業（きぎょう）が働（はたら）き方（かた）を見直（みなお）している。新（あたら）しい制度（せいど）を導入（どうにゅう）することによって、仕事（しごと）の効率（こうりつ）が上（あ）がることもある。しかし、制度（せいど）を変（か）えれば、必（かなら）ず問題（もんだい）が解決（かいけつ）するとは限（かぎ）らない。社員（しゃいん）の仕事内容（しごとないよう）や生活（せいかつ）の状況（じょうきょう）に応（おう）じた方法（ほうほう）を検討（けんとう）する必要（ひつよう）があるからだ。また、効率（こうりつ）だけでなく、働（はたら）く人（ひと）の負担（ふたん）についても考慮（こうりょ）することが重要（じゅうよう）である。",
+          "tts": "最近、多くの企業が働き方を見直している。新しい制度を導入することによって、仕事の効率が上がることもある。しかし、制度を変えれば、必ず問題が解決するとは限らない。社員の仕事内容や生活の状況に応じた方法を検討する必要があるからだ。また、効率だけでなく、働く人の負担についても考慮することが重要である。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "questions": [
+          {
+            "id": "day006-rq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "筆者が最も言いたいことは何ですか。",
+              "tts": "筆者が最も言いたいことは何ですか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "新しい制度を導入すれば、仕事の問題はほとんど解決する。",
+                  "tts": "新しい制度を導入すれば、仕事の問題はほとんど解決する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "仕事の効率を上げることが、働き方を変える唯一の目的である。",
+                  "tts": "仕事の効率を上げることが、働き方を変える唯一の目的である。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "働く人の状況や負担も考えながら、適切な方法を選ぶ必要がある。",
+                  "tts": "働く人の状況や負担も考えながら、適切な方法を選ぶ必要がある。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "D",
+                "text": {
+                  "display": "新しい制度を導入する企業は減っている。",
+                  "tts": "新しい制度を導入する企業は減っている。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "C",
+            "explanationZh": "答案：C。"
+          }
+        ],
+        "secondPass": [
+          "核对原文依据",
+          "点击日语听读",
+          "不看原文复述"
+        ]
+      },
+      "listening": {
+        "id": "day006-listening",
+        "instructionsZh": "先听，不先看带假名原文。目标：抓“最后决定”。",
+        "tts": "来週の説明会で使う資料なんだけど、参加者が増えたから、部数をもう少し増やしたほうがよさそうだね。私は内容をもう一度確認するから、悪いけど、あなたは必要な部数を確認して、コピーをお願いできる？会場の予約はもう済んでいるよ。",
+        "question": {
+          "id": "day006-lq1",
+          "type": "single_choice",
+          "prompt": {
+            "display": "頼まれた人は、このあとまず何をしますか。",
+            "tts": "頼まれた人は、このあとまず何をしますか。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "display": "資料の内容を確認する。",
+                "tts": "資料の内容を確認する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "display": "必要な部数を確認する。",
+                "tts": "必要な部数を確認する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "display": "会場を予約する。",
+                "tts": "会場を予約する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "display": "説明会の参加を取りやめる。",
+                "tts": "説明会の参加を取りやめる。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            }
+          ],
+          "answer": "B",
+          "explanationZh": "答案：B。"
+        },
+        "questions": [
+          {
+            "id": "day006-lq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "頼まれた人は、このあとまず何をしますか。",
+              "tts": "頼まれた人は、このあとまず何をしますか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "資料の内容を確認する。",
+                  "tts": "資料の内容を確認する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "必要な部数を確認する。",
+                  "tts": "必要な部数を確認する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "会場を予約する。",
+                  "tts": "会場を予約する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "D",
+                "text": {
+                  "display": "説明会の参加を取りやめる。",
+                  "tts": "説明会の参加を取りやめる。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "B",
+            "explanationZh": "答案：B。"
+          }
+        ],
+        "segments": [
+          {
+            "text": {
+              "display": "来週（らいしゅう）の説明会（せつめいかい）で使（つか）う資料（しりょう）なんだけど、参加者（さんかしゃ）が増（ふ）えたから、部数（ぶすう）をもう少（すこ）し増（ふ）やしたほうがよさそうだね。私（わたし）は内容（ないよう）をもう一度（いちど）確認（かくにん）するから、悪（わる）いけど、あなたは必要（ひつよう）な部数（ぶすう）を確認（かくにん）して、コピーをお願（ねが）いできる？会場（かいじょう）の予約（よやく）はもう済（す）んでいるよ。",
+              "tts": "来週の説明会で使う資料なんだけど、参加者が増えたから、部数をもう少し増やしたほうがよさそうだね。私は内容をもう一度確認するから、悪いけど、あなたは必要な部数を確認して、コピーをお願いできる？会場の予約はもう済んでいるよ。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          }
+        ],
+        "retellingInstructionsZh": "抓信号：あなたは～／お願いできる？／もう済んでいる。；复述要求：不用逐字复述，只说“发生了什么＋对方要做什么”。",
+        "followUps": []
+      },
+      "speaking": {
+        "id": "day006-speaking",
+        "prompt": {
+          "display": "仕事（しごと）や勉強（べんきょう）の効率（こうりつ）を上（あ）げるために、何（なに）を見直（みなお）したほうがいいと思（おも）いますか。",
+          "tts": "仕事や勉強の効率を上げるために、何を見直したほうがいいと思いますか。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "instructionsZh": "要求：每人约2分钟，对方至少追问2次；必须使用今天语法至少2个，并尽量回收「～だけでなく／～に応じて」。回答结构升级为：结论 → 理由 → 具体例子。",
+        "models": [
+          {
+            "display": "私（わたし）は、勉強（べんきょう）の時間（じかん）だけでなく、復習（ふくしゅう）の方法（ほうほう）も見直（みなお）したほうがいいと思（おも）います。人（ひと）によって苦手（にがて）な部分（ぶぶん）が違（ちが）うので、自分（じぶん）の状況（じょうきょう）に応（おう）じた方法（ほうほう）を取（と）り入（い）れることが大切（たいせつ）です。",
+            "tts": "私は、勉強の時間だけでなく、復習の方法も見直したほうがいいと思います。人によって苦手な部分が違うので、自分の状況に応じた方法を取り入れることが大切です。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ],
+        "followUps": []
+      },
+      "recap": {
+        "instructionsZh": "1. 今天的12个新词随机抽6个，做到“汉字→读音→意思”。\n2. 两人分别用「～に応じた」「～に加えて」「～にかかわらず」各造1句。\n3. 把今天和旧知识中所有错误按：🟢立即正确／🟡会但反应慢／🔴不会或错误记录下来。\n4. 所有🟡🔴进入 Day 007 周复盘。\n今日总计约 115分钟：旧知识20＋新词25＋语法25＋阅读20＋听力15＋口语10（复盘穿插在最后5分钟，可与口语收尾合并）。"
+      }
+    },
+    {
+      "id": "day007",
+      "day": 7,
+      "week": 1,
+      "date": "2026-09-02",
+      "title": "第一周复盘与方法调整",
+      "schemaVersion": "2.1.0",
+      "source": {
+        "url": "https://app.notion.com/p/3cf150b34222811792d7ddd2b8d03875?pvs=204",
+        "title": "🇯🇵 Day 007｜N2 双人冲刺",
+        "archive": "docs/course-sources/day007.md"
+      },
+      "goalsZh": [
+        "今天是 Week 01 第一次累计回收日。重点从“继续堆新知识”转向“能否在没有假名提示时快速提取”。完成 D+1、D+3、D+7 三层复习，并特别训练昨天暴露出来的听力问题：听到关键词之后继续判断“谁负责什么”。",
+        "预计总用时：约115分钟。"
+      ],
+      "scheduledMinutes": 115,
+      "sourceEstimatedMinutes": 115,
+      "counts": {
+        "newVocabulary": 7,
+        "reviewVocabulary": 5
+      },
+      "modules": [
+        {
+          "durationMinutes": 25,
+          "type": "review"
+        },
+        {
+          "type": "source",
+          "title": "正式重点复习",
+          "durationMinutes": 0,
+          "blocks": [
+            {
+              "text": "D+1｜Day 006",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "第一轮禁止看假名。两人轮流抽读：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "維持費　普及　需要　供給　削る　占う　見込む　見直す　取り入れる　取り除く　著しい　乏しい",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "維持費",
+                  "tts": "いじひ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "普及",
+                  "tts": "ふきゅう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "需要",
+                  "tts": "じゅよう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "供給",
+                  "tts": "きょうきゅう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "削る",
+                  "tts": "けずる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "占う",
+                  "tts": "うらなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "見込む",
+                  "tts": "みこむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "見直す",
+                  "tts": "みなおす",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り入れる",
+                  "tts": "とりいれる",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り除く",
+                  "tts": "とりのぞく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "著しい",
+                  "tts": "いちじるしい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "乏しい",
+                  "tts": "とぼしい",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "要求：3秒内说读音＋中文意思＋一个搭配。",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "重点回收昨天三个语法：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "～に応じた",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に応じた",
+                  "tts": "に応じた",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "～に加えて",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に加えて",
+                  "tts": "に加えて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "～にかかわらず",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～にかかわらず",
+                  "tts": "にかかわらず",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "每人随机抽两个，各造一句。",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "D+3｜近期高频易错",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "省（はぶ）く／補（おぎな）う／伴（ともな）う／取（と）り組（く）む／占（し）める／示（しめ）す／生（しょう）じる／抑（おさ）える／促（うなが）す／把握（はあく）",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "省（はぶ）く／補（おぎな）う／伴（ともな）う／取（と）り組（く）む／占（し）める／示（しめ）す／生（しょう）じる／抑（おさ）える／促（うなが）す／把握（はあく）",
+                  "tts": "省く／補う／伴う／取り組む／占める／示す／生じる／抑える／促す／把握",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "把握",
+                  "tts": "はあく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "特别辨析：",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "占（し）める＝占据；占（うらな）う＝占卜、预测",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "占（し）める",
+                  "tts": "占める",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "占（うらな）う",
+                  "tts": "占う",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "示（しめ）す＝表示、显示",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "示（しめ）す",
+                  "tts": "示す",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "～に応（おう）じて＝根据情况相应变化；～に基（もと）づいて＝以资料、事实、规则为依据",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "～に応（おう）じて",
+                  "tts": "に応じて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "～に基（もと）づいて",
+                  "tts": "に基づいて",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "D+7｜第一周累计抽测",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "从第一周词汇中随机抽10个，只看汉字：維持　改善　避ける　省く　補う　伴う　傾向　影響　判断　取り組む",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "維持",
+                  "tts": "いじ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "改善",
+                  "tts": "かいぜん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "避ける",
+                  "tts": "さける",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "省く",
+                  "tts": "はぶく",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "補う",
+                  "tts": "おぎなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "伴う",
+                  "tts": "ともなう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "傾向",
+                  "tts": "けいこう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "影響",
+                  "tts": "えいきょう",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "判断",
+                  "tts": "はんだん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "取り組む",
+                  "tts": "とりくむ",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            },
+            {
+              "text": "记录：🟢3秒内正确／🟡反应慢／🔴不会或读错。今天的🟡🔴进入后续复习。",
+              "heading": false,
+              "japanese": []
+            },
+            {
+              "text": "日期校核：原文“D+7｜第一周累计抽测”保留为累计抽测；Day 001 的正式 D+7 到期日为 Day 008。",
+              "japanese": []
+            }
+          ],
+          "withinPreviousModule": true
+        },
+        {
+          "durationMinutes": 20,
+          "type": "vocabulary"
+        },
+        {
+          "type": "source",
+          "title": "词汇辨析",
+          "durationMinutes": 0,
+          "withinPreviousModule": true,
+          "blocks": [
+            {
+              "text": "易混说明",
+              "heading": true,
+              "japanese": []
+            },
+            {
+              "text": "削（けず）る使用范围广，可以削东西、削预算；削減（さくげん）する更正式，N2说明文常用于费用、排放、人员等减少。",
+              "heading": false,
+              "japanese": [
+                {
+                  "display": "削（けず）る",
+                  "tts": "削る",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "削減（さくげん）する",
+                  "tts": "削減する",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                },
+                {
+                  "display": "削減",
+                  "tts": "さくげん",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "durationMinutes": 25,
+          "type": "grammar"
+        },
+        {
+          "durationMinutes": 15,
+          "type": "reading"
+        },
+        {
+          "durationMinutes": 15,
+          "type": "listening"
+        },
+        {
+          "durationMinutes": 10,
+          "type": "speaking"
+        },
+        {
+          "durationMinutes": 5,
+          "type": "recap"
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "day007-v1",
+          "knowledgeId": "v-負担",
+          "mode": "review",
+          "word": {
+            "display": "負担",
+            "tts": "ふたん",
+            "lang": "ja-JP",
+            "translationZh": "负担"
+          },
+          "reading": "ふたん",
+          "collocations": [
+            {
+              "id": "day007-c1",
+              "text": {
+                "display": "負担（ふたん）を減（へ）らす",
+                "tts": "負担を減らす",
+                "lang": "ja-JP",
+                "translationZh": "减轻负担"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day007-v2",
+          "knowledgeId": "v-削減",
+          "mode": "review",
+          "word": {
+            "display": "削減",
+            "tts": "さくげん",
+            "lang": "ja-JP",
+            "translationZh": "削减"
+          },
+          "reading": "さくげん",
+          "collocations": [
+            {
+              "id": "day007-c2",
+              "text": {
+                "display": "費用（ひよう）を削減（さくげん）する",
+                "tts": "費用を削減する",
+                "lang": "ja-JP",
+                "translationZh": "削减费用"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day007-v3",
+          "knowledgeId": "v-考慮",
+          "mode": "review",
+          "word": {
+            "display": "考慮",
+            "tts": "こうりょ",
+            "lang": "ja-JP",
+            "translationZh": "考虑"
+          },
+          "reading": "こうりょ",
+          "collocations": [
+            {
+              "id": "day007-c3",
+              "text": {
+                "display": "安全性（あんぜんせい）を考慮（こうりょ）する",
+                "tts": "安全性を考慮する",
+                "lang": "ja-JP",
+                "translationZh": "考虑安全性"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day007-v4",
+          "knowledgeId": "v-適用",
+          "mode": "review",
+          "word": {
+            "display": "適用",
+            "tts": "てきよう",
+            "lang": "ja-JP",
+            "translationZh": "适用、应用"
+          },
+          "reading": "てきよう",
+          "collocations": []
+        },
+        {
+          "id": "day007-v5",
+          "knowledgeId": "v-実施",
+          "mode": "review",
+          "word": {
+            "display": "実施",
+            "tts": "じっし",
+            "lang": "ja-JP",
+            "translationZh": "实施"
+          },
+          "reading": "じっし",
+          "collocations": [
+            {
+              "id": "day007-c4",
+              "text": {
+                "display": "新制度（しんせいど）を実施（じっし）する",
+                "tts": "新制度を実施する",
+                "lang": "ja-JP",
+                "translationZh": "实施新制度"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day007-v6",
+          "knowledgeId": "v-設ける",
+          "mode": "new",
+          "word": {
+            "display": "設ける",
+            "tts": "もうける",
+            "lang": "ja-JP",
+            "translationZh": "设置、设立"
+          },
+          "reading": "もうける",
+          "collocations": []
+        },
+        {
+          "id": "day007-v7",
+          "knowledgeId": "v-取り扱う",
+          "mode": "new",
+          "word": {
+            "display": "取り扱う",
+            "tts": "とりあつかう",
+            "lang": "ja-JP",
+            "translationZh": "处理、经营"
+          },
+          "reading": "とりあつかう",
+          "collocations": []
+        },
+        {
+          "id": "day007-v8",
+          "knowledgeId": "v-見送る",
+          "mode": "new",
+          "word": {
+            "display": "見送る",
+            "tts": "みおくる",
+            "lang": "ja-JP",
+            "translationZh": "暂缓、放弃；送行"
+          },
+          "reading": "みおくる",
+          "collocations": []
+        },
+        {
+          "id": "day007-v9",
+          "knowledgeId": "v-確保",
+          "mode": "new",
+          "word": {
+            "display": "確保",
+            "tts": "かくほ",
+            "lang": "ja-JP",
+            "translationZh": "确保"
+          },
+          "reading": "かくほ",
+          "collocations": [
+            {
+              "id": "day007-c5",
+              "text": {
+                "display": "十分（じゅうぶん）な時間（じかん）を確保（かくほ）する",
+                "tts": "十分な時間を確保する",
+                "lang": "ja-JP",
+                "translationZh": "确保充足时间"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day007-v10",
+          "knowledgeId": "v-妨げる",
+          "mode": "new",
+          "word": {
+            "display": "妨げる",
+            "tts": "さまたげる",
+            "lang": "ja-JP",
+            "translationZh": "妨碍"
+          },
+          "reading": "さまたげる",
+          "collocations": [
+            {
+              "id": "day007-c6",
+              "text": {
+                "display": "作業（さぎょう）を妨（さまた）げる",
+                "tts": "作業を妨げる",
+                "lang": "ja-JP",
+                "translationZh": "妨碍工作"
+              }
+            }
+          ]
+        },
+        {
+          "id": "day007-v11",
+          "knowledgeId": "v-限られる",
+          "mode": "new",
+          "word": {
+            "display": "限られる",
+            "tts": "かぎられる",
+            "lang": "ja-JP",
+            "translationZh": "受到限制"
+          },
+          "reading": "かぎられる",
+          "collocations": []
+        },
+        {
+          "id": "day007-v12",
+          "knowledgeId": "v-望ましい",
+          "mode": "new",
+          "word": {
+            "display": "望ましい",
+            "tts": "のぞましい",
+            "lang": "ja-JP",
+            "translationZh": "理想的、最好"
+          },
+          "reading": "のぞましい",
+          "collocations": []
+        }
+      ],
+      "collocations": [
+        {
+          "id": "day007-c1",
+          "text": {
+            "display": "負担（ふたん）を減（へ）らす",
+            "tts": "負担を減らす",
+            "lang": "ja-JP",
+            "translationZh": "减轻负担"
+          }
+        },
+        {
+          "id": "day007-c2",
+          "text": {
+            "display": "費用（ひよう）を削減（さくげん）する",
+            "tts": "費用を削減する",
+            "lang": "ja-JP",
+            "translationZh": "削减费用"
+          }
+        },
+        {
+          "id": "day007-c3",
+          "text": {
+            "display": "安全性（あんぜんせい）を考慮（こうりょ）する",
+            "tts": "安全性を考慮する",
+            "lang": "ja-JP",
+            "translationZh": "考虑安全性"
+          }
+        },
+        {
+          "id": "day007-c4",
+          "text": {
+            "display": "新制度（しんせいど）を実施（じっし）する",
+            "tts": "新制度を実施する",
+            "lang": "ja-JP",
+            "translationZh": "实施新制度"
+          }
+        },
+        {
+          "id": "day007-c5",
+          "text": {
+            "display": "十分（じゅうぶん）な時間（じかん）を確保（かくほ）する",
+            "tts": "十分な時間を確保する",
+            "lang": "ja-JP",
+            "translationZh": "确保充足时间"
+          }
+        },
+        {
+          "id": "day007-c6",
+          "text": {
+            "display": "作業（さぎょう）を妨（さまた）げる",
+            "tts": "作業を妨げる",
+            "lang": "ja-JP",
+            "translationZh": "妨碍工作"
+          }
+        }
+      ],
+      "grammar": [
+        {
+          "id": "day007-g1",
+          "knowledgeId": "g-上で",
+          "mode": "review",
+          "form": {
+            "display": "～上（うえ）で",
+            "tts": "上で",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "在……之后；在……方面／过程中。",
+          "explanationZh": "「Vた＋上で」常表示先完成A，再以A为基础做B；「V辞書形＋上で」也可表示“在做……方面”。",
+          "examples": [
+            {
+              "display": "資料（しりょう）の内容（ないよう）を確認（かくにん）した上（うえ）で、最終的（さいしゅうてき）な判断（はんだん）をしてください。",
+              "tts": "資料の内容を確認した上で、最終的な判断をしてください。",
+              "lang": "ja-JP",
+              "translationZh": "请确认资料内容之后再做最终判断。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day007-g2",
+          "knowledgeId": "g-ことから",
+          "mode": "review",
+          "form": {
+            "display": "～ことから",
+            "tts": "ことから",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "由于……；从……可以判断出……。",
+          "explanationZh": "经常根据一个事实、特征或现象推出原因、名称或判断，说明文中很常见。",
+          "examples": [
+            {
+              "display": "利用者（りようしゃ）が急速（きゅうそく）に増（ふ）えていることから、サービスへの需要（じゅよう）が高（たか）まっていると考（かんが）えられます。",
+              "tts": "利用者が急速に増えていることから、サービスへの需要が高まっていると考えられます。",
+              "lang": "ja-JP",
+              "translationZh": "从使用者迅速增加这一点来看，可以认为对该服务的需求正在上升。"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "id": "day007-g3",
+          "knowledgeId": "g-ないことには",
+          "mode": "new",
+          "form": {
+            "display": "～ないことには",
+            "tts": "ないことには",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "meaningZh": "如果不……就不能……。",
+          "explanationZh": "强调前项是后项成立的必要条件，后项通常是否定或困难的结果。",
+          "examples": [
+            {
+              "display": "実際（じっさい）に使（つか）ってみないことには、この方法（ほうほう）が効果的（こうかてき）かどうか判断（はんだん）できません。",
+              "tts": "実際に使ってみないことには、この方法が効果的かどうか判断できません。",
+              "lang": "ja-JP",
+              "translationZh": "如果不实际试用，就无法判断这个方法是否有效。"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "review": {
+        "instructionsZh": "按 D+1 / D+3 复习；3秒说出读音与意思。记录真实红黄绿，再做原正式课程中的重点抽测。D+7 从 Day 008 起到期。",
+        "intervals": [
+          {
+            "offsetDays": 1,
+            "sourceDay": 6,
+            "vocabularyIds": [
+              "v-維持費",
+              "v-普及",
+              "v-需要",
+              "v-供給",
+              "v-削る",
+              "v-占う",
+              "v-見込む",
+              "v-見直す",
+              "v-取り入れる",
+              "v-取り除く",
+              "v-著しい",
+              "v-乏しい"
+            ],
+            "grammarIds": [
+              "g-に応じた",
+              "g-に加えて",
+              "g-にかかわらず"
+            ]
+          },
+          {
+            "offsetDays": 3,
+            "sourceDay": 4,
+            "vocabularyIds": [
+              "v-対策",
+              "v-条件",
+              "v-効果",
+              "v-負担",
+              "v-目的",
+              "v-手段",
+              "v-適用",
+              "v-考慮",
+              "v-抑える",
+              "v-備える"
+            ],
+            "grammarIds": [
+              "g-に比べて",
+              "g-によって",
+              "g-上で"
+            ]
+          }
+        ]
+      },
+      "reading": {
+        "id": "day007-reading",
+        "timeLimitSeconds": 90,
+        "text": {
+          "display": "最近（さいきん）、仕事（しごと）の効率（こうりつ）を上（あ）げるために、新（あたら）しいシステムを導入（どうにゅう）する企業（きぎょう）が増（ふ）えている。しかし、新（あたら）しい技術（ぎじゅつ）を取（と）り入（い）れるだけで、必（かなら）ず仕事（しごと）が楽（らく）になるわけではない。操作（そうさ）を覚（おぼ）えるための時間（じかん）が必要（ひつよう）になることに加（くわ）えて、従来（じゅうらい）の方法（ほうほう）を変更（へんこう）することが、かえって社員（しゃいん）の負担（ふたん）になる場合（ばあい）もある。そのため、導入（どうにゅう）する前（まえ）に、実際（じっさい）に利用（りよう）する人（ひと）の意見（いけん）を聞（き）いた上（うえ）で、その必要性（ひつようせい）を検討（けんとう）することが望（のぞ）ましい。",
+          "tts": "最近、仕事の効率を上げるために、新しいシステムを導入する企業が増えている。しかし、新しい技術を取り入れるだけで、必ず仕事が楽になるわけではない。操作を覚えるための時間が必要になることに加えて、従来の方法を変更することが、かえって社員の負担になる場合もある。そのため、導入する前に、実際に利用する人の意見を聞いた上で、その必要性を検討することが望ましい。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "questions": [
+          {
+            "id": "day007-rq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "筆者（ひっしゃ）の考（かんが）えに最（もっと）も近（ちか）いものはどれですか。",
+              "tts": "筆者の考えに最も近いものはどれですか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "新しいシステムはできるだけ早く導入するべきだ。",
+                  "tts": "新しいシステムはできるだけ早く導入するべきだ。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "新技術を導入すると社員の負担は必ず減る。",
+                  "tts": "新技術を導入すると社員の負担は必ず減る。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "実際の利用者の意見も確認してから導入を検討するべきだ。",
+                  "tts": "実際の利用者の意見も確認してから導入を検討するべきだ。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "D",
+                "text": {
+                  "display": "従来の方法は変更しないほうがよい。",
+                  "tts": "従来の方法は変更しないほうがよい。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "C",
+            "explanationZh": "正解：C。二人でA・B・Dがなぜ違うか説明する。"
+          }
+        ],
+        "secondPass": [
+          "核对原文依据",
+          "点击日语听读",
+          "不看原文复述"
+        ]
+      },
+      "listening": {
+        "id": "day007-listening",
+        "instructionsZh": "今天专门训练昨天出现的问题：不要只抓“椅子／资料”这样的名词，而要抓“谁＋做什么”。",
+        "tts": "女の人と男の人が会社で話しています。女の人はこのあと何をしますか。女：明日の会議の資料、内容はもう確認しましたか。男：はい。内容は大丈夫なんですが、参加者が二人増えたので、資料が足りないんです。女：じゃあ、私が追加で印刷しましょうか。男：お願いします。私は会議室にパソコンを準備しておきます。女：分かりました。印刷が終わったら、資料を机の上に置いておきますね。女の人はこのあと何をしますか。",
+        "question": {
+          "id": "day007-lq1",
+          "type": "single_choice",
+          "prompt": {
+            "display": "女（おんな）の人（ひと）はこのあと何（なに）をしますか。",
+            "tts": "女の人はこのあと何をしますか。",
+            "lang": "ja-JP",
+            "translationZh": null
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "display": "資料の内容を確認する。",
+                "tts": "資料の内容を確認する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "display": "参加者に連絡する。",
+                "tts": "参加者に連絡する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "display": "資料を追加で印刷する。",
+                "tts": "資料を追加で印刷する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "display": "会議室にパソコンを準備する。",
+                "tts": "会議室にパソコンを準備する。",
+                "lang": "ja-JP",
+                "translationZh": null
+              }
+            }
+          ],
+          "answer": "C",
+          "explanationZh": "正解：C。"
+        },
+        "questions": [
+          {
+            "id": "day007-lq1",
+            "type": "single_choice",
+            "prompt": {
+              "display": "女（おんな）の人（ひと）はこのあと何（なに）をしますか。",
+              "tts": "女の人はこのあと何をしますか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            },
+            "options": [
+              {
+                "id": "A",
+                "text": {
+                  "display": "資料の内容を確認する。",
+                  "tts": "資料の内容を確認する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "B",
+                "text": {
+                  "display": "参加者に連絡する。",
+                  "tts": "参加者に連絡する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "C",
+                "text": {
+                  "display": "資料を追加で印刷する。",
+                  "tts": "資料を追加で印刷する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              },
+              {
+                "id": "D",
+                "text": {
+                  "display": "会議室にパソコンを準備する。",
+                  "tts": "会議室にパソコンを準備する。",
+                  "lang": "ja-JP",
+                  "translationZh": null
+                }
+              }
+            ],
+            "answer": "C",
+            "explanationZh": "正解：C。"
+          }
+        ],
+        "segments": [
+          {
+            "text": {
+              "display": "女の人と男の人が会社で話しています。女の人はこのあと何をしますか。女：明日の会議の資料、内容はもう確認しましたか。男：はい。内容は大丈夫なんですが、参加者が二人増えたので、資料が足りないんです。女：じゃあ、私が追加で印刷しましょうか。男：お願いします。私は会議室にパソコンを準備しておきます。女：分かりました。印刷が終わったら、資料を机の上に置いておきますね。女の人はこのあと何をしますか。",
+              "tts": "女の人と男の人が会社で話しています。女の人はこのあと何をしますか。女：明日の会議の資料、内容はもう確認しましたか。男：はい。内容は大丈夫なんですが、参加者が二人増えたので、資料が足りないんです。女：じゃあ、私が追加で印刷しましょうか。男：お願いします。私は会議室にパソコンを準備しておきます。女：分かりました。印刷が終わったら、資料を机の上に置いておきますね。女の人はこのあと何をしますか。",
+              "lang": "ja-JP",
+              "translationZh": null
+            }
+          }
+        ],
+        "retellingInstructionsZh": "第二遍后再看关键分工：；最后每人不用原文，用日语2句复述“发生了什么＋两个人分别做什么”。",
+        "followUps": []
+      },
+      "speaking": {
+        "id": "day007-speaking",
+        "prompt": {
+          "display": "仕事（しごと）や勉強（べんきょう）に新（あたら）しい方法（ほうほう）を取（と）り入（い）れるとき、何（なに）を考（かんが）える必要（ひつよう）があると思（おも）いますか。",
+          "tts": "仕事や勉強に新しい方法を取り入れるとき、何を考える必要があると思いますか。",
+          "lang": "ja-JP",
+          "translationZh": null
+        },
+        "instructionsZh": "每人2分钟。结构固定为：结论 → 理由 → 例子 → 对方追问2次。至少主动使用今天三个语法中的两个。",
+        "models": [
+          {
+            "display": "新（あたら）しい方法（ほうほう）を取（と）り入（い）れる前（まえ）に、本当（ほんとう）に必要（ひつよう）かどうか考（かんが）えることが大切（たいせつ）だと思（おも）います。実際（じっさい）に使（つか）う人（ひと）の意見（いけん）を聞（き）いた上（うえ）で判断（はんだん）したほうがいいです。また、使（つか）ってみないことには分（わ）からない点（てん）もあるので、まず小（ちい）さく試（ため）す方法（ほうほう）がいいと思（おも）います。",
+            "tts": "新しい方法を取り入れる前に、本当に必要かどうか考えることが大切だと思います。実際に使う人の意見を聞いた上で判断したほうがいいです。また、使ってみないことには分からない点もあるので、まず小さく試す方法がいいと思います。",
+            "lang": "ja-JP",
+            "translationZh": null
+          }
+        ],
+        "followUps": []
+      },
+      "recap": {
+        "instructionsZh": "1. 今日12词随机抽6个：汉字→3秒内读音→意思→搭配。\n2. ～上で／～ことから／～ないことには，各自造一句。\n3. 听力重新口头回答：女は何をする？男は何をする？ 禁止只说“資料”“パソコン”，必须说完整动作。\n4. 所有🟡🔴记录下来；明天进入D+1，今天累计抽测中的薄弱项继续滚动回收。\n今日完成标准：不是“全部看完”，而是旧词能快速提取、三条新语法至少各主动使用一次，并且听力能明确区分“谁负责什么”。"
+      },
+      "weeklyReview": {
+        "instructionsZh": "按原正式 Day 007 完成累计抽测；在笔记记录 A / B 两人的红黄绿、听力分工和下周需回收的项目。尚未填写的结果保持空白。",
+        "assessment": {
+          "vocabularySampleCount": 10,
+          "grammarPromptCount": 3
+        },
+        "actualResults": null
+      }
+    }
+  ]
+}

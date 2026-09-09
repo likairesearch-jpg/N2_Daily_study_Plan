@@ -1,0 +1,18 @@
+// Engineering schema only; no teaching text is generated here.
+const fs=require('node:fs'),path=require('node:path');
+const str={type:'string'}, nonempty={type:'string',minLength:1}, num={type:'integer',minimum:0};
+const ref=n=>({$ref:'#/$defs/'+n}), arr=items=>({type:'array',items});
+const obj=(properties,required=Object.keys(properties))=>({type:'object',required,properties});
+const ja=obj({display:nonempty,tts:{...nonempty,pattern:'^[^（）]*$'},lang:{const:'ja-JP'},translationZh:{type:['string','null']}});
+const question=obj({id:nonempty,type:{enum:['single_choice','open']},prompt:ref('ja'),explanationZh:str,options:arr(obj({id:nonempty,text:ref('ja')})),answer:nonempty,sampleAnswer:ref('ja')},['id','type','prompt','explanationZh']);
+question.allOf=[{if:{properties:{type:{const:'single_choice'}}},then:{required:['options','answer'],properties:{options:{minItems:2}}}},{if:{properties:{type:{const:'open'}}},then:{required:['sampleAnswer']}}];
+const collocation=obj({id:nonempty,text:ref('ja')});
+const moduleSchema=obj({type:{enum:['review','vocabulary','grammar','reading','listening','speaking','recap','source','responses']},durationMinutes:num,title:nonempty,blocks:arr(obj({text:str,heading:{type:'boolean'},japanese:arr(ref('ja'))},['text','japanese'])),id:nonempty,tasks:arr(obj({prompt:ref('ja'),answer:ref('ja')}))},['type','durationMinutes']);
+moduleSchema.allOf=[{if:{properties:{type:{const:'source'}}},then:{required:['title','blocks']}},{if:{properties:{type:{const:'responses'}}},then:{required:['id','tasks']}}];
+const day=obj({id:{...nonempty,pattern:'^day[0-9]{3,}$'},day:{type:'integer',minimum:2},week:{type:'integer',minimum:1},date:{type:'string',format:'date'},title:nonempty,source:{type:'object',minProperties:1},goalsZh:arr(str),scheduledMinutes:num,counts:obj({newVocabulary:num,reviewVocabulary:num}),modules:{...arr(moduleSchema),minItems:1},vocabulary:arr(obj({id:nonempty,mode:{enum:['new','review']},word:ref('ja'),reading:nonempty,collocations:arr(collocation)})),collocations:arr(collocation),grammar:arr(obj({id:nonempty,mode:{enum:['new','review']},form:ref('ja'),meaningZh:str,examples:{...arr(ref('ja')),minItems:1}})),review:obj({intervals:arr(obj({offsetDays:{enum:[1,3,7]},sourceDay:{type:'integer',minimum:1},vocabularyIds:arr(nonempty),grammarIds:arr(nonempty)}))}),reading:obj({id:nonempty,text:ref('ja'),timeLimitSeconds:num,questions:arr(ref('question')),secondPass:arr(str)}),listening:obj({id:nonempty,tts:nonempty,segments:arr(obj({text:ref('ja')})),question:{anyOf:[ref('question'),{type:'null'}]},questions:arr(ref('question')),followUps:arr(ref('ja'))},['id','tts','segments']),speaking:obj({id:nonempty,prompt:ref('ja'),models:arr(ref('ja')),followUps:arr(ref('ja'))}),recap:{type:'object'}},['id','day','week','date','title','source','goalsZh','scheduledMinutes','counts','modules']);
+for(const type of ['review','vocabulary','grammar','reading','listening','speaking','recap']){
+ (day.allOf??=[]).push({if:{properties:{modules:{contains:{properties:{type:{const:type}},required:['type']}}}},then:{required:type==='vocabulary'?['vocabulary','collocations']:[type]}});
+}
+const schema={$schema:'https://json-schema.org/draft/2020-12/schema',title:'N2 renderer contract (compatible with existing 2.0/2.1 courses)',...obj({schemaVersion:{enum:['2.0.0','2.1.0']},week:{type:'integer',minimum:1},days:{...arr(ref('day')),minItems:1,maxItems:7}},['schemaVersion','week','days']),$defs:{ja,question,day}};
+fs.mkdirSync(path.join(__dirname,'../schemas'),{recursive:true});
+fs.writeFileSync(path.join(__dirname,'../schemas/course.schema.json'),JSON.stringify(schema,null,2)+'\n');

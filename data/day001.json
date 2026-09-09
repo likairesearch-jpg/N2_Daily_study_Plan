@@ -1,0 +1,337 @@
+{
+  "week": 1,
+  "day": 1,
+  "date": "2026-08-27",
+  "title": "建立学习与输出的节奏",
+  "vocab": [
+    [
+      "維持",
+      "いじ",
+      "维持",
+      "現状（げんじょう）を維持（いじ）する",
+      "维持现状"
+    ],
+    [
+      "改善",
+      "かいぜん",
+      "改善",
+      "問題（もんだい）を改善（かいぜん）する",
+      "改善问题"
+    ],
+    [
+      "避ける",
+      "さける",
+      "避免",
+      "危険（きけん）を避（さ）ける",
+      "避免危险"
+    ],
+    [
+      "省く",
+      "はぶく",
+      "省略、去除",
+      "説明（せつめい）を省（はぶ）く",
+      "省略说明"
+    ],
+    [
+      "補う",
+      "おぎなう",
+      "补充、弥补",
+      "不足（ふそく）を補（おぎな）う",
+      "弥补不足"
+    ],
+    [
+      "伴う",
+      "ともなう",
+      "伴随",
+      "変化（へんか）に伴（ともな）う",
+      "伴随变化"
+    ],
+    [
+      "傾向",
+      "けいこう",
+      "倾向",
+      "～傾向（けいこう）がある",
+      "有……的倾向"
+    ],
+    [
+      "影響",
+      "えいきょう",
+      "影响"
+    ],
+    [
+      "状況",
+      "じょうきょう",
+      "状况"
+    ],
+    [
+      "対象",
+      "たいしょう",
+      "对象"
+    ],
+    [
+      "適切",
+      "てきせつ",
+      "适当、恰当"
+    ],
+    [
+      "明らか",
+      "あきらか",
+      "明显、明确"
+    ],
+    [
+      "比較",
+      "ひかく",
+      "比较"
+    ],
+    [
+      "判断",
+      "はんだん",
+      "判断"
+    ],
+    [
+      "取り組む",
+      "とりくむ",
+      "致力于、着手",
+      "問題（もんだい）に取（と）り組（く）む",
+      "着手解决问题"
+    ]
+  ],
+  "grammar": [
+    [
+      "～わけではない",
+      "并不是……；并非意味着……",
+      "对某种推断或一般化进行部分否定。",
+      "日本（にほん）に住（す）んでいるからといって、日本語（にほんご）が上手（じょうず）なわけではない。",
+      "虽然住在日本，但并不意味着日语就一定好。",
+      [
+        "～からといって",
+        "虽说……／不能仅因为……就……"
+      ]
+    ],
+    [
+      "～に違（ちが）いない",
+      "一定……；肯定……",
+      "",
+      "電気（でんき）がついているから、彼（かれ）は家（いえ）にいるに違（ちが）いない。",
+      "灯亮着，所以他肯定在家。"
+    ],
+    [
+      "～に伴（ともな）って",
+      "随着……；伴随着……",
+      "",
+      "人口（じんこう）の増加（ぞうか）に伴（ともな）って、住宅（じゅうたく）も増（ふ）えている。",
+      "随着人口增加，住宅也在增加。",
+      [
+        "増加（ぞうか）する",
+        "增加",
+        "増（ふ）える",
+        "某物增加",
+        "増（ふ）やす",
+        "使某物增加"
+      ]
+    ],
+    [
+      "～一方（いっぽう）で",
+      "另一方面；一方面……另一方面……",
+      "",
+      "日本（にほん）の生活（せいかつ）は便利（べんり）な一方（いっぽう）で、生活費（せいかつひ）が高（たか）い。",
+      "日本的生活很方便，但另一方面生活成本很高。"
+    ]
+  ],
+  "listening": [
+    [
+      "何（なに）について話（はな）していますか。",
+      "在谈什么？"
+    ],
+    [
+      "一番（いちばん）重要（じゅうよう）なことは何（なん）ですか。",
+      "最重要的信息是什么？"
+    ],
+    [
+      "話（はな）した人（ひと）はどう考（かんが）えていますか。",
+      "说话人的态度是什么？"
+    ]
+  ],
+  "speaking": [
+    [
+      "どうして日本語（にほんご）を勉強（べんきょう）していますか。",
+      "为什么学习日语？"
+    ],
+    [
+      "いつから日本語（にほんご）を勉強（べんきょう）していますか。",
+      "从什么时候开始学习日语？"
+    ],
+    [
+      "一番（いちばん）難（むずか）しいことは何（なん）ですか。",
+      "最难的是什么？"
+    ],
+    [
+      "N2に合格（ごうかく）したら、何（なに）をしたいですか。",
+      "通过 N2 后想做什么？"
+    ]
+  ],
+  "cards": [
+    {
+      "id": "day001-0",
+      "section": "今日目标",
+      "title": "学习 → 互测 → 输出",
+      "html": "<h1>建立学习与输出<br>的节奏。</h1><p class=\"meaning\">Day 001 · 8月27日（周四）</p><div class=\"stats\"><div><strong>15</strong><span>新词</span></div><div><strong>4</strong><span>N2 语法</span></div><div><strong>≈100</strong><span>分钟 · 原课程预计</span></div></div><p class=\"note\">先看假名学习，再隐藏假名互测。点击日语文字听发音，最后用自己的话说出来。各分项原标注合计85分钟，保留原课程“约100分钟”的总时长。</p>"
+    },
+    {
+      "id": "day001-1",
+      "section": "词汇 · 25分钟",
+      "title": "維持",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"いじ\" aria-label=\"朗读：維持\">維持</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"いじ\" aria-label=\"朗读：いじ\">いじ</span></p><p class=\"meaning\">维持</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"現状を維持する\" aria-label=\"朗读：現状を維持する\"><ruby>現状<rt>げんじょう</rt></ruby>を<ruby>維持<rt>いじ</rt></ruby>する</span><p class=\"translation\">维持现状</p></div>"
+    },
+    {
+      "id": "day001-2",
+      "section": "词汇 · 25分钟",
+      "title": "改善",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"かいぜん\" aria-label=\"朗读：改善\">改善</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"かいぜん\" aria-label=\"朗读：かいぜん\">かいぜん</span></p><p class=\"meaning\">改善</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"問題を改善する\" aria-label=\"朗读：問題を改善する\"><ruby>問題<rt>もんだい</rt></ruby>を<ruby>改善<rt>かいぜん</rt></ruby>する</span><p class=\"translation\">改善问题</p></div>"
+    },
+    {
+      "id": "day001-3",
+      "section": "词汇 · 25分钟",
+      "title": "避ける",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"さける\" aria-label=\"朗读：避ける\">避ける</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"さける\" aria-label=\"朗读：さける\">さける</span></p><p class=\"meaning\">避免</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"危険を避ける\" aria-label=\"朗读：危険を避ける\"><ruby>危険<rt>きけん</rt></ruby>を<ruby>避<rt>さ</rt></ruby>ける</span><p class=\"translation\">避免危险</p></div>"
+    },
+    {
+      "id": "day001-4",
+      "section": "词汇 · 25分钟",
+      "title": "省く",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"はぶく\" aria-label=\"朗读：省く\">省く</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"はぶく\" aria-label=\"朗读：はぶく\">はぶく</span></p><p class=\"meaning\">省略、去除</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"説明を省く\" aria-label=\"朗读：説明を省く\"><ruby>説明<rt>せつめい</rt></ruby>を<ruby>省<rt>はぶ</rt></ruby>く</span><p class=\"translation\">省略说明</p></div><p class=\"note\">重点读音：隐藏假名，试着在3秒内说出读音和意思。</p>"
+    },
+    {
+      "id": "day001-5",
+      "section": "词汇 · 25分钟",
+      "title": "補う",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"おぎなう\" aria-label=\"朗读：補う\">補う</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"おぎなう\" aria-label=\"朗读：おぎなう\">おぎなう</span></p><p class=\"meaning\">补充、弥补</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"不足を補う\" aria-label=\"朗读：不足を補う\"><ruby>不足<rt>ふそく</rt></ruby>を<ruby>補<rt>おぎな</rt></ruby>う</span><p class=\"translation\">弥补不足</p></div><p class=\"note\">重点读音：隐藏假名，试着在3秒内说出读音和意思。</p>"
+    },
+    {
+      "id": "day001-6",
+      "section": "词汇 · 25分钟",
+      "title": "伴う",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"ともなう\" aria-label=\"朗读：伴う\">伴う</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"ともなう\" aria-label=\"朗读：ともなう\">ともなう</span></p><p class=\"meaning\">伴随</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"変化に伴う\" aria-label=\"朗读：変化に伴う\"><ruby>変化<rt>へんか</rt></ruby>に<ruby>伴<rt>ともな</rt></ruby>う</span><p class=\"translation\">伴随变化</p></div><p class=\"note\">重点读音：隐藏假名，试着在3秒内说出读音和意思。</p>"
+    },
+    {
+      "id": "day001-7",
+      "section": "词汇 · 25分钟",
+      "title": "傾向",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"けいこう\" aria-label=\"朗读：傾向\">傾向</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"けいこう\" aria-label=\"朗读：けいこう\">けいこう</span></p><p class=\"meaning\">倾向</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"傾向がある\" aria-label=\"朗读：傾向がある\">～<ruby>傾向<rt>けいこう</rt></ruby>がある</span><p class=\"translation\">有……的倾向</p></div>"
+    },
+    {
+      "id": "day001-8",
+      "section": "词汇 · 25分钟",
+      "title": "影響",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"えいきょう\" aria-label=\"朗读：影響\">影響</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"えいきょう\" aria-label=\"朗读：えいきょう\">えいきょう</span></p><p class=\"meaning\">影响</p>"
+    },
+    {
+      "id": "day001-9",
+      "section": "词汇 · 25分钟",
+      "title": "状況",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"じょうきょう\" aria-label=\"朗读：状況\">状況</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"じょうきょう\" aria-label=\"朗读：じょうきょう\">じょうきょう</span></p><p class=\"meaning\">状况</p>"
+    },
+    {
+      "id": "day001-10",
+      "section": "词汇 · 25分钟",
+      "title": "対象",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"たいしょう\" aria-label=\"朗读：対象\">対象</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"たいしょう\" aria-label=\"朗读：たいしょう\">たいしょう</span></p><p class=\"meaning\">对象</p>"
+    },
+    {
+      "id": "day001-11",
+      "section": "词汇 · 25分钟",
+      "title": "適切",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"てきせつ\" aria-label=\"朗读：適切\">適切</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"てきせつ\" aria-label=\"朗读：てきせつ\">てきせつ</span></p><p class=\"meaning\">适当、恰当</p>"
+    },
+    {
+      "id": "day001-12",
+      "section": "词汇 · 25分钟",
+      "title": "明らか",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"あきらか\" aria-label=\"朗读：明らか\">明らか</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"あきらか\" aria-label=\"朗读：あきらか\">あきらか</span></p><p class=\"meaning\">明显、明确</p>"
+    },
+    {
+      "id": "day001-13",
+      "section": "词汇 · 25分钟",
+      "title": "比較",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"ひかく\" aria-label=\"朗读：比較\">比較</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"ひかく\" aria-label=\"朗读：ひかく\">ひかく</span></p><p class=\"meaning\">比较</p>"
+    },
+    {
+      "id": "day001-14",
+      "section": "词汇 · 25分钟",
+      "title": "判断",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"はんだん\" aria-label=\"朗读：判断\">判断</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"はんだん\" aria-label=\"朗读：はんだん\">はんだん</span></p><p class=\"meaning\">判断</p>"
+    },
+    {
+      "id": "day001-15",
+      "section": "词汇 · 25分钟",
+      "title": "取り組む",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"とりくむ\" aria-label=\"朗读：取り組む\">取り組む</span></h1><p class=\"translation\" lang=\"ja\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"とりくむ\" aria-label=\"朗读：とりくむ\">とりくむ</span></p><p class=\"meaning\">致力于、着手</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"問題に取り組む\" aria-label=\"朗读：問題に取り組む\"><ruby>問題<rt>もんだい</rt></ruby>に<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>む</span><p class=\"translation\">着手解决问题</p></div><p class=\"note\">重点读音：隐藏假名，试着在3秒内说出读音和意思。</p>"
+    },
+    {
+      "id": "day001-16",
+      "section": "语法 · 20分钟",
+      "title": "わけではない",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"わけではない\" aria-label=\"朗读：わけではない\">～わけではない</span></h1><p class=\"meaning\">并不是……；并非意味着……</p><p>对某种推断或一般化进行部分否定。</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"日本に住んでいるからといって、日本語が上手なわけではない。\" aria-label=\"朗读：日本に住んでいるからといって、日本語が上手なわけではない。\"><ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいるからといって、<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>なわけではない。</span><p class=\"translation\">虽然住在日本，但并不意味着日语就一定好。</p></div><div class=\"note\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"からといって\" aria-label=\"朗读：からといって\">～からといって</span> — 虽说……／不能仅因为……就……<br></div>"
+    },
+    {
+      "id": "day001-17",
+      "section": "语法 · 20分钟",
+      "title": "に違いない",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"に違いない\" aria-label=\"朗读：に違いない\">～に<ruby>違<rt>ちが</rt></ruby>いない</span></h1><p class=\"meaning\">一定……；肯定……</p><p></p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"電気がついているから、彼は家にいるに違いない。\" aria-label=\"朗读：電気がついているから、彼は家にいるに違いない。\"><ruby>電気<rt>でんき</rt></ruby>がついているから、<ruby>彼<rt>かれ</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>にいるに<ruby>違<rt>ちが</rt></ruby>いない。</span><p class=\"translation\">灯亮着，所以他肯定在家。</p></div>"
+    },
+    {
+      "id": "day001-18",
+      "section": "语法 · 20分钟",
+      "title": "に伴って",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"に伴って\" aria-label=\"朗读：に伴って\">～に<ruby>伴<rt>ともな</rt></ruby>って</span></h1><p class=\"meaning\">随着……；伴随着……</p><p></p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"人口の増加に伴って、住宅も増えている。\" aria-label=\"朗读：人口の増加に伴って、住宅も増えている。\"><ruby>人口<rt>じんこう</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>に<ruby>伴<rt>ともな</rt></ruby>って、<ruby>住宅<rt>じゅうたく</rt></ruby>も<ruby>増<rt>ふ</rt></ruby>えている。</span><p class=\"translation\">随着人口增加，住宅也在增加。</p></div><div class=\"note\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"増加する\" aria-label=\"朗读：増加する\"><ruby>増加<rt>ぞうか</rt></ruby>する</span> — 增加<br><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"増える\" aria-label=\"朗读：増える\"><ruby>増<rt>ふ</rt></ruby>える</span> — 某物增加<br><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"増やす\" aria-label=\"朗读：増やす\"><ruby>増<rt>ふ</rt></ruby>やす</span> — 使某物增加<br></div>"
+    },
+    {
+      "id": "day001-19",
+      "section": "语法 · 20分钟",
+      "title": "一方で",
+      "html": "<h1><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"一方で\" aria-label=\"朗读：一方で\">～<ruby>一方<rt>いっぽう</rt></ruby>で</span></h1><p class=\"meaning\">另一方面；一方面……另一方面……</p><p></p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"日本の生活は便利な一方で、生活費が高い。\" aria-label=\"朗读：日本の生活は便利な一方で、生活費が高い。\"><ruby>日本<rt>にほん</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>は<ruby>便利<rt>べんり</rt></ruby>な<ruby>一方<rt>いっぽう</rt></ruby>で、<ruby>生活費<rt>せいかつひ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い。</span><p class=\"translation\">日本的生活很方便，但另一方面生活成本很高。</p></div>"
+    },
+    {
+      "id": "day001-20",
+      "section": "双人语法",
+      "title": "10秒内造句",
+      "html": "<h2>随机说一个语法，<br>对方在10秒内造句。</h2><div class=\"example\"><p><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"わけではない\" aria-label=\"朗读：わけではない\">～わけではない</span></p><p><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"に違いない\" aria-label=\"朗读：に違いない\">～に<ruby>違<rt>ちが</rt></ruby>いない</span></p><p><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"に伴って\" aria-label=\"朗读：に伴って\">～に<ruby>伴<rt>ともな</rt></ruby>って</span></p><p><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"一方で\" aria-label=\"朗读：一方で\">～<ruby>一方<rt>いっぽう</rt></ruby>で</span></p></div><p class=\"note\">四个语法全部完成后，交换角色。</p>"
+    },
+    {
+      "id": "day001-21",
+      "section": "听力 · 20分钟",
+      "title": "先听，再复述",
+      "html": "<h2>先听，不看字幕。</h2><p class=\"note\">正式 Day 001 未指定固定听力原文。请自选一段1–2分钟、N2左右难度的日语材料；下面是原课程提问，点击即可朗读。</p><div class=\"example\"><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"何について話していますか。\" aria-label=\"朗读：何について話していますか。\"><ruby>何<rt>なに</rt></ruby>について<ruby>話<rt>はな</rt></ruby>していますか。</span><p class=\"translation\">在谈什么？</p><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"一番重要なことは何ですか。\" aria-label=\"朗读：一番重要なことは何ですか。\"><ruby>一番<rt>いちばん</rt></ruby><ruby>重要<rt>じゅうよう</rt></ruby>なことは<ruby>何<rt>なん</rt></ruby>ですか。</span><p class=\"translation\">最重要的信息是什么？</p><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"話した人はどう考えていますか。\" aria-label=\"朗读：話した人はどう考えていますか。\"><ruby>話<rt>はな</rt></ruby>した<ruby>人<rt>ひと</rt></ruby>はどう<ruby>考<rt>かんが</rt></ruby>えていますか。</span><p class=\"translation\">说话人的态度是什么？</p></div><p>第一遍听 → 互相回答 → 第二遍听 → 每人30秒日语复述。</p>"
+    },
+    {
+      "id": "day001-22",
+      "section": "口语 · 15分钟",
+      "title": "今天的对话主题",
+      "html": "<h2><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"どうして日本語を勉強していますか。\" aria-label=\"朗读：どうして日本語を勉強していますか。\">どうして<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>していますか。</span></h2><p class=\"meaning\">为什么学习日语？</p><p class=\"note\">每个人至少主动使用今天4个语法中的2个。轮流提问、回答，然后交换角色。</p>"
+    },
+    {
+      "id": "day001-23",
+      "section": "口语 · 15分钟",
+      "title": "追问 1",
+      "html": "<h2><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"いつから日本語を勉強していますか。\" aria-label=\"朗读：いつから日本語を勉強していますか。\">いつから<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>していますか。</span></h2><p class=\"meaning\">从什么时候开始学习日语？</p><p class=\"note\">每个人至少主动使用今天4个语法中的2个。轮流提问、回答，然后交换角色。</p>"
+    },
+    {
+      "id": "day001-24",
+      "section": "口语 · 15分钟",
+      "title": "追问 2",
+      "html": "<h2><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"一番難しいことは何ですか。\" aria-label=\"朗读：一番難しいことは何ですか。\"><ruby>一番<rt>いちばん</rt></ruby><ruby>難<rt>むずか</rt></ruby>しいことは<ruby>何<rt>なん</rt></ruby>ですか。</span></h2><p class=\"meaning\">最难的是什么？</p><p class=\"note\">每个人至少主动使用今天4个语法中的2个。轮流提问、回答，然后交换角色。</p>"
+    },
+    {
+      "id": "day001-25",
+      "section": "口语 · 15分钟",
+      "title": "追问 3",
+      "html": "<h2><span class=\"speak\" lang=\"ja\" role=\"button\" tabindex=\"0\" data-speech=\"N2に合格したら、何をしたいですか。\" aria-label=\"朗读：N2に合格したら、何をしたいですか。\">N2に<ruby>合格<rt>ごうかく</rt></ruby>したら、<ruby>何<rt>なに</rt></ruby>をしたいですか。</span></h2><p class=\"meaning\">通过 N2 后想做什么？</p><p class=\"note\">每个人至少主动使用今天4个语法中的2个。轮流提问、回答，然后交换角色。</p>"
+    },
+    {
+      "id": "day001-26",
+      "section": "复盘 · 5分钟",
+      "title": "把薄弱项留下来",
+      "html": "<h2>今天，哪些还需要再练？</h2><p>记录不会读的词、反应慢的词、造错的语法，以及认识却没听出来的词。</p><label for=\"notes\">我的错题与复习笔记</label><textarea id=\"notes\" placeholder=\"例如：省く — 读音反应慢\"></textarea><p class=\"note\">完成标准：15词至少12个能正确读出；理解4个语法，至少2个用于口语；完成无字幕听力与30秒复述。</p><p id=\"reviewCounts\"></p>"
+    }
+  ]
+}

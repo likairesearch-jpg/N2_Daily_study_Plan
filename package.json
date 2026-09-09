@@ -1,0 +1,21 @@
+{
+  "name": "n2-daily-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node tools/release.cjs validate",
+    "prepare:course": "node tools/release.cjs prepare",
+    "build": "node tools/release.cjs build",
+    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs",
+    "publish:course": "node tools/sync.cjs once",
+    "sync:status": "node tools/sync.cjs status",
+    "serve": "node tools/serve.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1"
+  }
+}

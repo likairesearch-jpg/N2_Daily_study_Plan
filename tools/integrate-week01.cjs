@@ -1,0 +1,18 @@
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..');
+const read=f=>fs.readFileSync(path.join(root,f),'utf8'),write=(f,s)=>fs.writeFileSync(path.join(root,f),s);
+fs.mkdirSync(path.join(root,'work/before-week01-import'),{recursive:true});
+for(const f of ['app.js','weekly.js','index.html','tools/build-course-data.cjs']){const p=path.join(root,'work/before-week01-import',path.basename(f));if(!fs.existsSync(p))fs.copyFileSync(path.join(root,f),p);}
+let app=read('app.js');
+app=app.replace("...(window.N2_WEEK02?.days||[]).map(d=>[d.id,d])","...(window.N2_WEEK01?.days||[]).map(d=>[d.id,d]),...(window.N2_WEEK02?.days||[]).map(d=>[d.id,d])");
+app=app.replace("+(day.week===1?'<option disabled>Day 002–007 · 尚未导入</option>':'')","");
+write('app.js',app);
+let weekly=read('weekly.js');
+weekly=weekly.replace(" const text="," function sourceBlocks(blocks){\n  return blocks.map(b=>{\n   let html='',position=0;const candidates=(b.japanese||[]).filter(t=>t.tts&&/[一-龯々ぁ-ゖァ-ヺ]/.test(t.tts)).sort((a,b)=>b.display.length-a.display.length);\n   while(position<b.text.length){let best=null,at=b.text.length;for(const t of candidates){const p=b.text.indexOf(t.display,position);if(p>=0&&p<at){at=p;best=t;}}if(!best){html+=esc(b.text.slice(position));break;}html+=esc(b.text.slice(position,at))+jp(best.display,best.tts);position=at+best.display.length;}\n   return b.heading?'<h3>'+html+'</h3>':'<p>'+html+'</p>';\n  }).join('');\n }\n"+" const text=");
+weekly=weekly.replace("  if(module.type==='review') {","  if(module.type==='source'){\n   const key=day.id+'-source-'+day.modules.indexOf(module);\n   add(key,module.title,module.title,()=>'<h2>'+esc(module.title)+'</h2>'+sourceBlocks(module.blocks));\n  }\n  if(module.type==='responses'){\n   module.tasks.forEach((task,i)=>{const key=module.id+'-'+i;\n    add(key,'即时应答 · '+module.durationMinutes+'分钟','听后立即回答',()=>'<h2>即时应答 '+(i+1)+'</h2>'+note(module.instructionsZh)+'<button class=\"speak audio-trigger\" data-speech=\"'+esc(task.prompt.tts)+'\">播放题目</button>'+(show(key)?examples([task.prompt,task.answer]):reveal(key,'已回答，查看题目与示范')));\n   });\n  }\n"+"  if(module.type==='review') {");
+weekly=weekly.replace("questions([l.question],false)","questions(l.questions||(l.question?[l.question]:[]),false)");
+weekly=weekly.replace("note(l.retellingInstructionsZh):reveal","note(l.retellingInstructionsZh)+examples(l.followUps):reveal");
+weekly=weekly.replace("'Week 02 交接'","'Week '+String(day.week).padStart(2,'0')+' 交接'").replace("'<h2>Week 02 · 周复盘与交接</h2>'","'<h2>Week '+String(day.week).padStart(2,'0')+' · 周复盘与交接</h2>'");
+write('weekly.js',weekly);
+write('tools/build-course-data.cjs',"const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..');const read=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name),'utf8').replace(/^\\uFEFF/,''));\nconst week1=read('week01.json'),week2=read('week02.json'),knowledge=read('knowledge-index.json');\nif(week1.days.length!==6||week1.days.some((d,i)=>d.week!==1||d.day!==i+2))throw Error('Invalid Week01');\nif(week2.days.length!==7||week2.days.some((d,i)=>d.week!==2||d.day!==i+8))throw Error('Invalid Week02');\nfs.writeFileSync(path.join(root,'data/course-bundle.js'),'// Generated from JSON. Do not edit by hand.\\nwindow.N2_WEEK01='+JSON.stringify(week1)+';\\nwindow.N2_WEEK02='+JSON.stringify(week2)+';\\nwindow.N2_KNOWLEDGE='+JSON.stringify(knowledge)+';\\n');console.log('Generated local-file course bundle: Day002-014; Day001 remains compatible.');\n");
+let html=read('index.html');html=html.replace(/Day 001[^<\n]*Day 008–014/g,'Day 001–014');write('index.html',html);
+console.log('Week01 connected to existing UI.');

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "url": "data/week01.json",
+      "days": [
+        "day002",
+        "day003",
+        "day004",
+        "day005",
+        "day006",
+        "day007"
+      ]
+    },
+    {
+      "week": 2,
+      "url": "data/week02.json",
+      "days": [
+        "day008",
+        "day009",
+        "day010",
+        "day011",
+        "day012",
+        "day013",
+        "day014"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "url": "data/course-policy.json",
+      "sha256": "663abad047d7329eea23af9a6ecbaa9bebe8e41c641eeb05acde79c74570ae24"
+    },
+    {
+      "url": "data/day001.json",
+      "sha256": "6cfd42720021d18ee14f82372a064b16ddb8548aeeba583f42c409e43f79e577"
+    },
+    {
+      "url": "data/knowledge-index.json",
+      "sha256": "420a88d1274542fd49cafcb3cae20a42b37aceeec628e7f430504c5728dfa7d4"
+    },
+    {
+      "url": "data/week01.json",
+      "sha256": "4e080e0b2e45571ac46c02295d1b0d83ab3d2734b6e9954209328d9e65d477d3"
+    },
+    {
+      "url": "data/week02.json",
+      "sha256": "eb951d166f9b7ab2354a7915db9ad081c030711877aafb7a1f2cec006e99f30c"
+    }
+  ]
+}

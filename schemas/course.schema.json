@@ -1,0 +1,772 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "N2 renderer contract (compatible with existing 2.0/2.1 courses)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "week",
+    "days"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        "2.0.0",
+        "2.1.0"
+      ]
+    },
+    "week": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/day"
+      },
+      "minItems": 1,
+      "maxItems": 7
+    }
+  },
+  "$defs": {
+    "ja": {
+      "type": "object",
+      "required": [
+        "display",
+        "tts",
+        "lang",
+        "translationZh"
+      ],
+      "properties": {
+        "display": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tts": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^（）]*$"
+        },
+        "lang": {
+          "const": "ja-JP"
+        },
+        "translationZh": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "prompt",
+        "explanationZh"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "single_choice",
+            "open"
+          ]
+        },
+        "prompt": {
+          "$ref": "#/$defs/ja"
+        },
+        "explanationZh": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "text"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "$ref": "#/$defs/ja"
+              }
+            }
+          }
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sampleAnswer": {
+          "$ref": "#/$defs/ja"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "single_choice"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "options",
+              "answer"
+            ],
+            "properties": {
+              "options": {
+                "minItems": 2
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "open"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "sampleAnswer"
+            ]
+          }
+        }
+      ]
+    },
+    "day": {
+      "type": "object",
+      "required": [
+        "id",
+        "day",
+        "week",
+        "date",
+        "title",
+        "source",
+        "goalsZh",
+        "scheduledMinutes",
+        "counts",
+        "modules"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^day[0-9]{3,}$"
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "week": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "goalsZh": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scheduledMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counts": {
+          "type": "object",
+          "required": [
+            "newVocabulary",
+            "reviewVocabulary"
+          ],
+          "properties": {
+            "newVocabulary": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reviewVocabulary": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "durationMinutes"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "review",
+                  "vocabulary",
+                  "grammar",
+                  "reading",
+                  "listening",
+                  "speaking",
+                  "recap",
+                  "source",
+                  "responses"
+                ]
+              },
+              "durationMinutes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "text",
+                    "japanese"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "heading": {
+                      "type": "boolean"
+                    },
+                    "japanese": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/ja"
+                      }
+                    }
+                  }
+                }
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "prompt",
+                    "answer"
+                  ],
+                  "properties": {
+                    "prompt": {
+                      "$ref": "#/$defs/ja"
+                    },
+                    "answer": {
+                      "$ref": "#/$defs/ja"
+                    }
+                  }
+                }
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "source"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "title",
+                    "blocks"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "responses"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "id",
+                    "tasks"
+                  ]
+                }
+              }
+            ]
+          },
+          "minItems": 1
+        },
+        "vocabulary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "mode",
+              "word",
+              "reading",
+              "collocations"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mode": {
+                "enum": [
+                  "new",
+                  "review"
+                ]
+              },
+              "word": {
+                "$ref": "#/$defs/ja"
+              },
+              "reading": {
+                "type": "string",
+                "minLength": 1
+              },
+              "collocations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "text"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "text": {
+                      "$ref": "#/$defs/ja"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "collocations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "text"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "$ref": "#/$defs/ja"
+              }
+            }
+          }
+        },
+        "grammar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "mode",
+              "form",
+              "meaningZh",
+              "examples"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mode": {
+                "enum": [
+                  "new",
+                  "review"
+                ]
+              },
+              "form": {
+                "$ref": "#/$defs/ja"
+              },
+              "meaningZh": {
+                "type": "string"
+              },
+              "examples": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ja"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "intervals"
+          ],
+          "properties": {
+            "intervals": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "offsetDays",
+                  "sourceDay",
+                  "vocabularyIds",
+                  "grammarIds"
+                ],
+                "properties": {
+                  "offsetDays": {
+                    "enum": [
+                      1,
+                      3,
+                      7
+                    ]
+                  },
+                  "sourceDay": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "vocabularyIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "grammarIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reading": {
+          "type": "object",
+          "required": [
+            "id",
+            "text",
+            "timeLimitSeconds",
+            "questions",
+            "secondPass"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "$ref": "#/$defs/ja"
+            },
+            "timeLimitSeconds": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "questions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/question"
+              }
+            },
+            "secondPass": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "listening": {
+          "type": "object",
+          "required": [
+            "id",
+            "tts",
+            "segments"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tts": {
+              "type": "string",
+              "minLength": 1
+            },
+            "segments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "text"
+                ],
+                "properties": {
+                  "text": {
+                    "$ref": "#/$defs/ja"
+                  }
+                }
+              }
+            },
+            "question": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/question"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "questions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/question"
+              }
+            },
+            "followUps": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ja"
+              }
+            }
+          }
+        },
+        "speaking": {
+          "type": "object",
+          "required": [
+            "id",
+            "prompt",
+            "models",
+            "followUps"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "$ref": "#/$defs/ja"
+            },
+            "models": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ja"
+              }
+            },
+            "followUps": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ja"
+              }
+            }
+          }
+        },
+        "recap": {
+          "type": "object"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "review"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "review"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "vocabulary"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "vocabulary",
+              "collocations"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "grammar"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "grammar"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "reading"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "reading"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "listening"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "listening"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "speaking"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "speaking"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "modules": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "recap"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "recap"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

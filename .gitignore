@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.sync/
+work/
+*.log
+.env
+.env.*
+!.env.example
+data/course-bundle.js
+data/day001.js
+data/*.tmp
