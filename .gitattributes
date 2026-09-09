@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Course hashes cover exact UTF-8 bytes; never rewrite their line endings.
+data/*.json -text
+*.png binary
