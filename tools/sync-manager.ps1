@@ -1,4 +1,4 @@
-﻿param([switch]$SmokeTest)
+﻿param([switch]$SmokeTest,[ValidateSet('reference','sync','stop','start','status')][string]$SmokeAction='reference')
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
@@ -77,7 +77,7 @@ $timer.Add_Tick({
  }
 })
 $form.Add_FormClosing({if($script:job){$_.Cancel=$true;[void][System.Windows.Forms.MessageBox]::Show('请等待当前操作完成，再关闭窗口。','操作正在运行')}})
-$form.Add_Shown({Start-JobUI 'tools/reference.cjs' 'status' '本地 Reference 信息'})
+$form.Add_Shown({if($SmokeTest){$indices=@{sync=0;stop=1;start=2;status=3;reference=5};$script:buttons[$indices[$SmokeAction]].PerformClick()}else{Start-JobUI 'tools/reference.cjs' 'status' '本地 Reference 信息'}})
 $timer.Start()
 [void]$form.ShowDialog()
 $timer.Stop();$timer.Dispose();$form.Dispose()

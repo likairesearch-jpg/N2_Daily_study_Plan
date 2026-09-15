@@ -47,3 +47,7 @@ Added licensed reference snapshots: 11,720 vocabulary records, 2,211 kanji, 1,06
 Added deterministic refresh, exact license evidence checks, conflict reports, search and coverage commands. Tested license change rejection, invalid schema/IDs, failed Git fetch preserving previous data, and repeated offline updates. Source caches and draft snapshots are ignored; Pages excludes the reference corpus.
 
 Course dates and new-item counts are now validated. GitHub Actions generates the course index before checking metadata, validates reference data and runs a real browser PWA smoke test. Windows synchronization is now a one-minute periodic task; Ready between runs is expected. See RELEASE_WORKFLOW.md for controls.
+
+## 2026-09-15 desktop manager and manual references
+
+Course task verified: one Daily trigger, 16:00 Windows local time (Japan), interval one day, no minute repetition. No reference scheduled task found. GUI launch/render and actual stop/start/status/sync button handlers passed. Stop produced Disabled; start restored schedule; manual sync reported no changes and HEAD stayed unchanged. Local reference query filters, failed-fetch preservation and license-change rejection passed. Formal Day001-014 and reference snapshot remained unchanged. Open N2 Sync Manager.vbs by double-click; no terminal needed. Reference is manual-only; snapshot/source info is available in the GUI.
