@@ -4,6 +4,7 @@ $projectRoot=Split-Path $PSScriptRoot -Parent
 $taskName='N2-Daily-Course-Sync'
 switch ($Action) {
  'install' {
+  if((git -C $projectRoot branch --show-current) -ne 'main'){throw 'Install daily synchronization only from main'}
   $nodePath=(Get-Command node -ErrorAction Stop).Source
   $gitFolder=Split-Path (Get-Command git -ErrorAction Stop).Source
   $syncDir=Join-Path $projectRoot '.sync'

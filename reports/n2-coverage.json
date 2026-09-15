@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-09-15",
+  "examDate": "2026-12-06",
+  "daysAvailable": 82,
+  "formalWeeks": [
+    1,
+    2,
+    3
+  ],
+  "latestFormalDay": 21,
+  "referenceSnapshot": "6ab38257b036b0ded183a334f7ec12b20c26551df1f233575492f3a2ba808895",
+  "courseSignature": "e75ff9e8da6f9252e45fefcfc7e91207f23594b7b02edc09fd32b2d4f4d2d7b2",
+  "types": {
+    "vocab": {
+      "n2Candidates": 2518,
+      "resolvedN2": 2285,
+      "coveredStableIds": 67,
+      "uncovered": 2451,
+      "levelConflicts": 233,
+      "unmappedCourseItems": 158
+    },
+    "grammar": {
+      "n2Candidates": 225,
+      "resolvedN2": 220,
+      "coveredStableIds": 26,
+      "uncovered": 199,
+      "levelConflicts": 5,
+      "unmappedCourseItems": 24
+    },
+    "kanji": {
+      "n2Candidates": 367,
+      "resolvedN2": 367,
+      "coveredStableIds": null,
+      "uncovered": null,
+      "levelConflicts": 0,
+      "unmappedCourseItems": 0
+    }
+  },
+  "forecasts": [
+    {
+      "newWordsPerDay": 12,
+      "capacity": 984,
+      "possibleAdditionalCoverage": 984,
+      "remainingGap": 1467
+    },
+    {
+      "newWordsPerDay": 15,
+      "capacity": 1230,
+      "possibleAdditionalCoverage": 1230,
+      "remainingGap": 1221
+    },
+    {
+      "newWordsPerDay": 18,
+      "capacity": 1476,
+      "possibleAdditionalCoverage": 1476,
+      "remainingGap": 975
+    },
+    {
+      "newWordsPerDay": 20,
+      "capacity": 1640,
+      "possibleAdditionalCoverage": 1640,
+      "remainingGap": 811
+    }
+  ],
+  "assumptions": [
+    "N2 candidate means at least one source assigns N2; conflicts separately counted.",
+    "Coverage uses stable IDs and conservative unique historical mappings, not mastery; unresolved historical items may make the gap look larger.",
+    "Kanji formal instructional coverage is unknown, not zero.",
+    "Optimistic daily capacity includes today, excludes exam day, assumes no rest/review-only days and all new words are distinct N2 candidates. Experiments are excluded."
+  ]
+}

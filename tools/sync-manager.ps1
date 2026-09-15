@@ -1,4 +1,4 @@
-﻿param([switch]$SmokeTest,[ValidateSet('reference','sync','stop','start','status')][string]$SmokeAction='reference')
+﻿param([switch]$SmokeTest,[ValidateSet('reference','sync','stop','start','status','plan','plan-save')][string]$SmokeAction='reference')
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
@@ -14,22 +14,27 @@ $form.MinimumSize=New-Object System.Drawing.Size(900,700)
 $form.StartPosition='CenterScreen'
 $form.Font=New-Object System.Drawing.Font('Microsoft YaHei UI',10)
 $form.BackColor=[System.Drawing.Color]::FromArgb(245,247,250)
+$tabs=New-Object System.Windows.Forms.TabControl;$tabs.Dock='Fill'
+$publishTab=New-Object System.Windows.Forms.TabPage;$publishTab.Text='发布与同步'
+$planTab=New-Object System.Windows.Forms.TabPage;$planTab.Text='学习计划实验室 / Plan Lab';$planTab.AutoScroll=$true
+$tabs.TabPages.Add($publishTab);$tabs.TabPages.Add($planTab);$form.Controls.Add($tabs)
 $title=New-Object System.Windows.Forms.Label
 $title.Text='课程发布与本地资料库'
 $title.Font=New-Object System.Drawing.Font('Microsoft YaHei UI',18,[System.Drawing.FontStyle]::Bold)
 $title.SetBounds(24,18,820,40)
-$form.Controls.Add($title)
+$publishTab.Controls.Add($title)
 $hint=New-Object System.Windows.Forms.Label
 $hint.Text='课程每天 16:00 自动同步（电脑本地时间）。Reference 仅在点击按钮时联网更新。'
+if((git -C $root branch --show-current) -ne 'main'){$hint.Text='功能测试工作区：不能直接发布。正式每日任务仍使用 main；Reference 仅手动更新。'}
 $hint.SetBounds(24,65,830,30)
-$form.Controls.Add($hint)
+$publishTab.Controls.Add($hint)
 $script:buttons=@()
 function Add-ActionButton($text,$left,$top,$scriptFile,$mode){
  $button=New-Object System.Windows.Forms.Button
  $button.Text=$text; $button.SetBounds($left,$top,190,42)
  $button.Tag=@($scriptFile,$mode)
  $button.Add_Click({$mode=$this.Tag[1];if($this.Tag[0] -eq 'tools/workflow.cjs'){$mode+=' --week='+$weekPicker.Value};Start-JobUI $this.Tag[0] $mode $this.Text})
- $form.Controls.Add($button);$script:buttons+=,$button
+ $publishTab.Controls.Add($button);$script:buttons+=,$button
 }
 Add-ActionButton '立即同步课程' 24 108 'tools/sync.cjs' 'once'
 Add-ActionButton '停止自动同步' 230 108 'tools/sync.cjs' 'stop'
@@ -45,20 +50,20 @@ $weekPicker=New-Object System.Windows.Forms.NumericUpDown
 $weekPicker.Minimum=1;$weekPicker.Maximum=200;$weekPicker.SetBounds(642,228,80,30)
 $courseIndex=Get-Content -Raw -LiteralPath (Join-Path $root 'data/index.json') | ConvertFrom-Json
 $weekPicker.Value=1+($courseIndex.weeks | Measure-Object -Property week -Maximum).Maximum
-$form.Controls.Add($weekPicker)
-$weekLabel=New-Object System.Windows.Forms.Label;$weekLabel.Text='Week';$weekLabel.SetBounds(734,228,80,30);$form.Controls.Add($weekLabel)
+$publishTab.Controls.Add($weekPicker)
+$weekLabel=New-Object System.Windows.Forms.Label;$weekLabel.Text='Week';$weekLabel.SetBounds(734,228,80,30);$publishTab.Controls.Add($weekLabel)
 $note=New-Object System.Windows.Forms.Label
 $note.Text='开启只恢复每日计划；立即同步随时可用。停止不撤回已发布内容。资料更新不会发布课程。'
 $note.SetBounds(24,274,830,38)
-$form.Controls.Add($note)
+$publishTab.Controls.Add($note)
 $script:output=New-Object System.Windows.Forms.TextBox
 $script:output.Multiline=$true;$script:output.ReadOnly=$true;$script:output.ScrollBars='Both';$script:output.WordWrap=$false
 $script:output.Font=New-Object System.Drawing.Font('Consolas',10)
 $script:output.SetBounds(24,320,808,340);$script:output.Anchor='Top,Bottom,Left,Right'
-$form.Controls.Add($script:output)
+$publishTab.Controls.Add($script:output)
 $script:state=New-Object System.Windows.Forms.Label
 $script:state.SetBounds(24,690,808,28);$script:state.Anchor='Bottom,Left,Right';$script:state.Text='就绪 · 关闭窗口不影响每日计划任务'
-$form.Controls.Add($script:state)
+$publishTab.Controls.Add($script:state)
 $script:job=$null;$script:smokeExit=1
 function Start-JobUI($scriptFile,$mode,$label){
  if($script:job){return}
@@ -83,11 +88,13 @@ $timer.Add_Tick({
   $script:state.Text=if($code -eq 0){'已完成 · '+(Get-Date -Format 'HH:mm:ss')}else{'失败 · 退出码 '+$code+' · 请查看上方错误；原有资料不会因失败而删除'}
   $script:job.Dispose();$script:job=$null
   foreach($button in $script:buttons){$button.Enabled=$true}
+  $script:lastJobCode=$code;if($script:afterJob){& $script:afterJob;$script:afterJob=$null}
   if($SmokeTest){$script:smokeExit=$code;$form.Refresh();$bmp=New-Object System.Drawing.Bitmap($form.Width,$form.Height);$form.DrawToBitmap($bmp,$form.ClientRectangle);$bmp.Save((Join-Path $root '.sync/manager-preview.png'));$bmp.Dispose();$form.Close()}
  }
 })
 $form.Add_FormClosing({if($script:job){$_.Cancel=$true;[void][System.Windows.Forms.MessageBox]::Show('请等待当前操作完成，再关闭窗口。','操作正在运行')}})
-$form.Add_Shown({if($SmokeTest){$indices=@{sync=0;stop=1;start=2;status=3;reference=5};$script:buttons[$indices[$SmokeAction]].PerformClick()}else{Start-JobUI 'tools/dashboard.cjs' 'local' '本地系统状态'}})
+. (Join-Path $PSScriptRoot 'plan-panel.ps1')
+$form.Add_Shown({if($SmokeTest -and $SmokeAction -eq 'plan-save'){$tabs.SelectedTab=$planTab;$p=Get-Content -Raw -Encoding UTF8 (Join-Path $root 'config/profiles/official-default.json') | ConvertFrom-Json;$p.id='experiment-ui-test';$p.name='界面保存测试';$p.mode='experiment';Fill-Profile $p;$script:planNew=$true;$script:planFields.vocabularyPerDay.Value=18;Save-Plan $false}elseif($SmokeTest -and $SmokeAction -eq 'plan'){$tabs.SelectedTab=$planTab;Start-JobUI 'tools/plan.cjs' 'list' '读取本地 Profile'}elseif($SmokeTest){$indices=@{sync=0;stop=1;start=2;status=3;reference=5};$script:buttons[$indices[$SmokeAction]].PerformClick()}else{Start-JobUI 'tools/dashboard.cjs' 'local' '本地系统状态'}})
 $timer.Start()
 [void]$form.ShowDialog()
 $timer.Stop();$timer.Dispose();$form.Dispose()

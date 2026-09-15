@@ -1,0 +1,18 @@
+'use strict';
+window.N2PlanClient=(()=>{
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const ruby=s=>esc(s).replace(/([一-龯々]+)（([ぁ-ゖァ-ヺー]+)）/g,'<ruby>$1<rt>$2</rt></ruby>');
+ const plain=s=>String(s||'').replace(/（[^）]*）|\([^)]*\)/g,'');
+ function dictionary(){return window.N2_DICTIONARY||{entries:[],byItem:{},examplesByItem:{}};}
+ function entry(id,surface){const d=dictionary();return d.entries.find(e=>e.id===(d.byItem[id]||id))||d.entries.find(e=>e.surface===plain(surface).replace(/[〜～~\s]/g,''));}
+ function badge(id,surface){const e=entry(id,surface);return e?.levels.length?'<small class="jlpt-badge" title="'+esc(e.conflict?'来源存在差异；非官方确定等级':'参考资料等级；非官方考纲')+'">'+esc(e.levels.join('/')+(e.conflict?'*':''))+'</small>':'';}
+ function tokens(text){const s=plain(text),entries=dictionary().entries.filter(e=>e.type==='vocab').sort((a,b)=>b.surface.length-a.surface.length);let out='',i=0;while(i<s.length){const e=entries.find(e=>s.startsWith(e.surface,i));if(e){out+='<button type="button" class="word-token" data-word="'+esc(e.id)+'">'+esc(e.surface)+'</button>';i+=e.surface.length;}else out+=esc(s[i++]);}return out;}
+ function examples(id,fallback){const list=dictionary().examplesByItem[id]||fallback||[];return list.map(t=>'<div class="example"><button class="speak sentence-audio" aria-label="朗读完整例句或搭配" data-speech="'+esc(t.tts||plain(t.display))+'">🔊</button><span>'+tokens(t.display)+'</span>'+(t.translationZh?'<p class="translation">'+esc(t.translationZh)+'</p>':'')+'</div>').join('');}
+ const split=s=>String(s||'').match(/[^。！？!?]+[。！？!?]*[」』”"]?/g)||[];
+ function reading(r){const displays=split(r.text.display),speech=split(r.text.tts);const parts=r.sentences||displays.map((display,i)=>({display,tts:displays.length===speech.length?speech[i]:plain(display)}));return parts.map(t=>'<span class="speak reading-sentence" role="button" tabindex="0" lang="ja" data-speech="'+esc(t.tts)+'">'+ruby(t.display)+'</span>').join('');}
+ function detail(id){const e=entry(id);const panel=document.querySelector('#word-detail');if(!panel||!e)return;panel.innerHTML='<h2>词汇详情</h2><h3>'+esc(e.surface)+' '+badge(e.id)+'</h3><p>'+esc(e.reading||('读音候选：'+e.readingCandidates.join(' / ')||'unknown'))+'</p><p>'+esc(e.meaningZh||'原课程未提供中文释义')+'</p>'+(!e.meaningZh&&e.meaningsEn.length?'<p>参考释义（英文）：'+esc(e.meaningsEn.join('; '))+'</p>':'')+(e.reading?'<button class="speak" data-speech="'+esc(e.reading)+'">🔊 单词发音</button>':'')+e.collocations.map(t=>'<p>'+esc(t.display)+'</p>').join('')+'<details><summary>Reference / 来源'+(e.conflict?'（有差异）':'')+'</summary>'+e.sources.map(s=>'<p>'+esc(s.id+' · '+s.license+' · '+s.attribution)+'</p>').join('')+'</details>';}
+ function afterRender(cardId,dayId){if(dayId==='day001'){const card=document.querySelector('#card'),heading=card?.querySelector('h1,h2');if(heading){const surface=heading.textContent;heading.insertAdjacentHTML('beforeend',badge(cardId,surface));}const list=dictionary().examplesByItem[cardId];if(list?.length){const target=card?.querySelector('.example');if(target)target.outerHTML=examples(cardId,list);}}
+ const panel=document.querySelector('#word-detail');if(panel)panel.innerHTML='<h2>词汇详情</h2><p>点击上方例句中的词汇查看信息。</p>';}
+ function experimentDays(){return (window.N2_EXPERIMENTS||[]).flatMap(e=>e.sessions.map((s,i)=>{const prefix='exp-'+e.id+'-'+s.id+'--';const copy=structuredClone(s);const walk=x=>{if(!x||typeof x!=='object')return;for(const [k,v]of Object.entries(x)){if(k==='id'&&typeof v==='string')x[k]=prefix+v;else walk(v);}};walk(copy);return {...copy,week:'exp:'+e.id,day:i+1,experimentId:e.id,experimentTitle:e.title};}));}
+ return {badge,examples,reading,detail,afterRender,experimentDays};
+})();

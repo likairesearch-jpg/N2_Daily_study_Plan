@@ -11,7 +11,7 @@ function boot(){
 }
 
 let env=boot();
-assert.equal(env.run('courseDays.size'),14);
+assert.equal(env.run('courseDays.size'),1+require('../data/index.json').weeks.reduce((n,w)=>n+w.days.length,0));
 const counts=[15,12,10,14,12,12],grammarCounts=[4,4,3,4,3,3];
 for(let n=2;n<=7;n++){
  const id='day'+String(n).padStart(3,'0');

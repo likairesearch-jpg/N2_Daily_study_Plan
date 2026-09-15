@@ -6,7 +6,7 @@
     "validate": "node tools/release.cjs validate",
     "prepare:course": "node tools/release.cjs prepare",
     "build": "node tools/release.cjs build",
-    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs && node tests/reference.cjs && node tests/work-context.cjs",
+    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs && node tests/reference.cjs && node tests/work-context.cjs && node tests/plan-lab.cjs",
     "publish:course": "node tools/sync.cjs once",
     "sync:status": "node tools/sync.cjs status",
     "serve": "node tools/serve.cjs",
@@ -20,7 +20,12 @@
     "work:context": "node tools/workflow.cjs context",
     "draft:validate": "node tools/workflow.cjs validate",
     "draft:promote": "node tools/workflow.cjs promote",
-    "refs:map": "node tools/workflow.cjs map"
+    "refs:map": "node tools/workflow.cjs map",
+    "plan:coverage": "node tools/plan.cjs coverage",
+    "plan:context": "node tools/plan.cjs context",
+    "profile:list": "node tools/plan.cjs list",
+    "experiment:validate": "node tools/experiments.cjs validate",
+    "experiment:promote": "node tools/experiments.cjs promote"
   },
   "engines": {
     "node": ">=22"

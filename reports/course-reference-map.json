@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "courseSignature": "dcdb5ada998a3d08807f84e57d853c29d155bcd875ce869d515c577aac65e55a",
+  "courseSignature": "132df52d3c8309e1fff9b6bb17b880f936795fa5f4dc5a95c3847fb38e104061",
   "entries": [
     {
       "day": 1,
@@ -2491,10 +2491,1060 @@
       "referenceId": "grammar-80af31a1364c6d3c61a90008",
       "method": "unique-exact-surface",
       "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v01",
+      "surface": "打合（うちあわ）せ",
+      "reading": "うちあわせ",
+      "referenceId": "vocab-0835b8e7873e42abb108556d",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v02",
+      "surface": "受（う）け持（も）つ",
+      "reading": "うけもつ",
+      "referenceId": "vocab-120c16df8d138d9bca9503d9",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v03",
+      "surface": "通知（つうち）する",
+      "reading": "つうちする",
+      "referenceId": "vocab-0d5cb4e6c2a21db20030ba53",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v04",
+      "surface": "纏（まと）める",
+      "reading": "まとめる",
+      "referenceId": "vocab-0c85dcf766c9d5f081df44e4",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v05",
+      "surface": "解説（かいせつ）する",
+      "reading": "かいせつする",
+      "referenceId": "vocab-1fa5e46bd659a73d41d59475",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v06",
+      "surface": "分類（ぶんるい）する",
+      "reading": "ぶんるいする",
+      "referenceId": "vocab-150fb4ddbf3c9d9df6218a47",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v07",
+      "surface": "区分（くぶん）する",
+      "reading": "くぶんする",
+      "referenceId": "vocab-1f3f825517a42c0c76241d01",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v08",
+      "surface": "削除（さくじょ）する",
+      "reading": "さくじょする",
+      "referenceId": "vocab-1e5aa52c06fb4d7b0971476f",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v09",
+      "surface": "肯定（こうてい）する",
+      "reading": "こうていする",
+      "referenceId": "vocab-150e350d2836bf05da6de56e",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v10",
+      "surface": "断定（だんてい）する",
+      "reading": "だんていする",
+      "referenceId": "vocab-227c6fd63fa555327cce8fd0",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v11",
+      "surface": "捉（とら）える",
+      "reading": "とらえる",
+      "referenceId": "vocab-02ec2bec2cb42c5bd94fcbb1",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "vocab",
+      "itemId": "day015-v12",
+      "surface": "ただし",
+      "reading": "ただし",
+      "referenceId": "vocab-0508b52197f37956814d0526",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "grammar",
+      "itemId": "day015-g1",
+      "surface": "てはいられない",
+      "reading": null,
+      "referenceId": "grammar-00360e0ae46bf394891147e6",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "grammar",
+      "itemId": "day015-g2",
+      "surface": "ものですから・もので",
+      "reading": null,
+      "referenceId": "grammar-06ee7eeb8800ad1e7c184f36",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 15,
+      "type": "grammar",
+      "itemId": "day015-g3",
+      "surface": "だけは",
+      "reading": null,
+      "referenceId": "grammar-00cb3ef20ec9c9fc3eb7f7cc",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v01",
+      "surface": "測定（そくてい）",
+      "reading": "そくてい",
+      "referenceId": "vocab-0069c7500ae4c3e70610f696",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v02",
+      "surface": "量（はか）る",
+      "reading": "はかる",
+      "referenceId": "vocab-1d781aae47051dae004c747b",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v03",
+      "surface": "観測（かんそく）する",
+      "reading": "かんそくする",
+      "referenceId": "vocab-130ed7c78995ff9aee5bc7c3",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v04",
+      "surface": "曲線（きょくせん）",
+      "reading": "きょくせん",
+      "referenceId": "vocab-0c000f9df18ae02d8e863744",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v05",
+      "surface": "加速（かそく）",
+      "reading": "かそく",
+      "referenceId": "vocab-1184f3b76e584f1b193f5c42",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v06",
+      "surface": "上下（じょうげ）する",
+      "reading": "じょうげする",
+      "referenceId": "vocab-1e548cf390ec365f5bda1523",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v07",
+      "surface": "激増（げきぞう）する",
+      "reading": "げきぞうする",
+      "referenceId": "vocab-285420866efe080990506413",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v08",
+      "surface": "過半数（かはんすう）",
+      "reading": "かはんすう",
+      "referenceId": "vocab-01fe75187f35f7dab8cb4887",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v09",
+      "surface": "幾分（いくぶん）",
+      "reading": "いくぶん",
+      "referenceId": "vocab-141a9bdaa0157eab8bccc473",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v10",
+      "surface": "一段（いちだん）と",
+      "reading": "いちだんと",
+      "referenceId": "vocab-0025de3289dde36c3ec54ba2",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v11",
+      "surface": "繋（つな）がり",
+      "reading": "つながり",
+      "referenceId": "vocab-1309cc2487a1df3c72feace1",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "vocab",
+      "itemId": "day016-v12",
+      "surface": "自然科学（しぜんかがく）",
+      "reading": "しぜんかがく",
+      "referenceId": "vocab-14b54403ea6a754682ad9e45",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "grammar",
+      "itemId": "day016-g1",
+      "surface": "ところをみると",
+      "reading": null,
+      "referenceId": "grammar-04f339ca21264e0468ab31f7",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "grammar",
+      "itemId": "day016-g2",
+      "surface": "にきまっている",
+      "reading": null,
+      "referenceId": "grammar-0a2fadc56f4cfe74716002e7",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 16,
+      "type": "grammar",
+      "itemId": "day016-g3",
+      "surface": "というものではない・というものでもない",
+      "reading": null,
+      "referenceId": "grammar-2574077bd41422479a8b222c",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v01",
+      "surface": "貸（か）し出（だ）し",
+      "reading": "かしだし",
+      "referenceId": "vocab-142db2288b750fbd472b67e4",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v02",
+      "surface": "通帳（つうちょう）",
+      "reading": "つうちょう",
+      "referenceId": "vocab-080ed003db1010afa4ea1fdc",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v03",
+      "surface": "手（て）ごろ",
+      "reading": "てごろ",
+      "referenceId": "vocab-23dc4a4200fde88e3f2b63cb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v04",
+      "surface": "発売（はつばい）する",
+      "reading": "はつばいする",
+      "referenceId": "vocab-00e07f6b4d2a6dd624906d08",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v05",
+      "surface": "又（また）は",
+      "reading": "または",
+      "referenceId": "vocab-0b545f5d3e6567c162c65e64",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v06",
+      "surface": "まもなく",
+      "reading": "まもなく",
+      "referenceId": "vocab-1b34e5c99e3fce5847dc2d98",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v07",
+      "surface": "申請（しんせい）する",
+      "reading": "しんせいする",
+      "referenceId": "vocab-e1cbce3a044f161b3eb2a31a",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v08",
+      "surface": "有難（ありがた）い",
+      "reading": "ありがたい",
+      "referenceId": "vocab-1d66a18f7b469f676ab050b0",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v09",
+      "surface": "折角（せっかく）",
+      "reading": "せっかく",
+      "referenceId": "vocab-0a6deffde0679425b9748d1f",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v10",
+      "surface": "お構（かま）いなく",
+      "reading": "おかまいなく",
+      "referenceId": "vocab-0f05822f23ba680de0c991f3",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v11",
+      "surface": "御無沙汰（ごぶさた）",
+      "reading": "ごぶさた",
+      "referenceId": "vocab-0b0dd50e5ec3523a6a00a989",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "vocab",
+      "itemId": "day017-v12",
+      "surface": "乗（の）り越（こ）し",
+      "reading": "のりこし",
+      "referenceId": "vocab-077ba248b82ff2e270dfeb0b",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "grammar",
+      "itemId": "day017-g1",
+      "surface": "にこしたことはない",
+      "reading": null,
+      "referenceId": "grammar-0cb4cf3a0cc83ad9385fa070",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "grammar",
+      "itemId": "day017-g2",
+      "surface": "をのぞいて",
+      "reading": null,
+      "referenceId": "grammar-096411a2f0fda6d1fdb4b495",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 17,
+      "type": "grammar",
+      "itemId": "day017-g3",
+      "surface": "はともかく",
+      "reading": null,
+      "referenceId": "grammar-1406f83b97e14713f085a081",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v01",
+      "surface": "整備（せいび）する",
+      "reading": "せいびする",
+      "referenceId": "vocab-09c1bb90aa3235d8315d41cf",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v02",
+      "surface": "器具（きぐ）",
+      "reading": "きぐ",
+      "referenceId": "vocab-081a5fe6c29417850f891f2a",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v03",
+      "surface": "清掃（せいそう）する",
+      "reading": "せいそうする",
+      "referenceId": "vocab-1fd3ac599fc2aeb7211bfd87",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v04",
+      "surface": "消毒（しょうどく）する",
+      "reading": "しょうどくする",
+      "referenceId": "vocab-0c6c3acac2e5cad905168afb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v05",
+      "surface": "点（つ）く",
+      "reading": "つく",
+      "referenceId": "vocab-04b8874f71b91699ab0b66bb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v06",
+      "surface": "点（つ）ける",
+      "reading": "つける",
+      "referenceId": "vocab-11b44eb980ac59f5c614843a",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v07",
+      "surface": "蛍光灯（けいこうとう）",
+      "reading": "けいこうとう",
+      "referenceId": "vocab-269c43326bff04d8c64afa09",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v08",
+      "surface": "大通（おおどお）り",
+      "reading": "おおどおり",
+      "referenceId": "vocab-0fc05b4af3d95a9b9a71ae20",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v09",
+      "surface": "工事（こうじ）する",
+      "reading": "こうじする",
+      "referenceId": "vocab-1a7d9f9196e54d51e62e0e9e",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v10",
+      "surface": "開通（かいつう）する",
+      "reading": "かいつうする",
+      "referenceId": "vocab-250658a08449294685ed1853",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v11",
+      "surface": "拡張（かくちょう）する",
+      "reading": "かくちょうする",
+      "referenceId": "vocab-1c301d0ed4f575f81bf31989",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "vocab",
+      "itemId": "day018-v12",
+      "surface": "解散（かいさん）する",
+      "reading": "かいさんする",
+      "referenceId": "vocab-06887330b45ad61bf5c01e1c",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "grammar",
+      "itemId": "day018-g1",
+      "surface": "まんがいち",
+      "reading": null,
+      "referenceId": "grammar-01645609dd48e8f0bacf89b3",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "grammar",
+      "itemId": "day018-g2",
+      "surface": "てはならない",
+      "reading": null,
+      "referenceId": "grammar-064e70f0e5ab9ac1820e6e60",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 18,
+      "type": "grammar",
+      "itemId": "day018-g3",
+      "surface": "をとわず",
+      "reading": null,
+      "referenceId": "grammar-1816a637137f8308a6c60acf",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v01",
+      "surface": "大学院（だいがくいん）",
+      "reading": "だいがくいん",
+      "referenceId": "vocab-05c0ca6374931ffbfef18b15",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v02",
+      "surface": "自習（じしゅう）する",
+      "reading": "じしゅうする",
+      "referenceId": "vocab-20ab8ca71d1723f3e744f9aa",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v03",
+      "surface": "実習（じっしゅう）する",
+      "reading": "じっしゅうする",
+      "referenceId": "vocab-1fb96a0034c2023f71afeebb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v04",
+      "surface": "写真家（しゃしんか）",
+      "reading": "しゃしんか",
+      "referenceId": "vocab-0670bd5c4d114fa4c41f63f3",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v05",
+      "surface": "工芸（こうげい）",
+      "reading": "こうげい",
+      "referenceId": "vocab-1f0ed54b95147e3f6ea2f9f8",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v06",
+      "surface": "作製（さくせい）",
+      "reading": "さくせい",
+      "referenceId": "vocab-168714b3f0e8a0d86e5f0511",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v07",
+      "surface": "顕微鏡（けんびきょう）",
+      "reading": "けんびきょう",
+      "referenceId": "vocab-14bfb483b4df0423b036a8f2",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v08",
+      "surface": "社会科学（しゃかいかがく）",
+      "reading": "しゃかいかがく",
+      "referenceId": "vocab-1a3f0640ce751052eba1908e",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v09",
+      "surface": "初（はじ）めに",
+      "reading": "はじめに",
+      "referenceId": "vocab-1d8a358f4ae79f356b922c4e",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v10",
+      "surface": "こうして",
+      "reading": "こうして",
+      "referenceId": "vocab-1661916f94eba2ae46ef1409",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v11",
+      "surface": "せっせと",
+      "reading": "せっせと",
+      "referenceId": "vocab-1ee80d231dd58efe3c66759d",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "vocab",
+      "itemId": "day019-v12",
+      "surface": "元々（もともと）",
+      "reading": "もともと",
+      "referenceId": "vocab-2858efe7a11646324a8859c0",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "grammar",
+      "itemId": "day019-g1",
+      "surface": "をきっかけに・がきっかけで",
+      "reading": null,
+      "referenceId": "grammar-23787f396b7711a60621d7da",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "grammar",
+      "itemId": "day019-g2",
+      "surface": "だけあって",
+      "reading": null,
+      "referenceId": "grammar-2b6a2972f74234dac5336999",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 19,
+      "type": "grammar",
+      "itemId": "day019-g3",
+      "surface": "つつ・つつも",
+      "reading": null,
+      "referenceId": "grammar-1b901a5489d63362de1fecc8",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v01",
+      "surface": "相違（そうい）する",
+      "reading": "そういする",
+      "referenceId": "vocab-00517943ee024538100d2518",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v02",
+      "surface": "とどまる",
+      "reading": "とどまる",
+      "referenceId": "vocab-08e237b48a7d7ddcad22e966",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v03",
+      "surface": "却（かえ）って",
+      "reading": "かえって",
+      "referenceId": "vocab-1f2b88a2e84f413f13c0022f",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v04",
+      "surface": "思（おも）いがけない",
+      "reading": "おもいがけない",
+      "referenceId": "vocab-1f75a2abec5b905690125b1e",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v05",
+      "surface": "月給（げっきゅう）",
+      "reading": "げっきゅう",
+      "referenceId": "vocab-201c745d70fb5f3a1d32cbb7",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v06",
+      "surface": "支出（ししゅつ）する",
+      "reading": "ししゅつする",
+      "referenceId": "vocab-5ce41ad54da6da94ee65038b",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v07",
+      "surface": "契約（けいやく）する",
+      "reading": "けいやくする",
+      "referenceId": "vocab-2b1780311f06878b4c072e84",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v08",
+      "surface": "納得（なっとく）する",
+      "reading": "なっとくする",
+      "referenceId": "vocab-29f9531dcff8b0c2a9b6b75e",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v09",
+      "surface": "評価（ひょうか）する",
+      "reading": "ひょうかする",
+      "referenceId": "vocab-1f93e25618f5b0095ef2f2e9",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v10",
+      "surface": "資源（しげん）",
+      "reading": "しげん",
+      "referenceId": "vocab-7accd570d8538b7db9b2c2eb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v11",
+      "surface": "節約（せつやく）する",
+      "reading": "せつやくする",
+      "referenceId": "vocab-bdb704ac72de96c2a70e2139",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "vocab",
+      "itemId": "day020-v12",
+      "surface": "解釈（かいしゃく）する",
+      "reading": "かいしゃくする",
+      "referenceId": "vocab-5d2b3e7e87228370ff9d9d01",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "grammar",
+      "itemId": "day020-g1",
+      "surface": "にせよ・にしろ",
+      "reading": null,
+      "referenceId": "grammar-24546fab0a26db69f8704266",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "grammar",
+      "itemId": "day020-g2",
+      "surface": "ばかりか",
+      "reading": null,
+      "referenceId": "grammar-0da3916dbd4d12249c2fd299",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 20,
+      "type": "grammar",
+      "itemId": "day020-g3",
+      "surface": "のもとうぜんだ",
+      "reading": null,
+      "referenceId": "grammar-1979fded5a214cd6303ac3fe",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v01",
+      "surface": "捉（とら）える",
+      "reading": "とらえる",
+      "referenceId": "vocab-02ec2bec2cb42c5bd94fcbb1",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v02",
+      "surface": "断定（だんてい）する",
+      "reading": "だんていする",
+      "referenceId": "vocab-227c6fd63fa555327cce8fd0",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v03",
+      "surface": "過半数（かはんすう）",
+      "reading": "かはんすう",
+      "referenceId": "vocab-01fe75187f35f7dab8cb4887",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v04",
+      "surface": "量（はか）る",
+      "reading": "はかる",
+      "referenceId": "vocab-1d781aae47051dae004c747b",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v05",
+      "surface": "申請（しんせい）する",
+      "reading": "しんせいする",
+      "referenceId": "vocab-e1cbce3a044f161b3eb2a31a",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v06",
+      "surface": "貸（か）し出（だ）し",
+      "reading": "かしだし",
+      "referenceId": "vocab-142db2288b750fbd472b67e4",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v07",
+      "surface": "点（つ）く",
+      "reading": "つく",
+      "referenceId": "vocab-04b8874f71b91699ab0b66bb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v08",
+      "surface": "点（つ）ける",
+      "reading": "つける",
+      "referenceId": "vocab-11b44eb980ac59f5c614843a",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v09",
+      "surface": "自習（じしゅう）する",
+      "reading": "じしゅうする",
+      "referenceId": "vocab-20ab8ca71d1723f3e744f9aa",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v10",
+      "surface": "実習（じっしゅう）する",
+      "reading": "じっしゅうする",
+      "referenceId": "vocab-1fb96a0034c2023f71afeebb",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v11",
+      "surface": "相違（そうい）する",
+      "reading": "そういする",
+      "referenceId": "vocab-00517943ee024538100d2518",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "vocab",
+      "itemId": "day021-v12",
+      "surface": "節約（せつやく）する",
+      "reading": "せつやくする",
+      "referenceId": "vocab-bdb704ac72de96c2a70e2139",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "grammar",
+      "itemId": "day021-g1",
+      "surface": "てはいられない",
+      "reading": null,
+      "referenceId": "grammar-00360e0ae46bf394891147e6",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "grammar",
+      "itemId": "day021-g2",
+      "surface": "というものではない・というものでもない",
+      "reading": null,
+      "referenceId": "grammar-2574077bd41422479a8b222c",
+      "method": "explicit-referenceId",
+      "candidates": []
+    },
+    {
+      "day": 21,
+      "type": "grammar",
+      "itemId": "day021-g3",
+      "surface": "にせよ・にしろ",
+      "reading": null,
+      "referenceId": "grammar-24546fab0a26db69f8704266",
+      "method": "explicit-referenceId",
+      "candidates": []
     }
   ],
   "summary": {
-    "matched": 35,
+    "matched": 140,
     "review": 182
   }
 }
