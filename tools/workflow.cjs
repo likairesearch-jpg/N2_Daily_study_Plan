@@ -1,0 +1,47 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const R=require('./release.cjs'),Ref=require('./reference.cjs');
+const ROOT=R.ROOT,read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const key=s=>String(s||'').normalize('NFKC').replace(/（[^）]*）|\([^)]*\)/g,'').replace(/[〜～~\s]/g,'');
+const write=(p,v)=>R.writeChanged(ROOT,{[p]:JSON.stringify(v,null,2)+'\n'});
+function mapping(files=R.capture(),rows=Ref.load().rows){
+ const {weeks,values}=R.validate(files),byId=new Map(rows.map(r=>[r.id,r])),entries=[];
+ const add=(day,type,item,surface,reading,id)=>{const matches=rows.filter(r=>r.type===type&&key(r.surface)===key(surface));let match,method;
+  if(item.referenceId){match=byId.get(item.referenceId);if(!match||match.type!==type||key(match.surface)!==key(surface))throw Error('Invalid explicit referenceId '+item.referenceId);method='explicit-referenceId';}
+  else{const exact=matches.filter(r=>!r.conflict&&r.confidence!=='review'&&(type==='grammar'||key(r.reading)===key(reading)));if(exact.length===1&&matches.length===1){match=exact[0];method='unique-exact-surface'+(type==='vocab'?'-reading':'');}}
+  entries.push({day,type,itemId:id,surface,reading:reading||null,referenceId:match?.id||null,method:method||'review-required',candidates:match?[]:matches.slice(0,5).map(r=>r.id)});
+ };
+ const first=values['data/day001.json'];first.vocab.forEach((v,i)=>add(1,'vocab',{},v[0],v[1],'day001-vocab-'+i));first.grammar.forEach((g,i)=>add(1,'grammar',{},g[0],null,'day001-grammar-'+i));
+ for(const w of weeks)for(const d of w.days){for(const v of d.vocabulary||[])add(d.day,'vocab',v,v.word.display,v.reading,v.id);for(const g of d.grammar||[])add(d.day,'grammar',g,g.form.display,null,g.id);}
+ return {schemaVersion:1,courseSignature:R.signature(files),entries,summary:{matched:entries.filter(e=>e.referenceId).length,review:entries.filter(e=>!e.referenceId).length}};
+}
+function saveMapping(){const m=mapping();write('reports/course-reference-map.json',m);write('reports/reference-mapping-review.json',{courseSignature:m.courseSignature,entries:m.entries.filter(e=>!e.referenceId)});return m;}
+function draft(week,promote=false){
+ if(!Number.isInteger(week)||week<1)throw Error('Use --week=<positive integer>');
+ const name='week'+String(week).padStart(2,'0')+'.json',draftPath=path.join(ROOT,'data/drafts',name),target='data/'+name,text=fs.readFileSync(draftPath,'utf8'),before=R.capture(),next={...before,[target]:text};
+ R.validate(next);if(promote&&before[target]===text){R.assertPublished(before);return {promoted:true,unchanged:true,week};}const approvals=read(path.join(ROOT,'data/publication.json'));approvals.weeks[target]={sha256:R.hash(text),approvedAt:new Date().toISOString(),method:'validated-draft-promotion'};next['data/publication.json']=JSON.stringify(approvals,null,2)+'\n';R.assertPublished(next);const meta=R.metadata(next);
+ if(!promote)return {validated:true,week,sha256:R.hash(text),published:false};
+ const lock=path.join(ROOT,'.sync/publish.lock');fs.mkdirSync(path.dirname(lock),{recursive:true});let fd;try{fd=fs.openSync(lock,'wx');fs.writeFileSync(fd,String(process.pid));}catch{throw Error('Publisher busy; retry after current sync (or recover exited PID lock)');}
+ try{if(R.signature(R.capture())!==R.signature(before)||fs.readFileSync(draftPath,'utf8')!==text)throw Error('Course/draft changed during validation; retry');
+  const backup='.cache/promotions/'+Date.now()+'-'+week+'/';R.writeChanged(ROOT,Object.fromEntries(Object.entries(before).map(([p,t])=>[backup+p,t])));
+  // Course bytes first, approval last: any interrupted promotion blocks publication rather than exposing unapproved bytes.
+  R.writeChanged(ROOT,{[target]:text});R.writeChanged(ROOT,{'data/publication.json':next['data/publication.json']});R.writeChanged(ROOT,meta);R.bundle(ROOT,next);
+  return {promoted:true,week,sha256:R.hash(text),note:'Draft retained. Daily or manual course sync publishes this approved snapshot.'};
+ }finally{fs.closeSync(fd);fs.unlinkSync(lock);}
+}
+function context(week){
+ const files=R.capture();R.assertPublished(files);const {weeks,values}=R.validate(files),ref=Ref.load(),m=mapping(files,ref.rows),latest=weeks.at(-1),next=latest.week+1;
+ if(week!==next)throw Error('Context must target next formal Week '+next);
+ const start=(week-1)*7+1,anchor=Date.parse(values['data/day001.json'].date+'T00:00:00Z'),date=d=>new Date(anchor+(d-1)*86400000).toISOString().slice(0,10),today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ const ids=new Set(m.entries.map(e=>e.referenceId).filter(Boolean));const compact=r=>({id:r.id,type:r.type,surface:r.surface,reading:r.reading,meanings:r.meanings.slice(0,3),jlpt:r.jlpt.resolved,confidence:r.confidence,conflict:r.conflict,structure:r.structure?.slice(0,2),sources:r.sources.map(s=>({id:s.id,url:s.url,license:s.license,attribution:s.attribution})),exampleIds:r.examples?.slice(0,2)});
+ const candidates=type=>ref.rows.filter(r=>r.type===type&&r.jlpt.resolved==='N2'&&!ids.has(r.id)&&!r.conflict&&r.confidence!=='review'&&!m.entries.some(e=>e.type===type&&key(e.surface)===key(r.surface))).slice(0,type==='vocab'?20:10);
+ const vocab=candidates('vocab'),grammar=candidates('grammar'),chars=new Set(vocab.flatMap(v=>[...v.surface]));const kanji=ref.rows.filter(r=>r.type==='kanji'&&chars.has(r.surface)&&!r.conflict).slice(0,8);
+ const exampleIds=new Set([...vocab,...grammar].flatMap(r=>(r.examples||[]).slice(0,1)));const examples=ref.rows.filter(r=>exampleIds.has(r.id)).slice(0,8).map(compact);
+ let state={};const statePath=path.join(ROOT,'reports/learner-state.json');if(fs.existsSync(statePath)){const raw=read(statePath);if(raw.schemaVersion!==1||!raw.states||typeof raw.states!=='object')throw Error('Invalid learner-state schema');for(const [id,color]of Object.entries(raw.states)){if(!['red','yellow','green','unknown'].includes(color))throw Error('Invalid learner color '+id);if(!ref.rows.some(r=>r.id===id))throw Error('Unknown learner referenceId '+id);}state=raw.states;}
+ const reviews=Array.from({length:7},(_,i)=>({day:start+i,date:date(start+i),intervals:[1,3,7].map(offset=>{const sourceDay=start+i-offset;return {offset,sourceDay,status:sourceDay>latest.days.at(-1).day?'pending-current-draft':'formal',candidates:m.entries.filter(e=>e.day===sourceDay).slice(0,12).map(e=>({referenceId:e.referenceId,itemId:e.itemId,type:e.type,surface:e.surface,state:state[e.referenceId]||'unknown'}))};})}));
+ const handoff=latest.days.at(-1).weeklyReview||{};
+ const pack={schemaVersion:1,generatedAt:new Date().toISOString(),referenceSnapshot:ref.index.version,courseSignature:m.courseSignature,latestFormal:{week:latest.week,day:latest.days.at(-1).day},next:{week,startDay:start,endDay:start+6,startDate:date(start),endDate:date(start+6)},exam:{date:'2026-12-06',asOf:today,daysRemaining:Math.ceil((Date.parse('2026-12-06')-Date.parse(today))/86400000),daysFromPlannedWeekStart:Math.ceil((Date.parse('2026-12-06')-Date.parse(date(start)))/86400000)},coveredStableIds:[...ids],learnerStates:Object.fromEntries([...ids].map(id=>[id,state[id]||'unknown'])),handoff:{source:'data/week'+String(latest.week).padStart(2,'0')+'.json',instructions:handoff.instructionsZh||[],actualResults:handoff.actualResults||'unknown',note:'Only existing formal handoff; missing results are unknown.'},spacedReview:reviews,candidates:{vocabulary:vocab.map(compact),grammar:grammar.map(compact),kanji:kanji.map(compact),readingSupport:vocab.slice(0,6).map(v=>({referenceId:v.id,surface:v.surface,reading:v.reading})),examples},reviewRequired:m.entries.filter(e=>!e.referenceId).slice(0,10),referenceConflicts:ref.rows.filter(r=>r.conflict&&Object.values(r.jlpt.bySource).flat().includes('N2')).slice(0,5).map(compact),coverageSummary:{...m.summary,uniqueStableIds:ids.size,matchedIsNotMastery:true,n2:Object.fromEntries(['vocab','grammar','kanji'].map(type=>{const list=ref.rows.filter(r=>r.type===type&&Object.values(r.jlpt.bySource).flat().includes('N2'));return [type,{candidates:list.length,coveredStableIds:list.filter(r=>ids.has(r.id)).length,unmappedHistoricalItems:m.entries.filter(e=>e.type===type&&!e.referenceId).length,conflicts:list.filter(r=>r.conflict).length}]}))},rules:['This is a planning context, not a formal Week course.','Write original explanations, examples and passages. Third-party copying/adaptation requires provenance.','Write drafts only; validate then explicitly promote when complete.','Unknown learner state must not be invented.']};
+ if(JSON.stringify(pack).length>100000)throw Error('Context exceeds 100KB bound; reduce candidate scope');write('reports/work-context.json',pack);write('reports/course-reference-map.json',m);write('reports/reference-mapping-review.json',{courseSignature:m.courseSignature,entries:m.entries.filter(e=>!e.referenceId)});return {file:'reports/work-context.json',bytes:Buffer.byteLength(JSON.stringify(pack)),next:pack.next,coverage:m.summary};
+}
+module.exports={mapping,draft,context,key};
+if(require.main===module)try{const cmd=process.argv[2],week=Number(process.argv.find(a=>a.startsWith('--week='))?.slice(7));const result=cmd==='context'?context(week):cmd==='map'?saveMapping():cmd==='validate'?draft(week):cmd==='promote'?draft(week,true):null;if(!result)throw Error('Use context|validate|promote --week=N, or map');console.log(JSON.stringify(result,null,2));}catch(e){console.error('WORKFLOW FAILED: '+e.message);process.exitCode=1;}

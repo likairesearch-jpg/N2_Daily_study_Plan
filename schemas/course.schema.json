@@ -25,6 +25,9 @@
       },
       "minItems": 1,
       "maxItems": 7
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
     }
   },
   "$defs": {
@@ -54,6 +57,9 @@
             "string",
             "null"
           ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
         }
       }
     },
@@ -107,6 +113,9 @@
         },
         "sampleAnswer": {
           "$ref": "#/$defs/ja"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
         }
       },
       "allOf": [
@@ -372,6 +381,13 @@
                     }
                   }
                 }
+              },
+              "referenceId": {
+                "type": "string",
+                "pattern": "^vocab-[a-f0-9]{24}$"
+              },
+              "provenance": {
+                "$ref": "#/$defs/provenance"
               }
             }
           }
@@ -429,6 +445,13 @@
                   "$ref": "#/$defs/ja"
                 },
                 "minItems": 1
+              },
+              "referenceId": {
+                "type": "string",
+                "pattern": "^grammar-[a-f0-9]{24}$"
+              },
+              "provenance": {
+                "$ref": "#/$defs/provenance"
               }
             }
           }
@@ -601,6 +624,9 @@
         },
         "recap": {
           "type": "object"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
         }
       },
       "allOf": [
@@ -767,6 +793,50 @@
           }
         }
       ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "origin"
+      ],
+      "properties": {
+        "origin": {
+          "enum": [
+            "work-original",
+            "third-party-verbatim",
+            "third-party-adapted"
+          ]
+        },
+        "sourceRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "if": {
+        "properties": {
+          "origin": {
+            "enum": [
+              "third-party-verbatim",
+              "third-party-adapted"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "sourceRef",
+          "license",
+          "attribution"
+        ]
+      }
     }
   }
 }

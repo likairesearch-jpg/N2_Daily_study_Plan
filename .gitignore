@@ -11,3 +11,7 @@ data/day001.js
 data/*.tmp
 
 .cache/
+
+data/drafts/
+reports/work-context.json
+reports/learner-state.json

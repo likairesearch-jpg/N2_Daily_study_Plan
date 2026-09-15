@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const R=require('../tools/release.cjs'),W=require('../tools/workflow.cjs'),Ref=require('../tools/reference.cjs');
+const files=R.capture(),signature=R.signature(files),ref=Ref.load(),map=W.mapping(files,ref.rows);
+const latest=R.validate(files).weeks.at(-1),next=latest.week+1;const packResult=W.context(next),pack=JSON.parse(fs.readFileSync(path.join(R.ROOT,packResult.file),'utf8'));
+assert.equal(pack.latestFormal.day,latest.days.at(-1).day);assert.equal(pack.next.startDay,latest.days.at(-1).day+1);assert(packResult.bytes<100000);assert(pack.candidates.vocabulary.length<=20);assert(pack.candidates.grammar.length<=10);assert(pack.candidates.examples.length<=8);assert(!fs.existsSync(path.join(R.ROOT,'data/week'+String(next).padStart(2,'0')+'.json')));assert.equal(pack.spacedReview[0].intervals[2].sourceDay,pack.next.startDay-7);
+assert(pack.coveredStableIds.every(id=>ref.rows.some(r=>r.id===id)));assert(pack.reviewRequired.every(e=>e.referenceId===null));
+const match=map.entries.find(e=>e.day>=8&&e.referenceId),file='data/week02.json',week=JSON.parse(files[file]),day=week.days.find(d=>d.day===match.day),item=day[match.type==='vocab'?'vocabulary':'grammar'].find(i=>i.id===match.itemId);item.referenceId=match.referenceId;item.provenance={origin:'work-original'};
+const candidate=()=>({...files,[file]:JSON.stringify(week)});R.validate(candidate());assert.throws(()=>R.assertPublished(candidate()),/not promoted/);
+item.referenceId='vocab-000000000000000000000000';assert.throws(()=>R.validate(candidate()),/referenceId/);item.referenceId=match.referenceId;
+item.provenance={origin:'third-party-adapted'};assert.throws(()=>R.validate(candidate()),/provenance|sourceRef|license|attribution/);item.provenance={origin:'third-party-adapted',sourceRef:'https://example.invalid/test-fixture',license:'TEST ONLY',attribution:'Isolated validator fixture'};R.validate(candidate());
+assert.equal(R.signature(R.capture()),signature);assert(!fs.existsSync(path.join(R.ROOT,'dist/data/drafts')));assert(!fs.existsSync(path.join(R.ROOT,'dist/reports')));
+console.log('PASS Work context bounds, stable-ID validation, provenance requirements, approval rejection, formal courses untouched');

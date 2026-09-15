@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
 const R=require('./release.cjs'),dir=path.join(R.ROOT,'.sync');fs.mkdirSync(dir,{recursive:true});
 const statusFile=path.join(dir,'status.json');
-function status(state,message){const value={time:new Date().toISOString(),pid:process.pid,state,message};fs.writeFileSync(statusFile,JSON.stringify(value,null,2));console.log(state+': '+message);}
+function status(state,message){const old=fs.existsSync(statusFile)?JSON.parse(fs.readFileSync(statusFile,'utf8')):{};const now=new Date().toISOString();const value={...old,time:now,pid:process.pid,state,message,...(state==='error'?{lastFailureAt:now,lastFailureReason:message}:{}),...(state==='ok'?{lastSuccessAt:now}:{}),...(state==='ok'&&message.startsWith('Published ')?{lastSuccessfulPushAt:now}:{})};fs.writeFileSync(statusFile,JSON.stringify(value,null,2));console.log(state+': '+message);}
 function git(args,options={}){const r=cp.spawnSync('git',args,{cwd:R.ROOT,encoding:'utf8',timeout:60000,windowsHide:true,env:{...process.env,GIT_TERMINAL_PROMPT:'0',GCM_INTERACTIVE:'Never',...options.env},input:options.input});if(r.error||r.status!==0)throw Error('git '+args[0]+' failed: '+(r.error?.message||r.stderr||r.stdout).trim());return r.stdout.trim();}
 function locked(fn){const file=path.join(dir,'publish.lock');if(fs.existsSync(file)){const pid=Number(fs.readFileSync(file,'utf8'));if(Number.isInteger(pid)&&pid>0){try{process.kill(pid,0);}catch(e){if(e.code==='ESRCH')fs.unlinkSync(file);}}}let fd;try{fd=fs.openSync(file,'wx');fs.writeFileSync(fd,String(process.pid));}catch{throw Error('Publisher lock exists. Check service status before recovering stale .sync/publish.lock.');}try{return fn();}finally{fs.closeSync(fd);fs.unlinkSync(file);}}
 function synchronize(){return locked(()=>{
@@ -13,7 +13,7 @@ function synchronize(){return locked(()=>{
  if(git(['ls-files','-u']))throw Error('Resolve Git conflicts manually');
  if(git(['diff','--name-only','--','tools/release.cjs','tools/sync.cjs','schemas','weekly.js']))throw Error('Validation/renderer code has uncommitted changes; complete the engineering release first');
  const before=git(['rev-parse','HEAD']);
- const files=R.capture(),meta=R.metadata(files),snapshot={...files,...meta};
+ const files=R.capture();R.assertPublished(files);const meta=R.metadata(files),snapshot={...files,...meta};
  const tracked=git(['ls-files','--','data','version.json']).split('\n').filter(p=>R.AUTO(p));
  for(const p of tracked)if(!(p in snapshot))throw Error('Automatic deletion is prohibited: '+p);
  // Fetch may fail without losing or resetting any local data. Retry next cycle.

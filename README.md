@@ -8,7 +8,7 @@
 - [自动同步、停止、恢复和发布](docs/RELEASE_WORKFLOW.md)
 - [实际安装/测试状态](docs/SETUP_STATUS.md)
 
-Work 保存 data/weekXX.json → 本地每日16:00同步（Windows本地时间） → 校验 → 自动 commit/push → Actions → Pages → App 自动更新。index/version 由程序维护，课程与学习进度分离。
+Work 保存 data/drafts/weekXX.json → 完成后 validate/promote → 本地每日16:00同步（Windows本地时间） → 校验 → 自动 commit/push → Actions → Pages → App 自动更新。index/version 由程序维护，课程与学习进度分离。
 
 ```powershell
 node tools/release.cjs prepare
@@ -61,3 +61,7 @@ Work 查询本地小批量资料：
 Double-click **N2 Sync Manager.vbs** in the project folder. No terminal commands are needed. Buttons: sync courses now, stop/start daily course sync, show sync status, manually update Reference, and show local Reference snapshot/source information. Closing the window leaves the daily task enabled unless you stopped it. Course sync runs daily at 16:00 Windows local time (currently Japan). Reference has NO scheduled refresh. The learner App does not download the reference library; Work uses local bounded queries.
 
 Reference update is explicitly manual: GUI button, or `node tools/reference.cjs update` / `npm run refs:update`. Latest snapshot is in `data/reference/index.json`, and commit/version/fetchedAt are in its `metadata/registry.json` and `sources/registry.json`; the GUI Reference info button displays them. fetchedAt stays unchanged when the pinned upstream commit stays unchanged. Failures or changed license/attribution evidence leave the last usable snapshot intact.
+
+## Work readiness
+
+Work writes `data/drafts/weekXX.json`, validates, then explicitly promotes. Only hash-approved formal weeks can publish. Use the manager context/draft buttons or `npm run work:context -- --week=3`. See docs/COURSE_SCHEMA.md and reports/system-readiness.md. Opening the manager reads local status; checking Pages is an explicit network action.

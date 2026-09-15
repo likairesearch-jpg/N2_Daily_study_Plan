@@ -1,3 +1,5 @@
+> 最新发布规则：Work 只写 data/drafts/weekXX.json；完成后明确 validate/promote 才进入正式目录。以 docs/COURSE_SCHEMA.md 的 Draft publication gate 为准。Codex 不生成 Week03。
+
 > 2026-09-15 最新实施规则：暂不生成任何正式 Week03；保留 data/weekXX.json 平面结构。docs/COURSE_SCHEMA.md 是最高接口合同，沿用 display/tts/goalsZh/recap。示意字段不能替代合同。reference 与正式课程完全分离。
 
 # AGENTS.md
@@ -368,7 +370,7 @@ Codex 不生成教学内容，但要确保 App 能发现 Work 的更新。
 长期目标：
 
 ```text
-Work 写入 data/weekXX.json
+Work 写入 data/drafts/weekXX.json → validate/promote → data/weekXX.json
         ↓
 本地/云端校验
         ↓

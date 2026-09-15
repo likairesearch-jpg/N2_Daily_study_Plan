@@ -12,16 +12,11 @@ assert.throws(()=>R.validate(edit(w=>w.days[0].review.intervals[0].vocabularyIds
 assert.throws(()=>R.validate(edit(w=>w.days[0].vocabulary.push(w.days[0].vocabulary[0]))),/duplicate card|duplicate new/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].date='2026-09-04')),/date continuity/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].counts.newVocabulary++)),/count/);
-// Future navigation and validation fixture: existing teaching text copied only in memory, never published.
-const future=JSON.parse(files['data/week02.json']);future.week=3;future.id='week03';future.dayRange={start:15,end:21};
-future.days=future.days.map(d=>{const old=d.day,newDay=old+7,oldId=d.id,newId='day'+String(newDay).padStart(3,'0');d=JSON.parse(JSON.stringify(d).replaceAll(oldId,newId));d.day=newDay;d.week=3;for(const kind of ['vocabulary','grammar'])for(const x of d[kind])x.mode='review';d.counts.newVocabulary=0;d.counts.newGrammar=0;d.counts.reviewVocabulary=d.vocabulary.length;d.counts.reviewGrammar=d.grammar.length;d.date=new Date(Date.parse(d.date)+7*86400000).toISOString().slice(0,10);for(const r of d.review.intervals){r.sourceDay+=7;if(r.sourceDayId)r.sourceDayId='day'+String(r.sourceDay).padStart(3,'0');}return d;});
-const withFuture={...files,'data/week03.json':JSON.stringify(future)};assert.equal(R.validate(withFuture).weeks.length,3);
-assert.equal(JSON.parse(R.metadata(withFuture)['data/index.json']).weeks[2].days[0],'day015');
 // Isolated local remote exercises real Git without publishing test content to GitHub.
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'n2-infra-')),repo=path.join(temp,'repo'),remote=path.join(temp,'remote.git');fs.mkdirSync(repo);
 const run=(cmd,args,cwd=repo,ok=true)=>{const r=cp.spawnSync(cmd,args,{cwd,encoding:'utf8',windowsHide:true,env:{...process.env,NODE_PATH:path.join(R.ROOT,'node_modules'),GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:path.join(temp,'empty-config'),GIT_TERMINAL_PROMPT:'0'}});if(ok&&r.status!==0)throw Error(r.stdout+r.stderr);return r;};
 const git=(...args)=>run('git',args).stdout.trim();
-for(const p of ['tools/release.cjs','tools/sync.cjs','weekly.js','schemas/course.schema.json']){fs.mkdirSync(path.dirname(path.join(repo,p)),{recursive:true});fs.copyFileSync(path.join(R.ROOT,p),path.join(repo,p));}
+for(const p of ['tools/release.cjs','tools/sync.cjs','tools/workflow.cjs','tools/reference.cjs','weekly.js','schemas/course.schema.json']){fs.mkdirSync(path.dirname(path.join(repo,p)),{recursive:true});fs.copyFileSync(path.join(R.ROOT,p),path.join(repo,p));}
 R.writeChanged(repo,{...files,...meta,'.gitignore':'.sync/\ndata/*.js\n'});
 git('init','-b','main');git('config','user.name','Infrastructure Test');git('config','user.email','test@example.invalid');git('add','.');git('commit','-m','Test baseline');
 run('git',['init','--bare',remote]);git('remote','add','origin','https://github.com/n2-test/local.git');git('config','url.'+remote.replace(/\\/g,'/')+'.insteadOf','https://github.com/n2-test/local.git');git('push','-u','origin','main');
@@ -35,3 +30,15 @@ fs.writeFileSync(path.join(repo,'data/week02.json'),'{');assert.notEqual(once(fa
 fs.writeFileSync(path.join(repo,'data/week02.json'),files['data/week02.json']);git('add','unrelated.txt');assert.notEqual(once(false).status,0,'must reject pre-existing manual staging');
 assert.equal(R.signature(R.capture()),original,'real formal course data was untouched');
 console.log('PASS: schema failures, deterministic versions, real isolated Git sync, no duplicate commits, no unrelated files, invalid data blocked, manual staging protected. Test fixture: '+temp);
+
+// Draft rehearsal uses Week02 only inside the isolated test repository.
+git('reset','HEAD','unrelated.txt');fs.mkdirSync(path.join(repo,'data/drafts'),{recursive:true});const draftPath=path.join(repo,'data/drafts/week02.json');
+fs.writeFileSync(draftPath,'{');assert.notEqual(run(process.execPath,['tools/workflow.cjs','promote','--week=2'],repo,false).status,0);assert.equal(git('rev-parse','HEAD'),published);
+const rehearsal=JSON.parse(files['data/week02.json']);rehearsal.title+=' [ISOLATED TEST ONLY]';fs.writeFileSync(draftPath,JSON.stringify(rehearsal));
+once(true);assert.equal(git('rev-parse','HEAD'),published,'draft cannot trigger commit');
+run(process.execPath,['tools/workflow.cjs','validate','--week=2']);assert.equal(fs.readFileSync(path.join(repo,'data/week02.json'),'utf8'),files['data/week02.json']);
+run(process.execPath,['tools/workflow.cjs','promote','--week=2']);once(true);const promoted=git('rev-parse','HEAD');assert.notEqual(promoted,published);assert(!git('show','--pretty=','--name-only','HEAD').includes('drafts'));assert(!fs.readFileSync(path.join(repo,'data/index.json'),'utf8').includes('drafts'));once(true);assert.equal(git('rev-parse','HEAD'),promoted);
+fs.writeFileSync(path.join(repo,'data/week02.json'),JSON.stringify({...rehearsal,title:'Unapproved edit'}));assert.notEqual(once(false).status,0);assert.equal(git('rev-parse','HEAD'),promoted);
+assert.equal(R.signature(R.capture()),original,'No rehearsal course escaped isolated repository');console.log('PASS draft -> validate -> promote -> index/version -> isolated Git push; unpromoted changes rejected');
+
+const resolvedTemp=fs.realpathSync(temp),tempRoot=fs.realpathSync(os.tmpdir());assert(resolvedTemp.startsWith(tempRoot+path.sep)&&path.basename(resolvedTemp).startsWith('n2-infra-'));fs.rmSync(resolvedTemp,{recursive:true,force:true,maxRetries:3});console.log('PASS isolated rehearsal checkout and remote cleaned');

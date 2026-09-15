@@ -44,3 +44,25 @@ Day001 特例：cards 存放从原版逐字提取的27张静态卡片展示，id
 本文是 Work 与 App 的最高接口合同。继续使用 data/weekXX.json 和 display/tts/goalsZh/recap；studyText/goals/dailyReview 不是可直接替换的字段。index/version 由程序维护。正式 Week03 暂停生成，不能自动补空白课程。
 
 校验增加：按原 Day001 日期推算逐日连续日期，以及跨正式日的新词/新语法重复与声明数量核对。保留既有复习 mode，不重写历史课程。独立 miniMock/handoffSummary 尚未实现，请勿输出为期待自动显示的模块；周复盘沿用现有 weeklyReview。参考资料不属于正式课程。
+
+## Draft publication gate and Work handoff (current)
+
+Work MUST write data/drafts/weekXX.json, never edit data/weekXX.json directly. Drafts are ignored by Git, course capture/index, build and PWA. Complete the whole week before explicitly promoting it. The GUI includes context, validate-draft and promote buttons with a Week selector.
+
+1. Generate planning context: `npm run work:context -- --week=3` (or `node tools/workflow.cjs context --week=3`). This does NOT generate a course.
+2. Read WORK_INSTRUCTIONS.md, docs/COURSE_SCHEMA.md, reports/work-context.json and only necessary prior formal Week data. Write original teaching content to the draft path.
+3. Validate: `node tools/workflow.cjs validate --week=3`.
+4. Only when complete, promote: `node tools/workflow.cjs promote --week=3`.
+5. Daily 16:00 sync or the GUI sync button publishes approved data.
+
+Promote validates the entire candidate course collection and renderer, then records exact SHA-256 in data/publication.json. Direct edits after promotion are rejected by sync and CI/build. Approval is an accidental-publication safeguard, not a cryptographic authorization system. A crash between week and manifest writes blocks publication; rerun promotion after recovery. .cache/promotions stores local pre-promotion backups. Draft is retained. Promoting identical already-approved bytes is a no-op. Do not manually edit publication.json; it is maintained by the promotion tool and auto-synced with courses.
+
+Optional vocabulary/grammar `referenceId` is the stable ID from the context/reference record; validator checks existence, type and matching surface. Historical mappings are in reports/course-reference-map.json; unresolved/conflicting matches in reports/reference-mapping-review.json. Courses are not silently rewritten. Stable ID mapping takes priority; unresolved historical text is fallback, not mastery. Never guess a referenceId.
+
+Optional `provenance` can be attached to course objects, Japanese text, questions or vocab/grammar items. Original content: `{"origin":"work-original"}`. Copied/adapted third-party content: `{"origin":"third-party-adapted","sourceRef":"exact source URL or reference ID with locator","license":"applicable license","attribution":"required credit"}` (use third-party-verbatim for copies). All three fields are required for third-party origins. Work must identify copying/adaptation: a validator cannot discover undeclared copying or decide whether a license permits publication. Preserve source-specific notices and satisfy applicable license obligations before promotion.
+
+Reference supplies candidates/readings/kanji/JLPT metadata/coverage/fact checking. Work should write original Chinese explanations, collocation guidance, examples, reading/listening passages, speaking demonstrations and N2-style exercises. Do not assume an example in the context pack is free of attribution requirements.
+
+Context pack is local, bounded below 100KB and Git-ignored; default candidates: 20 vocab, 10 grammar, 8 kanji, 8 examples. Reading support means vocabulary/readings, not generated reading passages. D+1/D+3/D+7 use day offsets and identify future draft-only items as pending. Red/yellow/green are unknown unless explicitly supplied in local reports/learner-state.json: `{"schemaVersion":1,"states":{"<referenceId>":"red"}}`. This is a user-supplied mapping, not automatic import of browser card colors. The pack includes all matched learned IDs, not claims of mastery; map review reports may need inspection if coverage is sparse. Regenerate context after formal course/reference changes. Next-Week dates follow the preserved Day001 anchor; date drift is for Work/user planning, not silent renumbering.
+
+Week03 remains uncreated by Codex. Creating its context is not authorization to generate a formal course.

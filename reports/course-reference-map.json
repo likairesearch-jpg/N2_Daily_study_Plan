@@ -1,0 +1,2500 @@
+{
+  "schemaVersion": 1,
+  "courseSignature": "dcdb5ada998a3d08807f84e57d853c29d155bcd875ce869d515c577aac65e55a",
+  "entries": [
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-0",
+      "surface": "維持",
+      "reading": "いじ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-c667ab8fbe3ce034e6d987a6"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-1",
+      "surface": "改善",
+      "reading": "かいぜん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d87461b6dbcda1902a745714"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-2",
+      "surface": "避ける",
+      "reading": "さける",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-f2e00863587ddd9d84869a31"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-3",
+      "surface": "省く",
+      "reading": "はぶく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-396063087c2a3010ca0f7866"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-4",
+      "surface": "補う",
+      "reading": "おぎなう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-1bf470f91fab0630d805818f"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-5",
+      "surface": "伴う",
+      "reading": "ともなう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-c3351a402e8bb8dda49bde9d"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-6",
+      "surface": "傾向",
+      "reading": "けいこう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-80c2a006ca4ff2a7118e3d1e"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-7",
+      "surface": "影響",
+      "reading": "えいきょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-aa2b1c3944c7b03093922c72"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-8",
+      "surface": "状況",
+      "reading": "じょうきょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-bc06af6e958fc9051dbdbcff"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-9",
+      "surface": "対象",
+      "reading": "たいしょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d8c2867586e5165ef1fd20a1"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-10",
+      "surface": "適切",
+      "reading": "てきせつ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-87a582335de75caf10958a2c"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-11",
+      "surface": "明らか",
+      "reading": "あきらか",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-25557152eb1d527a729ec0ab"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-12",
+      "surface": "比較",
+      "reading": "ひかく",
+      "referenceId": "vocab-79aa27ef6ffb96c4d6832645",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-13",
+      "surface": "判断",
+      "reading": "はんだん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-fd571f14be325aaf14264012"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "vocab",
+      "itemId": "day001-vocab-14",
+      "surface": "取り組む",
+      "reading": "とりくむ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-34d643950f33d1e37493f26e"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "grammar",
+      "itemId": "day001-grammar-0",
+      "surface": "～わけではない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-bae2a0aeb7c05b83bf7363af"
+      ]
+    },
+    {
+      "day": 1,
+      "type": "grammar",
+      "itemId": "day001-grammar-1",
+      "surface": "～に違（ちが）いない",
+      "reading": null,
+      "referenceId": "grammar-e6683f641c45862918ca1e6b",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 1,
+      "type": "grammar",
+      "itemId": "day001-grammar-2",
+      "surface": "～に伴（ともな）って",
+      "reading": null,
+      "referenceId": "grammar-c0a893b8c014859eb97b56cb",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 1,
+      "type": "grammar",
+      "itemId": "day001-grammar-3",
+      "surface": "～一方（いっぽう）で",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v1",
+      "surface": "確認",
+      "reading": "かくにん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-fa63888b8755c22b998e16a8"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v2",
+      "surface": "認める",
+      "reading": "みとめる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ddf603994390ccc940fec2a1",
+        "vocab-e8187b92636ee52e8168b58d"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v3",
+      "surface": "求める",
+      "reading": "もとめる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-af859d4c55673149f2774d75"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v4",
+      "surface": "防ぐ",
+      "reading": "ふせぐ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b6f059cea4a6761baa087e14"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v5",
+      "surface": "含む",
+      "reading": "ふくむ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-7f6d853239eed6b18209ecc3"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v6",
+      "surface": "限る",
+      "reading": "かぎる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-6e7e50de54b4d599927e54d6"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v7",
+      "surface": "異なる",
+      "reading": "ことなる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-028152c1857167c6f1d69b8c"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v8",
+      "surface": "優れる",
+      "reading": "すぐれる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-c98d2a7bff4de33f2ee2c5be"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v9",
+      "surface": "達する",
+      "reading": "たっする",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b69eb22e5307d382a4d0a279"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v10",
+      "surface": "占める",
+      "reading": "しめる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-e7e9383d261a61076543be13"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v11",
+      "surface": "得る",
+      "reading": "える",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-43faa1d1905b0166bea046cb",
+        "vocab-da4728c60c10d8f1976f4752"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v12",
+      "surface": "生じる",
+      "reading": "しょうじる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-39fd3def51081c8c5ddd7445"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v13",
+      "surface": "示す",
+      "reading": "しめす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-9a456b581a0a886f95c12916"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v14",
+      "surface": "基づく",
+      "reading": "もとづく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-9796a98fc01ac1d233424ae6"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "vocab",
+      "itemId": "day002-v15",
+      "surface": "応じる",
+      "reading": "おうじる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-38b1eaf39251b551a0d8fab6"
+      ]
+    },
+    {
+      "day": 2,
+      "type": "grammar",
+      "itemId": "day002-g1",
+      "surface": "～に基（もと）づいて",
+      "reading": null,
+      "referenceId": "grammar-0ba75f71c4d321c867e5b370",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 2,
+      "type": "grammar",
+      "itemId": "day002-g2",
+      "surface": "～に応（おう）じて",
+      "reading": null,
+      "referenceId": "grammar-190aa5b1a18276db78e8606e",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 2,
+      "type": "grammar",
+      "itemId": "day002-g3",
+      "surface": "～おそれがある",
+      "reading": null,
+      "referenceId": "grammar-23b71986f4aff0d27c64e810",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 2,
+      "type": "grammar",
+      "itemId": "day002-g4",
+      "surface": "～にすぎない",
+      "reading": null,
+      "referenceId": "grammar-1d4d1c0d140525730e3b8afb",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v1",
+      "surface": "原因",
+      "reading": "げんいん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-0be9336eae7106d4bf3add39"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v2",
+      "surface": "結果",
+      "reading": "けっか",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-876c8bfa14e253d01c2d5708"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v3",
+      "surface": "増加",
+      "reading": "ぞうか",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-680f95b422a77de0736c42bf"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v4",
+      "surface": "減少",
+      "reading": "げんしょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-195d67d8efb456be999e576c"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v5",
+      "surface": "程度",
+      "reading": "ていど",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-418e8d34f398334be9ec1df1"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v6",
+      "surface": "範囲",
+      "reading": "はんい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-7e87db9a309aede59718a788"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v7",
+      "surface": "現象",
+      "reading": "げんしょう",
+      "referenceId": "vocab-b8404c7065676ad39c01953f",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v8",
+      "surface": "解決",
+      "reading": "かいけつ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-0991de56d7b929fe88dcf1db"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v9",
+      "surface": "防止",
+      "reading": "ぼうし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-862fad1ce042f4242f41e85e"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v10",
+      "surface": "予測",
+      "reading": "よそく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-1d509f20f90f9d1a1986cb23"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v11",
+      "surface": "及ぼす",
+      "reading": "およぼす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-2aa9bc731fa83f30ab357ac7"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "vocab",
+      "itemId": "day003-v12",
+      "surface": "確かめる",
+      "reading": "たしかめる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-3c94eb9faf55e26916240e8c"
+      ]
+    },
+    {
+      "day": 3,
+      "type": "grammar",
+      "itemId": "day003-g1",
+      "surface": "～につれて",
+      "reading": null,
+      "referenceId": "grammar-b3a321929f8eb4be43f24c38",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 3,
+      "type": "grammar",
+      "itemId": "day003-g2",
+      "surface": "～に対（たい）して",
+      "reading": null,
+      "referenceId": "grammar-5dedefe773569c7079558bd8",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 3,
+      "type": "grammar",
+      "itemId": "day003-g3",
+      "surface": "～ことから",
+      "reading": null,
+      "referenceId": "grammar-78dcf682b203927bba401e39",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 3,
+      "type": "grammar",
+      "itemId": "day003-g4",
+      "surface": "～とは限（かぎ）らない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v1",
+      "surface": "対策",
+      "reading": "たいさく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-940386d1bb7e8df2fd7ba2be"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v2",
+      "surface": "条件",
+      "reading": "じょうけん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-100c3cf7b6ac4cc57eb0450b"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v3",
+      "surface": "効果",
+      "reading": "こうか",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ed2d59720c17c534f88073ad"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v4",
+      "surface": "負担",
+      "reading": "ふたん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-7768a607f68905a752e02807"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v5",
+      "surface": "目的",
+      "reading": "もくてき",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-56a4f66ba43a77f43d412501"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v6",
+      "surface": "手段",
+      "reading": "しゅだん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ee32e5f1460cb76eefc7e9d8"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v7",
+      "surface": "適用",
+      "reading": "てきよう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-84b3736809c600d7d62aa9d9"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v8",
+      "surface": "考慮",
+      "reading": "こうりょ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-321547feb2d86409a32028d1"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v9",
+      "surface": "抑える",
+      "reading": "おさえる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 4,
+      "type": "vocab",
+      "itemId": "day004-v10",
+      "surface": "備える",
+      "reading": "そなえる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-6002f80aabc5c779e7ae4aca"
+      ]
+    },
+    {
+      "day": 4,
+      "type": "grammar",
+      "itemId": "day004-g1",
+      "surface": "～に比（くら）べて",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 4,
+      "type": "grammar",
+      "itemId": "day004-g2",
+      "surface": "～によって",
+      "reading": null,
+      "referenceId": "grammar-56b99c892f6c11a85d6e5ba4",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 4,
+      "type": "grammar",
+      "itemId": "day004-g3",
+      "surface": "～上（うえ）で",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v1",
+      "surface": "実施",
+      "reading": "じっし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-8acc11e53135ff1108a7e409"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v2",
+      "surface": "検討",
+      "reading": "けんとう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-8b09bceaf65947e4abde6408"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v3",
+      "surface": "把握",
+      "reading": "はあく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-6044c9e6855df3c29f4d0590"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v4",
+      "surface": "継続",
+      "reading": "けいぞく",
+      "referenceId": "vocab-9e302e7c34ab804e4837e5e7",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v5",
+      "surface": "達成",
+      "reading": "たっせい",
+      "referenceId": "vocab-955a1d754072b4dfbc6c043f",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v6",
+      "surface": "改める",
+      "reading": "あらためる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-8dbdeb73e556b899a7acf1b8"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v7",
+      "surface": "促す",
+      "reading": "うながす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-0da108f4d3939e98bda26975"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v8",
+      "surface": "防止",
+      "reading": "ぼうし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-862fad1ce042f4242f41e85e"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v9",
+      "surface": "削減",
+      "reading": "さくげん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-239c8c17bc1ff2a97270e808"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v10",
+      "surface": "拡大",
+      "reading": "かくだい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-bb8d1a4375961bde4b142400"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v11",
+      "surface": "縮小",
+      "reading": "しゅくしょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-26ad212ab8674d0075d6ae2a"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v12",
+      "surface": "導入",
+      "reading": "どうにゅう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-0a94333cb54a8e722dd12a93"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v13",
+      "surface": "従う",
+      "reading": "したがう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b184bb911772a058c8c65633"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "vocab",
+      "itemId": "day005-v14",
+      "surface": "効率",
+      "reading": "こうりつ",
+      "referenceId": "vocab-0b15d0a8fb0d589454c0efd5",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 5,
+      "type": "grammar",
+      "itemId": "day005-g1",
+      "surface": "～にしたがって",
+      "reading": null,
+      "referenceId": "grammar-c523c16817190847f66b28a8",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 5,
+      "type": "grammar",
+      "itemId": "day005-g2",
+      "surface": "～ために",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-ca2570db83ef19dccfc9e3ae"
+      ]
+    },
+    {
+      "day": 5,
+      "type": "grammar",
+      "itemId": "day005-g3",
+      "surface": "～ことによって",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 5,
+      "type": "grammar",
+      "itemId": "day005-g4",
+      "surface": "～だけでなく",
+      "reading": null,
+      "referenceId": "grammar-6ad2173cd2ab59f898d2cf85",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v1",
+      "surface": "維持費",
+      "reading": "いじひ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v2",
+      "surface": "普及",
+      "reading": "ふきゅう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-08791e17f6e9c7ac52cfb932"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v3",
+      "surface": "需要",
+      "reading": "じゅよう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-c2868ed7dc94e87a4ca88e2c"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v4",
+      "surface": "供給",
+      "reading": "きょうきゅう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-5feecaaa5e95f1831d3da542"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v5",
+      "surface": "削る",
+      "reading": "けずる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-c0db8be528e6fd38e052c6d1"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v6",
+      "surface": "占う",
+      "reading": "うらなう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-3cbcffc90baea64e42ee9d26"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v7",
+      "surface": "見込む",
+      "reading": "みこむ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v8",
+      "surface": "見直す",
+      "reading": "みなおす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ca747ef22d03ecc793c0faed"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v9",
+      "surface": "取り入れる",
+      "reading": "とりいれる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-3400c6d645ace2074c4b7cdd"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v10",
+      "surface": "取り除く",
+      "reading": "とりのぞく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-9b97d5ba5c33e00c27793248"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v11",
+      "surface": "著しい",
+      "reading": "いちじるしい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-27d229f57c247a9bb1802377"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "vocab",
+      "itemId": "day006-v12",
+      "surface": "乏しい",
+      "reading": "とぼしい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-87e0efaae5b977ca4f675246"
+      ]
+    },
+    {
+      "day": 6,
+      "type": "grammar",
+      "itemId": "day006-g1",
+      "surface": "～に応じた",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 6,
+      "type": "grammar",
+      "itemId": "day006-g2",
+      "surface": "～に加えて",
+      "reading": null,
+      "referenceId": "grammar-47ea524be3eb54ac306589ff",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 6,
+      "type": "grammar",
+      "itemId": "day006-g3",
+      "surface": "～にかかわらず",
+      "reading": null,
+      "referenceId": "grammar-5629bbfa1cfb22209fd1ce86",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v1",
+      "surface": "負担",
+      "reading": "ふたん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-7768a607f68905a752e02807"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v2",
+      "surface": "削減",
+      "reading": "さくげん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-239c8c17bc1ff2a97270e808"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v3",
+      "surface": "考慮",
+      "reading": "こうりょ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-321547feb2d86409a32028d1"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v4",
+      "surface": "適用",
+      "reading": "てきよう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-84b3736809c600d7d62aa9d9"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v5",
+      "surface": "実施",
+      "reading": "じっし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-8acc11e53135ff1108a7e409"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v6",
+      "surface": "設ける",
+      "reading": "もうける",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-fb4eb7549ac3f7432cafcaf1"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v7",
+      "surface": "取り扱う",
+      "reading": "とりあつかう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b1f4ac7fd71b3b4e589c67c3"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v8",
+      "surface": "見送る",
+      "reading": "みおくる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ee55fa8dfec6252bed1f3e02"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v9",
+      "surface": "確保",
+      "reading": "かくほ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d2366d0519a21f378c378d78"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v10",
+      "surface": "妨げる",
+      "reading": "さまたげる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-dc4299a0519e1081078dd3d4"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v11",
+      "surface": "限られる",
+      "reading": "かぎられる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 7,
+      "type": "vocab",
+      "itemId": "day007-v12",
+      "surface": "望ましい",
+      "reading": "のぞましい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-1c3da895283529eaa002ff61"
+      ]
+    },
+    {
+      "day": 7,
+      "type": "grammar",
+      "itemId": "day007-g1",
+      "surface": "～上（うえ）で",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 7,
+      "type": "grammar",
+      "itemId": "day007-g2",
+      "surface": "～ことから",
+      "reading": null,
+      "referenceId": "grammar-78dcf682b203927bba401e39",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 7,
+      "type": "grammar",
+      "itemId": "day007-g3",
+      "surface": "～ないことには",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v01",
+      "surface": "担当（たんとう）",
+      "reading": "たんとう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-16830d36a3a3a01c76e61412"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v02",
+      "surface": "手配（てはい）",
+      "reading": "てはい",
+      "referenceId": "vocab-a0bab77cb6641a015784644d",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v03",
+      "surface": "提出（ていしゅつ）",
+      "reading": "ていしゅつ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-6faa8cabaa9185cd6bb33141"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v04",
+      "surface": "締切（しめきり）",
+      "reading": "しめきり",
+      "referenceId": "vocab-1daa7aded830c35a56f861a5",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v05",
+      "surface": "変更（へんこう）",
+      "reading": "へんこう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-eaa8cdc02874143064977e73"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v06",
+      "surface": "延期（えんき）",
+      "reading": "えんき",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-56553a822886e3b484f1b5b8"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v07",
+      "surface": "中止（ちゅうし）",
+      "reading": "ちゅうし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-1bdf3b6e3cc007ac4814a078"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v08",
+      "surface": "了承（りょうしょう）",
+      "reading": "りょうしょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-cfb137f177b84c3c346a0469"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v09",
+      "surface": "承認（しょうにん）",
+      "reading": "しょうにん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-f9710bc07843c29030fbc8cc"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v10",
+      "surface": "依頼（いらい）",
+      "reading": "いらい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-83a5d37799a9aa4ec893e1cc"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v11",
+      "surface": "対応（たいおう）",
+      "reading": "たいおう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-262654354c6e63d352dc1128"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "vocab",
+      "itemId": "day008-v12",
+      "surface": "指摘（してき）",
+      "reading": "してき",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-69b258484b4811b46d1e9554"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "grammar",
+      "itemId": "day008-g1",
+      "surface": "～ものの",
+      "reading": null,
+      "referenceId": "grammar-32a1397fd5b9cc263167119e",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 8,
+      "type": "grammar",
+      "itemId": "day008-g2",
+      "surface": "～わけにはいかない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-ba4aca5a799c34aa6ecb7fa9"
+      ]
+    },
+    {
+      "day": 8,
+      "type": "grammar",
+      "itemId": "day008-g3",
+      "surface": "～かねない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-6c32079b02743d29b43b854b"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v01",
+      "surface": "条件（じょうけん）",
+      "reading": "じょうけん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-100c3cf7b6ac4cc57eb0450b"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v02",
+      "surface": "基準（きじゅん）",
+      "reading": "きじゅん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-1fb6e6b1320cc13a9f40a48b"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v03",
+      "surface": "対象（たいしょう）",
+      "reading": "たいしょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d8c2867586e5165ef1fd20a1"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v04",
+      "surface": "制限（せいげん）",
+      "reading": "せいげん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b7a1ad14c61078ea80d1bdcc"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v05",
+      "surface": "調整（ちょうせい）",
+      "reading": "ちょうせい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-14a23de7338826131ce73467"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v06",
+      "surface": "判断（はんだん）",
+      "reading": "はんだん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-fd571f14be325aaf14264012"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v07",
+      "surface": "検討（けんとう）",
+      "reading": "けんとう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-8b09bceaf65947e4abde6408"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v08",
+      "surface": "比較（ひかく）",
+      "reading": "ひかく",
+      "referenceId": "vocab-79aa27ef6ffb96c4d6832645",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v09",
+      "surface": "適切（てきせつ）",
+      "reading": "てきせつ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-87a582335de75caf10958a2c"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v10",
+      "surface": "十分（じゅうぶん）",
+      "reading": "じゅうぶん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-3fe5f283983dacdc240d7182",
+        "vocab-b796e6705a2ba99377ddb97d"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v11",
+      "surface": "満（み）たす",
+      "reading": "みたす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ffba5897da7d4945e86a8ac3"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "vocab",
+      "itemId": "day009-v12",
+      "surface": "異（こと）なる",
+      "reading": "ことなる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-028152c1857167c6f1d69b8c"
+      ]
+    },
+    {
+      "day": 9,
+      "type": "grammar",
+      "itemId": "day009-g1",
+      "surface": "～に限（かぎ）って",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 9,
+      "type": "grammar",
+      "itemId": "day009-g2",
+      "surface": "～に限（かぎ）らず",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 9,
+      "type": "grammar",
+      "itemId": "day009-g3",
+      "surface": "～にしたところで",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v01",
+      "surface": "原因（げんいん）",
+      "reading": "げんいん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-0be9336eae7106d4bf3add39"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v02",
+      "surface": "要因（よういん）",
+      "reading": "よういん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-e7891117292dcdc539ab4258"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v03",
+      "surface": "結果（けっか）",
+      "reading": "けっか",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-876c8bfa14e253d01c2d5708"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v04",
+      "surface": "影響（えいきょう）",
+      "reading": "えいきょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-aa2b1c3944c7b03093922c72"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v05",
+      "surface": "傾向（けいこう）",
+      "reading": "けいこう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-80c2a006ca4ff2a7118e3d1e"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v06",
+      "surface": "一方（いっぽう）",
+      "reading": "いっぽう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-843ae71909beb7b744e373ff"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v07",
+      "surface": "反面（はんめん）",
+      "reading": "はんめん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v08",
+      "surface": "改善（かいぜん）",
+      "reading": "かいぜん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d87461b6dbcda1902a745714"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v09",
+      "surface": "解決（かいけつ）",
+      "reading": "かいけつ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-0991de56d7b929fe88dcf1db"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "vocab",
+      "itemId": "day010-v10",
+      "surface": "防（ふせ）ぐ",
+      "reading": "ふせぐ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b6f059cea4a6761baa087e14"
+      ]
+    },
+    {
+      "day": 10,
+      "type": "grammar",
+      "itemId": "day010-g1",
+      "surface": "～一方（いっぽう）で",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 10,
+      "type": "grammar",
+      "itemId": "day010-g2",
+      "surface": "～ことによって",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v01",
+      "surface": "したがって",
+      "reading": "したがって",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-27cc39b61e447c2460873de1"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v02",
+      "surface": "つまり",
+      "reading": "つまり",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-018fe54c883234d59bd64621",
+        "vocab-14451c28817cf674c9ab72e6"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v03",
+      "surface": "一方（いっぽう）",
+      "reading": "いっぽう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-843ae71909beb7b744e373ff"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v04",
+      "surface": "逆（ぎゃく）に",
+      "reading": "ぎゃくに",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v05",
+      "surface": "必（かなら）ずしも",
+      "reading": "かならずしも",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d040d64ad42a1cba72a69236"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v06",
+      "surface": "結局（けっきょく）",
+      "reading": "けっきょく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-974b68f7d4cc9ff5aa29e979"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v07",
+      "surface": "明（あき）らか",
+      "reading": "あきらか",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-25557152eb1d527a729ec0ab"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "vocab",
+      "itemId": "day011-v08",
+      "surface": "推測（すいそく）",
+      "reading": "すいそく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-4d90acda576ed5153ffb8aaf"
+      ]
+    },
+    {
+      "day": 11,
+      "type": "grammar",
+      "itemId": "day011-g1",
+      "surface": "～とは限（かぎ）らない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 11,
+      "type": "grammar",
+      "itemId": "day011-g2",
+      "surface": "～ことから",
+      "reading": null,
+      "referenceId": "grammar-78dcf682b203927bba401e39",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v01",
+      "surface": "主張（しゅちょう）",
+      "reading": "しゅちょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d4fbfafbdbf0a63a7b1cfb02"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v02",
+      "surface": "意見（いけん）",
+      "reading": "いけん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-f5e7e0501cfbedb192dad348"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v03",
+      "surface": "賛成（さんせい）",
+      "reading": "さんせい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-2ea6d1211b87a8a280bce206",
+        "vocab-c70d39d891eab12c278ecfa9"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v04",
+      "surface": "反対（たい）",
+      "reading": "はんたい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-edd2d0f97d7926f586c99652"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v05",
+      "surface": "認（みと）める",
+      "reading": "みとめる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ddf603994390ccc940fec2a1",
+        "vocab-e8187b92636ee52e8168b58d"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v06",
+      "surface": "否定",
+      "reading": "ひてい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-010496275dcf68d4e1b805c0"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v07",
+      "surface": "強調（きょうちょう）",
+      "reading": "きょうちょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-3d391e20780750ad3b2532c7"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v08",
+      "surface": "重視（じゅうし）",
+      "reading": "じゅうし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b58956e1c5ca5864bd7d13f7"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v09",
+      "surface": "程度（ていど）",
+      "reading": "ていど",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-418e8d34f398334be9ec1df1"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v10",
+      "surface": "大幅（おおはば）",
+      "reading": "おおはば",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-90550cf6c554b137678acd86"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v11",
+      "surface": "わずか",
+      "reading": "わずか",
+      "referenceId": "vocab-652849dcd65878e1056ced63",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 12,
+      "type": "vocab",
+      "itemId": "day012-v12",
+      "surface": "ほぼ",
+      "reading": "ほぼ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-4b4705172e426d13e8562dd9",
+        "vocab-94736c2d110c70c84fb66d3e"
+      ]
+    },
+    {
+      "day": 12,
+      "type": "grammar",
+      "itemId": "day012-g1",
+      "surface": "～に対（たい）して",
+      "reading": null,
+      "referenceId": "grammar-5dedefe773569c7079558bd8",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 12,
+      "type": "grammar",
+      "itemId": "day012-g2",
+      "surface": "～に比（くら）べて",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 12,
+      "type": "grammar",
+      "itemId": "day012-g3",
+      "surface": "～というより",
+      "reading": null,
+      "referenceId": "grammar-80af31a1364c6d3c61a90008",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v01",
+      "surface": "主張（しゅちょう）",
+      "reading": "しゅちょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d4fbfafbdbf0a63a7b1cfb02"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v02",
+      "surface": "認（みと）める",
+      "reading": "みとめる",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ddf603994390ccc940fec2a1",
+        "vocab-e8187b92636ee52e8168b58d"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v03",
+      "surface": "重視（じゅうし）",
+      "reading": "じゅうし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b58956e1c5ca5864bd7d13f7"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v04",
+      "surface": "程度（ていど）",
+      "reading": "ていど",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-418e8d34f398334be9ec1df1"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v05",
+      "surface": "要因（よういん）",
+      "reading": "よういん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-e7891117292dcdc539ab4258"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v06",
+      "surface": "反面（はんめん）",
+      "reading": "はんめん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v07",
+      "surface": "見込（みこ）む",
+      "reading": "みこむ",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v08",
+      "surface": "見直（みなお）す",
+      "reading": "みなおす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ca747ef22d03ecc793c0faed"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v09",
+      "surface": "乏（とぼ）しい",
+      "reading": "とぼしい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-87e0efaae5b977ca4f675246"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "vocab",
+      "itemId": "day013-v10",
+      "surface": "締切（しめきり）",
+      "reading": "しめきり",
+      "referenceId": "vocab-1daa7aded830c35a56f861a5",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 13,
+      "type": "grammar",
+      "itemId": "day013-g1",
+      "surface": "～ものの",
+      "reading": null,
+      "referenceId": "grammar-32a1397fd5b9cc263167119e",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 13,
+      "type": "grammar",
+      "itemId": "day013-g2",
+      "surface": "～かねない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-6c32079b02743d29b43b854b"
+      ]
+    },
+    {
+      "day": 13,
+      "type": "grammar",
+      "itemId": "day013-g3",
+      "surface": "～というより",
+      "reading": null,
+      "referenceId": "grammar-80af31a1364c6d3c61a90008",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v01",
+      "surface": "担当（たんとう）",
+      "reading": "たんとう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-16830d36a3a3a01c76e61412"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v02",
+      "surface": "手配（てはい）",
+      "reading": "てはい",
+      "referenceId": "vocab-a0bab77cb6641a015784644d",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v03",
+      "surface": "締切（しめきり）",
+      "reading": "しめきり",
+      "referenceId": "vocab-1daa7aded830c35a56f861a5",
+      "method": "unique-exact-surface-reading",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v04",
+      "surface": "了承（りょうしょう）",
+      "reading": "りょうしょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-cfb137f177b84c3c346a0469"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v05",
+      "surface": "承認（しょうにん）",
+      "reading": "しょうにん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-f9710bc07843c29030fbc8cc"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v06",
+      "surface": "基準（きじゅん）",
+      "reading": "きじゅん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-1fb6e6b1320cc13a9f40a48b"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v07",
+      "surface": "制限（せいげん）",
+      "reading": "せいげん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b7a1ad14c61078ea80d1bdcc"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v08",
+      "surface": "調整（ちょうせい）",
+      "reading": "ちょうせい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-14a23de7338826131ce73467"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v09",
+      "surface": "満（み）たす",
+      "reading": "みたす",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-ffba5897da7d4945e86a8ac3"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v10",
+      "surface": "要因（よういん）",
+      "reading": "よういん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-e7891117292dcdc539ab4258"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v11",
+      "surface": "反面（はんめん）",
+      "reading": "はんめん",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v12",
+      "surface": "推測（すいそく）",
+      "reading": "すいそく",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-4d90acda576ed5153ffb8aaf"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v13",
+      "surface": "主張（しゅちょう）",
+      "reading": "しゅちょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-d4fbfafbdbf0a63a7b1cfb02"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v14",
+      "surface": "否定",
+      "reading": "ひてい",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-010496275dcf68d4e1b805c0"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v15",
+      "surface": "強調（きょうちょう）",
+      "reading": "きょうちょう",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-3d391e20780750ad3b2532c7"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "vocab",
+      "itemId": "day014-v16",
+      "surface": "重視（じゅうし）",
+      "reading": "じゅうし",
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "vocab-b58956e1c5ca5864bd7d13f7"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "grammar",
+      "itemId": "day014-g1",
+      "surface": "～ものの",
+      "reading": null,
+      "referenceId": "grammar-32a1397fd5b9cc263167119e",
+      "method": "unique-exact-surface",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "grammar",
+      "itemId": "day014-g2",
+      "surface": "～わけにはいかない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-ba4aca5a799c34aa6ecb7fa9"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "grammar",
+      "itemId": "day014-g3",
+      "surface": "～かねない",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": [
+        "grammar-6c32079b02743d29b43b854b"
+      ]
+    },
+    {
+      "day": 14,
+      "type": "grammar",
+      "itemId": "day014-g4",
+      "surface": "～に限（かぎ）って",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "grammar",
+      "itemId": "day014-g5",
+      "surface": "～に限（かぎ）らず",
+      "reading": null,
+      "referenceId": null,
+      "method": "review-required",
+      "candidates": []
+    },
+    {
+      "day": 14,
+      "type": "grammar",
+      "itemId": "day014-g6",
+      "surface": "～というより",
+      "reading": null,
+      "referenceId": "grammar-80af31a1364c6d3c61a90008",
+      "method": "unique-exact-surface",
+      "candidates": []
+    }
+  ],
+  "summary": {
+    "matched": 35,
+    "review": 182
+  }
+}

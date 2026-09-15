@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "weeks": {
+    "data/week01.json": {
+      "sha256": "4e080e0b2e45571ac46c02295d1b0d83ab3d2734b6e9954209328d9e65d477d3",
+      "approvedAt": "2026-09-15T08:13:53.605Z",
+      "method": "existing-formal-baseline"
+    },
+    "data/week02.json": {
+      "sha256": "02af4e067a10795ccd60e39019983888817192e253652af3cf62048f990bc48e",
+      "approvedAt": "2026-09-15T08:13:53.605Z",
+      "method": "existing-formal-baseline"
+    }
+  }
+}

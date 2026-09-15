@@ -1,3 +1,5 @@
+> 最新发布规则：Work 只写 data/drafts/weekXX.json；完成后明确 validate/promote 才进入正式目录。以 docs/COURSE_SCHEMA.md 的 Draft publication gate 为准。Codex 不生成 Week03。
+
 > 2026-09-15 最新实施规则：暂不生成任何正式 Week03；保留 data/weekXX.json 平面结构。docs/COURSE_SCHEMA.md 是最高接口合同，沿用 display/tts/goalsZh/recap。示意字段不能替代合同。reference 与正式课程完全分离。
 
 # WORK_INSTRUCTIONS.md
@@ -368,3 +370,25 @@ No network: query, coverage, validate, update --offline, sync status/start/stop.
 Double-click **N2 Sync Manager.vbs** in the project folder. No terminal commands are needed. Buttons: sync courses now, stop/start daily course sync, show sync status, manually update Reference, and show local Reference snapshot/source information. Closing the window leaves the daily task enabled unless you stopped it. Course sync runs daily at 16:00 Windows local time (currently Japan). Reference has NO scheduled refresh. The learner App does not download the reference library; Work uses local bounded queries.
 
 Reference update is explicitly manual: GUI button, or `node tools/reference.cjs update` / `npm run refs:update`. Latest snapshot is in `data/reference/index.json`, and commit/version/fetchedAt are in its `metadata/registry.json` and `sources/registry.json`; the GUI Reference info button displays them. fetchedAt stays unchanged when the pinned upstream commit stays unchanged. Failures or changed license/attribution evidence leave the last usable snapshot intact.
+
+## Draft publication gate and Work handoff (current)
+
+Work MUST write data/drafts/weekXX.json, never edit data/weekXX.json directly. Drafts are ignored by Git, course capture/index, build and PWA. Complete the whole week before explicitly promoting it. The GUI includes context, validate-draft and promote buttons with a Week selector.
+
+1. Generate planning context: `npm run work:context -- --week=3` (or `node tools/workflow.cjs context --week=3`). This does NOT generate a course.
+2. Read WORK_INSTRUCTIONS.md, docs/COURSE_SCHEMA.md, reports/work-context.json and only necessary prior formal Week data. Write original teaching content to the draft path.
+3. Validate: `node tools/workflow.cjs validate --week=3`.
+4. Only when complete, promote: `node tools/workflow.cjs promote --week=3`.
+5. Daily 16:00 sync or the GUI sync button publishes approved data.
+
+Promote validates the entire candidate course collection and renderer, then records exact SHA-256 in data/publication.json. Direct edits after promotion are rejected by sync and CI/build. Approval is an accidental-publication safeguard, not a cryptographic authorization system. A crash between week and manifest writes blocks publication; rerun promotion after recovery. .cache/promotions stores local pre-promotion backups. Draft is retained. Promoting identical already-approved bytes is a no-op. Do not manually edit publication.json; it is maintained by the promotion tool and auto-synced with courses.
+
+Optional vocabulary/grammar `referenceId` is the stable ID from the context/reference record; validator checks existence, type and matching surface. Historical mappings are in reports/course-reference-map.json; unresolved/conflicting matches in reports/reference-mapping-review.json. Courses are not silently rewritten. Stable ID mapping takes priority; unresolved historical text is fallback, not mastery. Never guess a referenceId.
+
+Optional `provenance` can be attached to course objects, Japanese text, questions or vocab/grammar items. Original content: `{"origin":"work-original"}`. Copied/adapted third-party content: `{"origin":"third-party-adapted","sourceRef":"exact source URL or reference ID with locator","license":"applicable license","attribution":"required credit"}` (use third-party-verbatim for copies). All three fields are required for third-party origins. Work must identify copying/adaptation: a validator cannot discover undeclared copying or decide whether a license permits publication. Preserve source-specific notices and satisfy applicable license obligations before promotion.
+
+Reference supplies candidates/readings/kanji/JLPT metadata/coverage/fact checking. Work should write original Chinese explanations, collocation guidance, examples, reading/listening passages, speaking demonstrations and N2-style exercises. Do not assume an example in the context pack is free of attribution requirements.
+
+Context pack is local, bounded below 100KB and Git-ignored; default candidates: 20 vocab, 10 grammar, 8 kanji, 8 examples. Reading support means vocabulary/readings, not generated reading passages. D+1/D+3/D+7 use day offsets and identify future draft-only items as pending. Red/yellow/green are unknown unless explicitly supplied in local reports/learner-state.json: `{"schemaVersion":1,"states":{"<referenceId>":"red"}}`. This is a user-supplied mapping, not automatic import of browser card colors. The pack includes all matched learned IDs, not claims of mastery; map review reports may need inspection if coverage is sparse. Regenerate context after formal course/reference changes. Next-Week dates follow the preserved Day001 anchor; date drift is for Work/user planning, not silent renumbering.
+
+Week03 remains uncreated by Codex. Creating its context is not authorization to generate a formal course.

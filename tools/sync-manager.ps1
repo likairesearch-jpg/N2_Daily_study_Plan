@@ -9,8 +9,8 @@ $runtimeFile=Join-Path $root '.sync/runtime.json'
 if(Test-Path $runtimeFile){$runtime=Get-Content -Raw -LiteralPath $runtimeFile | ConvertFrom-Json; $node=$runtime.NodePath; $env:PATH=$runtime.GitFolder+';'+$env:PATH}else{$node=(Get-Command node -ErrorAction Stop).Source}
 $form=New-Object System.Windows.Forms.Form
 $form.Text='N2 Daily · 同步管理'
-$form.Size=New-Object System.Drawing.Size(900,700)
-$form.MinimumSize=New-Object System.Drawing.Size(900,600)
+$form.Size=New-Object System.Drawing.Size(900,780)
+$form.MinimumSize=New-Object System.Drawing.Size(900,700)
 $form.StartPosition='CenterScreen'
 $form.Font=New-Object System.Drawing.Font('Microsoft YaHei UI',10)
 $form.BackColor=[System.Drawing.Color]::FromArgb(245,247,250)
@@ -28,26 +28,36 @@ function Add-ActionButton($text,$left,$top,$scriptFile,$mode){
  $button=New-Object System.Windows.Forms.Button
  $button.Text=$text; $button.SetBounds($left,$top,190,42)
  $button.Tag=@($scriptFile,$mode)
- $button.Add_Click({Start-JobUI $this.Tag[0] $this.Tag[1] $this.Text})
+ $button.Add_Click({$mode=$this.Tag[1];if($this.Tag[0] -eq 'tools/workflow.cjs'){$mode+=' --week='+$weekPicker.Value};Start-JobUI $this.Tag[0] $mode $this.Text})
  $form.Controls.Add($button);$script:buttons+=,$button
 }
 Add-ActionButton '立即同步课程' 24 108 'tools/sync.cjs' 'once'
 Add-ActionButton '停止自动同步' 230 108 'tools/sync.cjs' 'stop'
 Add-ActionButton '开启自动同步' 436 108 'tools/sync.cjs' 'start'
-Add-ActionButton '查看同步状态' 642 108 'tools/sync.cjs' 'status'
+Add-ActionButton '查看同步状态' 642 108 'tools/dashboard.cjs' 'local'
 Add-ActionButton '手动更新 Reference' 24 164 'tools/reference.cjs' 'update'
 Add-ActionButton '查看 Reference 信息' 230 164 'tools/reference.cjs' 'status'
+Add-ActionButton '检查 Pages 版本' 436 164 'tools/dashboard.cjs' 'pages'
+Add-ActionButton '生成 Work Context' 24 218 'tools/workflow.cjs' 'context'
+Add-ActionButton '校验课程草稿' 230 218 'tools/workflow.cjs' 'validate'
+Add-ActionButton '完成草稿并晋升' 436 218 'tools/workflow.cjs' 'promote'
+$weekPicker=New-Object System.Windows.Forms.NumericUpDown
+$weekPicker.Minimum=1;$weekPicker.Maximum=200;$weekPicker.SetBounds(642,228,80,30)
+$courseIndex=Get-Content -Raw -LiteralPath (Join-Path $root 'data/index.json') | ConvertFrom-Json
+$weekPicker.Value=1+($courseIndex.weeks | Measure-Object -Property week -Maximum).Maximum
+$form.Controls.Add($weekPicker)
+$weekLabel=New-Object System.Windows.Forms.Label;$weekLabel.Text='Week';$weekLabel.SetBounds(734,228,80,30);$form.Controls.Add($weekLabel)
 $note=New-Object System.Windows.Forms.Label
 $note.Text='开启只恢复每日计划；立即同步随时可用。停止不撤回已发布内容。资料更新不会发布课程。'
-$note.SetBounds(24,220,830,38)
+$note.SetBounds(24,274,830,38)
 $form.Controls.Add($note)
 $script:output=New-Object System.Windows.Forms.TextBox
 $script:output.Multiline=$true;$script:output.ReadOnly=$true;$script:output.ScrollBars='Both';$script:output.WordWrap=$false
 $script:output.Font=New-Object System.Drawing.Font('Consolas',10)
-$script:output.SetBounds(24,266,808,330);$script:output.Anchor='Top,Bottom,Left,Right'
+$script:output.SetBounds(24,320,808,340);$script:output.Anchor='Top,Bottom,Left,Right'
 $form.Controls.Add($script:output)
 $script:state=New-Object System.Windows.Forms.Label
-$script:state.SetBounds(24,610,808,28);$script:state.Anchor='Bottom,Left,Right';$script:state.Text='就绪 · 关闭窗口不影响每日计划任务'
+$script:state.SetBounds(24,690,808,28);$script:state.Anchor='Bottom,Left,Right';$script:state.Text='就绪 · 关闭窗口不影响每日计划任务'
 $form.Controls.Add($script:state)
 $script:job=$null;$script:smokeExit=1
 function Start-JobUI($scriptFile,$mode,$label){
@@ -77,7 +87,7 @@ $timer.Add_Tick({
  }
 })
 $form.Add_FormClosing({if($script:job){$_.Cancel=$true;[void][System.Windows.Forms.MessageBox]::Show('请等待当前操作完成，再关闭窗口。','操作正在运行')}})
-$form.Add_Shown({if($SmokeTest){$indices=@{sync=0;stop=1;start=2;status=3;reference=5};$script:buttons[$indices[$SmokeAction]].PerformClick()}else{Start-JobUI 'tools/reference.cjs' 'status' '本地 Reference 信息'}})
+$form.Add_Shown({if($SmokeTest){$indices=@{sync=0;stop=1;start=2;status=3;reference=5};$script:buttons[$indices[$SmokeAction]].PerformClick()}else{Start-JobUI 'tools/dashboard.cjs' 'local' '本地系统状态'}})
 $timer.Start()
 [void]$form.ShowDialog()
 $timer.Stop();$timer.Dispose();$form.Dispose()
