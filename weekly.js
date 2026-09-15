@@ -47,14 +47,14 @@ window.N2BuildCards = function(day, h) {
    }
   }
   if(module.type==='vocabulary'){
-   for(const v of day.vocabulary)add(v.id,label,v.word.display,()=>'<p class="eyebrow">'+(v.mode==='new'?'今日新词':'复习词')+'</p><h1>'+text(v.word)+'</h1><p class="translation" lang="ja">'+jp(v.reading,v.reading)+'</p><p class="meaning">'+esc(v.word.translationZh)+'</p>'+examples(v.collocations.map(c=>c.text)));
+   for(const v of day.vocabulary)add(v.id,label,v.word.display,()=>'<p class="eyebrow">'+(v.mode==='new'?'今日新词':'复习词')+'</p><h1>'+text(v.word)+(window.N2PlanClient?.badge(v.id,v.word.display)||'')+'</h1><p class="translation" lang="ja">'+jp(v.reading,v.reading)+'</p><p class="meaning">'+esc(v.word.translationZh)+'</p>'+(window.N2PlanClient?window.N2PlanClient.examples(v.id,v.examples||v.collocations.map(c=>c.text)):examples(v.examples||v.collocations.map(c=>c.text))));
    const linked=new Set(day.vocabulary.flatMap(v=>v.collocations.map(c=>c.id)));
    for(const c of day.collocations.filter(c=>!linked.has(c.id)))add(c.id,label,'重点搭配',()=>'<h2>'+text(c.text)+'</h2>'+translated(c.text));
   }
-  if(module.type==='grammar')for(const g of day.grammar)add(g.id,label,g.form.display,()=>'<p class="eyebrow">'+(g.mode==='new'?'新语法':'语法回收')+'</p><h1>'+text(g.form)+'</h1><p class="meaning">'+esc(g.meaningZh)+'</p>'+note(g.explanationZh)+examples(g.examples)+(g.notes||[]).map(n=>note(n.explanationZh)+examples(n.texts)).join(''));
+  if(module.type==='grammar')for(const g of day.grammar)add(g.id,label,g.form.display,()=>'<p class="eyebrow">'+(g.mode==='new'?'新语法':'语法回收')+'</p><h1>'+text(g.form)+(window.N2PlanClient?.badge(g.id,g.form.display)||'')+'</h1><p class="meaning">'+esc(g.meaningZh)+'</p>'+note(g.explanationZh)+examples(g.examples)+(g.notes||[]).map(n=>note(n.explanationZh)+examples(n.texts)).join(''));
   if(module.type==='reading'){
    const r=day.reading;
-   add(r.id,label,'先读后听',()=>'<h2>计时阅读 · '+r.timeLimitSeconds+'秒</h2>'+note(show(r.id)?r.secondPass.join(' → '):'第一遍自行计时，不查词，不听朗读。读完后完成下方问题。')+'<div class="reading-text">'+text(r.text,show(r.id))+'</div>'+questions(r.questions,show(r.id))+(show(r.id)?translated(r.text):reveal(r.id,'已完成阅读作答，进入听读复述')));
+   add(r.id,label,'先读后听',()=>'<h2>计时阅读 · '+r.timeLimitSeconds+'秒</h2>'+note(show(r.id)?r.secondPass.join(' → '):'第一遍自行计时，不查词，不听朗读。读完后完成下方问题。')+'<div class="reading-text">'+(show(r.id)&&window.N2PlanClient?window.N2PlanClient.reading(r):text(r.text,show(r.id)))+'</div>'+questions(r.questions,show(r.id))+(show(r.id)?translated(r.text):reveal(r.id,'已完成阅读作答，进入听读复述')));
   }
   if(module.type==='listening'){
    const l=day.listening;
