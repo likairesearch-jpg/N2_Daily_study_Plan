@@ -18,6 +18,10 @@ function validate(files){
  const weeks=Object.entries(values).filter(([n])=>/^data\/week\d+\.json$/.test(n)).sort((a,b)=>a[1].week-b[1].week);
  if(!weeks.length)throw Error('No weeks found');
  const seen=new Set(['day001']);
+ const baseline=values['data/day001.json'];const anchor=Date.parse(baseline.date+'T00:00:00Z');if(!Number.isFinite(anchor))throw Error('Invalid Day001 date');
+ const unit=s=>String(s).normalize('NFKC').replace(/（[^）]*）|\([^)]*\)/g,'').replace(/[〜～~\s]/g,'');
+ const taught={vocabulary:new Set(baseline.vocab.map(x=>unit(x[0]))),grammar:new Set(baseline.grammar.map(x=>unit(x[0])))};
+
  for(const [name,w] of weeks){
   if(!check(w))throw Error(name+': '+ajv.errorsText(check.errors,{separator:'\n'}));
   if(name!=='data/week'+String(w.week).padStart(2,'0')+'.json')throw Error(name+': week number does not match filename');
@@ -25,7 +29,10 @@ function validate(files){
   if(JSON.stringify(w.days.map(d=>d.day))!==JSON.stringify(expected))throw Error(name+': expected complete ordered days '+expected.join(','));
   const range=Array.isArray(w.dayRange)?w.dayRange:[w.dayRange?.start,w.dayRange?.end];
   if(range[0]!==start||range[1]!==start+6)throw Error(name+': incorrect dayRange');
-  for(const d of w.days){if(d.week!==w.week||d.id!=='day'+String(d.day).padStart(3,'0')||seen.has(d.id))throw Error(name+': duplicate/mismatched day '+d.id);seen.add(d.id);}
+  for(const d of w.days){
+   const expectedDate=new Date(anchor+(d.day-1)*86400000).toISOString().slice(0,10);if(d.date!==expectedDate)throw Error(d.id+': date continuity expected '+expectedDate);
+   for(const kind of ['vocabulary','grammar']){const entries=d[kind]||[];for(const item of entries){const key=unit((item.word||item.form).display);if(item.mode==='new'&&taught[kind].has(key))throw Error(d.id+': duplicate new '+kind+' '+key);taught[kind].add(key);}const field=kind==='vocabulary'?'newVocabulary':'newGrammar';if(d.counts[field]!==undefined&&d.counts[field]!==entries.filter(x=>x.mode==='new').length)throw Error(d.id+': incorrect '+field+' count');}
+   if(d.week!==w.week||d.id!=='day'+String(d.day).padStart(3,'0')||seen.has(d.id))throw Error(name+': duplicate/mismatched day '+d.id);seen.add(d.id);}
  }
  if(weeks.some(([,w],i)=>w.week!==i+1))throw Error('Weeks must be contiguous from Week 01');
  const base=values['data/knowledge-index.json'];

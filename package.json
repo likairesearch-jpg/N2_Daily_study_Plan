@@ -6,16 +6,21 @@
     "validate": "node tools/release.cjs validate",
     "prepare:course": "node tools/release.cjs prepare",
     "build": "node tools/release.cjs build",
-    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs",
+    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs && node tests/reference.cjs",
     "publish:course": "node tools/sync.cjs once",
     "sync:status": "node tools/sync.cjs status",
-    "serve": "node tools/serve.cjs"
+    "serve": "node tools/serve.cjs",
+    "refs:update": "node tools/reference.cjs update",
+    "refs:validate": "node tools/reference.cjs validate",
+    "refs:query": "node tools/reference.cjs query",
+    "stats:coverage": "node tools/reference.cjs coverage"
   },
   "engines": {
     "node": ">=22"
   },
   "devDependencies": {
     "ajv": "8.20.0",
-    "ajv-formats": "3.0.1"
+    "ajv-formats": "3.0.1",
+    "playwright": "1.62.1"
   }
 }

@@ -1,0 +1,151 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "surface",
+    "reading",
+    "meanings",
+    "jlpt",
+    "sources",
+    "variants",
+    "confidence",
+    "conflict",
+    "issues",
+    "examples",
+    "exampleVocabulary",
+    "meaningLanguage",
+    "translationOrigin",
+    "onyomi",
+    "kunyomi",
+    "structure",
+    "explanation",
+    "resolvedFrom"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(vocab|kanji|grammar|examples)-[a-f0-9]{24}$"
+    },
+    "type": {
+      "enum": [
+        "vocab",
+        "kanji",
+        "grammar",
+        "examples"
+      ]
+    },
+    "surface": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reading": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meanings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "jlpt": {
+      "type": "object",
+      "required": [
+        "resolved",
+        "bySource"
+      ],
+      "properties": {
+        "resolved": {
+          "enum": [
+            "N5",
+            "N4",
+            "N3",
+            "N2",
+            "N1",
+            null
+          ]
+        },
+        "bySource": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "N5",
+                "N4",
+                "N3",
+                "N2",
+                "N1"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "url",
+          "commit",
+          "file",
+          "row",
+          "license",
+          "attribution"
+        ],
+        "properties": {
+          "commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "license": {
+            "enum": [
+              "MIT",
+              "CC-BY-SA-4.0"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://github.com/"
+          },
+          "attribution": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1
+    },
+    "confidence": {
+      "enum": [
+        "medium",
+        "high",
+        "review"
+      ]
+    },
+    "conflict": {
+      "type": "boolean"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

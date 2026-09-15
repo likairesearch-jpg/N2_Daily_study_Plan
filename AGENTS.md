@@ -1,3 +1,5 @@
+> 2026-09-15 最新实施规则：暂不生成任何正式 Week03；保留 data/weekXX.json 平面结构。docs/COURSE_SCHEMA.md 是最高接口合同，沿用 display/tts/goalsZh/recap。示意字段不能替代合同。reference 与正式课程完全分离。
+
 # AGENTS.md
 # N2-Daily-App｜Codex 长期开发与资料管线规则
 
@@ -54,11 +56,9 @@ N2-Daily-App/
 ├── css/
 ├── js/
 ├── data/
-│   ├── course/
-│   │   ├── index.json
-│   │   ├── week01.json
-│   │   ├── week02.json
-│   │   └── week03.json ...
+│   ├── index.json
+│   ├── week01.json
+│   ├── week02.json
 │   └── reference/
 │       ├── vocab/
 │       ├── kanji/
@@ -161,7 +161,7 @@ npm run refs:update
 5. schema validation。
 6. 冲突检测。
 7. 生成/更新 `docs/SOURCES.md` 与 `sources/registry.json` 中可自动维护的信息。
-8. 不修改 `data/course/`。
+8. 不修改 `data/`。
 
 网络失败时保留上一版可用 reference 数据，不删除。
 
@@ -295,29 +295,28 @@ Codex 负责维护 schema 与 validator，但不擅自改变教学含义。
 
 ```text
 Day
-├─ goals
+├─ goalsZh
 ├─ review
 ├─ vocabulary
 ├─ grammar
 ├─ reading
 ├─ listening
 ├─ speaking
-└─ dailyReview
+└─ recap
 ```
 
-Week 第 7 天支持：
+Week 第7天沿用当前接口；独立 handoffSummary / miniMock 尚未纳入合同，不得直接生成或假称已支持：
 
 ```text
 weeklyReview
-handoffSummary
-miniMock
+现有 weeklyReview 内的交接展示
 ```
 
 ### TTS
 
 每个需朗读对象同时支持：
 
-- `studyText`：可含假名
+- `display`：可含假名
 - `tts`：纯日语
 
 不要让 UI 从带括号假名文本直接读，以免 TTS 读出括号内容。
@@ -349,8 +348,8 @@ Codex 不生成教学内容，但要确保 App 能发现 Work 的更新。
 
 检查：
 
-- `data/course/index.json`
-- `data/course/week03.json`
+- `data/index.json`
+- `data/week03.json`
 - UI 当前最新 Week / Day
 
 截至 2026-09-15，用户报告 App 在 Week 02 / Day 014 后没有继续更新。
@@ -369,7 +368,7 @@ Codex 不生成教学内容，但要确保 App 能发现 Work 的更新。
 长期目标：
 
 ```text
-Work 写入 data/course/weekXX.json
+Work 写入 data/weekXX.json
         ↓
 本地/云端校验
         ↓

@@ -20,10 +20,13 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npm run validate
       - run: npm run prepare:course
+      - run: npm run validate
+      - run: npm run refs:validate
       - run: npm test
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/browser.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

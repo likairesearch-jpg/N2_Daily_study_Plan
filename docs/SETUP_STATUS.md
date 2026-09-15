@@ -37,3 +37,13 @@
 - file:// 旧进度不会自动跨来源迁移到 HTTPS，必须先导出再导入。
 - 停止/恢复/一键重试命令见 RELEASE_WORKFLOW.md；将来的软件故障和浏览器变化仍可能需要工程维护。
 
+
+## 2026-09-15 reference infrastructure update
+
+Recovery tag: infrastructure-before-reference-20260915. Formal Week01/02 and course version remain byte-for-byte unchanged; no Week03 was generated.
+
+Added licensed reference snapshots: 11,720 vocabulary records, 2,211 kanji, 1,064 grammar records and 21,144 examples across N5–N1. Counts are reference candidates, not learned items or official JLPT lists. OpenJLPT and nihongo-mono are imported with their notices; other requested sources remain audited manual references.
+
+Added deterministic refresh, exact license evidence checks, conflict reports, search and coverage commands. Tested license change rejection, invalid schema/IDs, failed Git fetch preserving previous data, and repeated offline updates. Source caches and draft snapshots are ignored; Pages excludes the reference corpus.
+
+Course dates and new-item counts are now validated. GitHub Actions generates the course index before checking metadata, validates reference data and runs a real browser PWA smoke test. Windows synchronization is now a one-minute periodic task; Ready between runs is expected. See RELEASE_WORKFLOW.md for controls.

@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "jlptbenkyo-repo",
+      "name": "JLPT Benkyo repository",
+      "url": "https://github.com/kananinirav/jlptbenkyo",
+      "branch": "master",
+      "cacheName": "jlptbenkyo",
+      "dataTypes": [
+        "manual-reference"
+      ],
+      "license": "Unspecified",
+      "attribution": "JLPT Benkyo repository authors (no data copied)",
+      "machineImportAllowed": false,
+      "redistributionAllowed": false,
+      "notes": "Website link collection; no LICENSE or redistribution grant found. Manual links only.",
+      "auditedAt": "2026-09-15",
+      "evidence": {
+        "README.md": "359486082f58712ec927539a62aabb34730fc877ef6571f6dd7dbb3d7c12e9b4"
+      },
+      "licenseInventory": []
+    },
+    {
+      "id": "anchor-kanji",
+      "name": "AnchorI JLPT Kanji Dictionary",
+      "url": "https://github.com/AnchorI/jlpt-kanji-dictionary",
+      "branch": "main",
+      "cacheName": "jlpt-kanji-dictionary",
+      "dataTypes": [
+        "manual-reference"
+      ],
+      "license": "MIT (repository); dictionary provenance unresolved",
+      "attribution": "AnchorI JLPT Kanji Dictionary authors (no data copied)",
+      "machineImportAllowed": false,
+      "redistributionAllowed": false,
+      "notes": "MIT notice is present, but dictionary-source attribution and rights chain are not documented. No bulk redistribution approved.",
+      "auditedAt": "2026-09-15",
+      "evidence": {
+        "LICENSE": "1aec4a13aef8f77ecc5c2a3d0a560e5205e84db448c1b02f997f1346c9e987e1",
+        "README.md": "e9ee5fe2be4e14d3b348ffeeb1c9b3689ebe16635f80da99526a5d31faf7a2c6"
+      },
+      "licenseInventory": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "japanese-jlpt-learner",
+      "name": "Japanese JLPT Learner",
+      "url": "https://github.com/hatwarsanskar95-web/japanese-JLPT-learner",
+      "branch": "main",
+      "cacheName": "japanese-JLPT-learner",
+      "dataTypes": [
+        "manual-reference"
+      ],
+      "license": "Unspecified",
+      "attribution": "Japanese JLPT Learner authors (no data copied)",
+      "machineImportAllowed": false,
+      "redistributionAllowed": false,
+      "notes": "No LICENSE/NOTICE found; linked/bundled PDFs and quizzes are not approved for redistribution.",
+      "auditedAt": "2026-09-15",
+      "evidence": {
+        "README.md": "928ccf17a80a3b002cc66ad1a2aca62057ea4459587925c20ac4eab3c9651339"
+      },
+      "licenseInventory": []
+    },
+    {
+      "id": "nippon",
+      "name": "Nippon notes",
+      "url": "https://github.com/xinwu-yang/nippon",
+      "branch": "master",
+      "cacheName": "nippon",
+      "dataTypes": [
+        "manual-reference"
+      ],
+      "license": "Unspecified",
+      "attribution": "Nippon notes authors (no data copied)",
+      "machineImportAllowed": false,
+      "redistributionAllowed": false,
+      "notes": "No LICENSE/NOTICE found. Personal study notes, manual reference only.",
+      "auditedAt": "2026-09-15",
+      "evidence": {
+        "README.md": "e2aa913bc5dd2ebfc710c699d7f58e534fef08313c7dd357bec65b21cf5dd02c"
+      },
+      "licenseInventory": []
+    },
+    {
+      "id": "openjlpt",
+      "name": "OpenJLPT",
+      "url": "https://github.com/evanclan/OpenJLPT",
+      "branch": "main",
+      "cacheName": "OpenJLPT",
+      "dataTypes": [
+        "vocabulary",
+        "kanji",
+        "grammar",
+        "examples",
+        "JLPT metadata"
+      ],
+      "license": "CC-BY-SA-4.0",
+      "attribution": "OpenJLPT contributors; EDRDG; Jonathan Waller; Tatoeba",
+      "machineImportAllowed": true,
+      "redistributionAllowed": true,
+      "notes": "Import vocabulary, kanji, examples and grammar seed data. Retain OpenJLPT, EDRDG JMdict/KANJIDIC2, Jonathan Waller and Tatoeba attribution. Grammar is a seed dataset, not complete coverage.",
+      "auditedAt": "2026-09-15",
+      "evidence": {
+        "LICENSE": "0bdfb0201d1803634f268cdff0993b8349d2c70e956a06dbb667c8dd65254ec5",
+        "NOTICE.md": "1195caaed2fb25e7da908ba41edf8e333169801f4c6a8cc4f275d8479bc2b36e",
+        "README.md": "a377ba7c2366f5d2b62db10903cb2318b3aaa8e4a77184c81ba5040e3d2181f0",
+        "sources/grammar/README.md": "364cf05d2eb2298a4a7ce4e5fb83d0c030546e49e999fc99993acbc67050de8d"
+      },
+      "licenseInventory": [
+        "LICENSE",
+        "NOTICE.md"
+      ]
+    },
+    {
+      "id": "nihongo-mono",
+      "name": "nihongo mono",
+      "url": "https://github.com/stndaru/nihongo-mono",
+      "branch": "master",
+      "cacheName": "nihongo-mono",
+      "dataTypes": [
+        "vocabulary",
+        "kanji",
+        "grammar",
+        "examples",
+        "JLPT metadata"
+      ],
+      "license": "MIT (grammar); CC-BY-SA-4.0 (vocabulary/kanji)",
+      "attribution": "Copyright (c) 2026 Stefanus Ndaru Wedhatama; EDRDG; Jonathan Waller; Tatoeba",
+      "machineImportAllowed": true,
+      "redistributionAllowed": true,
+      "notes": "Import only src/data/vocab, verbs, grammar and JLPT-tagged kanji. Grammar explanations/examples declared original MIT; inventory references Bunpro/JLPT Sensei. EDRDG/Waller/Tatoeba lineage retained; no stroke, OCR, IPADIC or names assets imported.",
+      "auditedAt": "2026-09-15",
+      "evidence": {
+        "LICENSE": "6bffa8432531e16d76ce3d7878654cb65cec6dfa8a8d9918154331705cbb1a64",
+        "LICENSE-DATA.md": "09ab792cb0d4f2ba7b3113a9e5f41129685586d021bfaea1164ae7f831047fbd",
+        "README.md": "73026803e22352863b7b352f85e4ce694dfec3802fd72176e2aa1e4ff8c8bda6",
+        "scripts/sources.json": "40ec3b5fec8c94b0fe51e2c635d36dc9793a4341d83bca191a860a851fd15bb6"
+      },
+      "licenseInventory": [
+        "LICENSE",
+        "LICENSE-DATA.md",
+        "public/ocr/NOTICE.md"
+      ]
+    },
+    {
+      "id": "jlptbenkyo-web",
+      "name": "JLPT Benkyo website",
+      "url": "https://jlptbenkyo.com/",
+      "dataTypes": [
+        "manual-reference"
+      ],
+      "license": "No bulk redistribution permission established",
+      "attribution": "JLPT Benkyo website",
+      "machineImportAllowed": false,
+      "redistributionAllowed": false,
+      "notes": "All-rights-reserved website; no open data grant established. Links only; no site mirror.",
+      "auditedAt": "2026-09-15",
+      "evidence": {}
+    },
+    {
+      "id": "jlpt-official",
+      "name": "JLPT official public study and test-section pages",
+      "url": "https://www.jlpt.jp/e/samples/forlearners.html",
+      "dataTypes": [
+        "manual-reference"
+      ],
+      "license": "No bulk redistribution permission established",
+      "attribution": "JLPT official public study and test-section pages",
+      "machineImportAllowed": false,
+      "redistributionAllowed": false,
+      "notes": "Use public sample/test-section pages for human reference only; no questions, audio, workbooks or unpublished tests imported. See https://www.jlpt.jp/e/guideline/testsections.html .",
+      "auditedAt": "2026-09-15",
+      "evidence": {}
+    }
+  ]
+}

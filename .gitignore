@@ -9,3 +9,5 @@ work/
 data/course-bundle.js
 data/day001.js
 data/*.tmp
+
+.cache/

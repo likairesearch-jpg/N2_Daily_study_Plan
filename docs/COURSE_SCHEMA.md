@@ -38,3 +38,9 @@ Work 必须实际具备向这台电脑此目录写入文件的能力。仅在云
 手动校验：`node tools/release.cjs prepare`，再运行 `node tools/release.cjs validate`。
 
 Day001 特例：cards 存放从原版逐字提取的27张静态卡片展示，id 固定 day001-0…26。发布校验限制标签与属性，禁止脚本、事件处理器、链接和样式注入。原 vocab/grammar/listening/speaking 也保留作来源对照。
+
+## 2026-09-15 接口优先级
+
+本文是 Work 与 App 的最高接口合同。继续使用 data/weekXX.json 和 display/tts/goalsZh/recap；studyText/goals/dailyReview 不是可直接替换的字段。index/version 由程序维护。正式 Week03 暂停生成，不能自动补空白课程。
+
+校验增加：按原 Day001 日期推算逐日连续日期，以及跨正式日的新词/新语法重复与声明数量核对。保留既有复习 mode，不重写历史课程。独立 miniMock/handoffSummary 尚未实现，请勿输出为期待自动显示的模块；周复盘沿用现有 weeklyReview。参考资料不属于正式课程。

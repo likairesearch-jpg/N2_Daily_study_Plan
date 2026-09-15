@@ -15,19 +15,20 @@ switch ($Action) {
   @"
 `$env:PATH='$escapedGit;'+`$env:PATH
 Set-Location -LiteralPath '$escapedRoot'
-& '$escapedNode' 'tools/sync.cjs' watch
+& '$escapedNode' 'tools/sync.cjs' poll
 exit `$LASTEXITCODE
 "@ | Set-Content -LiteralPath $launcher -Encoding UTF8
   $command=New-ScheduledTaskAction -Execute 'powershell.exe' -Argument "-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$launcher`"" -WorkingDirectory $projectRoot
   $trigger=New-ScheduledTaskTrigger -AtLogOn -User ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name)
+  $minuteTrigger=New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes 1)
   $principal=New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
   $settings=New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit ([TimeSpan]::Zero) -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 1)
-  Register-ScheduledTask -TaskName $taskName -Action $command -Trigger $trigger -Principal $principal -Settings $settings -Force | Out-Null
+  Register-ScheduledTask -TaskName $taskName -Action $command -Trigger @($trigger,$minuteTrigger) -Principal $principal -Settings $settings -Force | Out-Null
   Start-ScheduledTask -TaskName $taskName
  }
- 'start' {Start-ScheduledTask -TaskName $taskName}
- 'stop' {Stop-ScheduledTask -TaskName $taskName}
- 'restart' {Stop-ScheduledTask -TaskName $taskName; Start-ScheduledTask -TaskName $taskName}
+ 'start' {Enable-ScheduledTask -TaskName $taskName | Out-Null; Start-ScheduledTask -TaskName $taskName}
+ 'stop' {Disable-ScheduledTask -TaskName $taskName | Out-Null; Stop-ScheduledTask -TaskName $taskName}
+ 'restart' {Stop-ScheduledTask -TaskName $taskName; Enable-ScheduledTask -TaskName $taskName | Out-Null; Start-ScheduledTask -TaskName $taskName}
  'uninstall' {Stop-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue; Unregister-ScheduledTask -TaskName $taskName -Confirm:$false}
  'status' {Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue | Select-Object TaskName,State; Get-ScheduledTaskInfo -TaskName $taskName -ErrorAction SilentlyContinue; if(Test-Path (Join-Path $projectRoot '.sync/status.json')){Get-Content (Join-Path $projectRoot '.sync/status.json')}}
 }

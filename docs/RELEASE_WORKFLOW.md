@@ -6,11 +6,11 @@
 
 本机需要 Node.js 22+、Git、首次安装的校验依赖和已登录的 Git Credential Manager。朋友无需 Node/Git。GitHub Actions 使用 Node24 和 lockfile。
 
-Windows 计划任务 N2-Daily-Course-Sync 在当前用户登录时隐藏启动，每30秒检测；普通用户权限，不依赖 Codex 或 ChatGPT 开着。关机/睡眠/未登录时不运行，恢复后继续。
+Windows 计划任务 N2-Daily-Course-Sync 在当前用户登录时隐藏启动，每分钟执行一次短任务；普通用户权限，不依赖 Codex 或 ChatGPT 开着。关机/睡眠/未登录时不运行，恢复后继续。
 
 ## B. 以后每周理想流程
 
-Work 更新本地整周课程 → 两次检测文件稳定 → JSON/Schema/引用/卡片验证 → 生成 index/version → 独立 Git index 提交精确快照 → push main → Actions 检查/测试/打包 → Pages 发布 → 用户联网打开或回到 App 自动更新。
+Work 更新本地整周课程 → 两次检测文件稳定（至少30秒，通常1–2分钟内） → JSON/Schema/引用/卡片验证 → 生成 index/version → 独立 Git index 提交精确快照 → push main → Actions 检查/测试/打包 → Pages 发布 → 用户联网打开或回到 App 自动更新。
 
 只提交白名单课程。无关工作文件不提交；手动暂存区不为空或校验器/渲染器有未提交修改时暂停本轮。禁止自动删除已发布课程。
 
@@ -66,3 +66,13 @@ push 成功而 Actions 失败时，再 push 同一 commit 不会重跑。使用 
 工程发布：停止同步 → 修改 → node tools/release.cjs prepare → npm test → node tools/release.cjs build → 人工审核提交明确文件 → git push origin main → 确認 Actions 成功 → 重启同步。
 
 参考：[GitHub Pages 自定义工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)、[MDN 缓存策略](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Caching)、[SW updateViaCache](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/updateViaCache)。
+
+## 2026-09-15：周期任务与参考资料
+
+当前正式课程停在 Week02 / Day014，Week03 等待用户后续交给 Work。保留 data/weekXX.json，Work 不编辑 index/version。
+
+任务已改为登录触发 + 每分钟运行 node tools/sync.cjs poll。Ready 表示等待下一次执行，不再代表服务失效；结合 NextRunTime、LastTaskResult 和 .sync/status.json 的时间判断。stop 禁用任务，start/restart 重新启用；脚本在运行时失效可在下一轮继续。已退出进程的发布锁可自动回收，活动进程锁不会被删除。电脑关机、睡眠、用户未登录时仍不会同步。
+
+GitHub Actions 先验证课程并生成元数据，再检查、测试和构建，因此将来 Work 直接提交远程正式周 JSON 时不必手动生成索引。远程更新后，本地 watcher 仍会在分叉/落后时停止，需先安全协调本地 Git 工作区；本地同步不擅自合并。
+
+参考资料使用 node tools/reference.cjs update，校验通过后生成独立快照；不触碰正式课程。参考数据不会被课程 watcher 自动提交，也不会装进学习者的离线包。工程发布时 CI 额外验证 reference，操作与许可见 REFERENCE_PIPELINE.md、SOURCES.md。

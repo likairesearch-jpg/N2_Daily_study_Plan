@@ -5,14 +5,16 @@ const files=R.capture(),original=R.signature(files),meta=R.metadata(files);
 assert.deepEqual(meta,R.metadata(files),'version generation must be deterministic');
 let bad={...files,'data/week02.json':'{' };assert.throws(()=>R.validate(bad),/week02/);
 const edit=fn=>{const clone={...files},w=JSON.parse(clone['data/week02.json']);fn(w);clone['data/week02.json']=JSON.stringify(w);return clone;};
-assert.throws(()=>R.validate(edit(w=>w.days[0].day=15)),/days/);
+assert.throws(()=>R.validate(edit(w=>w.days[0].day=15)),/days|date continuity/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].vocabulary[0].word.tts='')),/tts/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].reading.questions[0].answer='INVALID')),/answer/);
 assert.throws(()=>R.validate(edit(w=>w.days[0].review.intervals[0].vocabularyIds.push('missing-reference'))),/unresolved/);
-assert.throws(()=>R.validate(edit(w=>w.days[0].vocabulary.push(w.days[0].vocabulary[0]))),/duplicate card/);
+assert.throws(()=>R.validate(edit(w=>w.days[0].vocabulary.push(w.days[0].vocabulary[0]))),/duplicate card|duplicate new/);
+assert.throws(()=>R.validate(edit(w=>w.days[0].date='2026-09-04')),/date continuity/);
+assert.throws(()=>R.validate(edit(w=>w.days[0].counts.newVocabulary++)),/count/);
 // Future navigation and validation fixture: existing teaching text copied only in memory, never published.
 const future=JSON.parse(files['data/week02.json']);future.week=3;future.id='week03';future.dayRange={start:15,end:21};
-future.days=future.days.map(d=>{const old=d.day,newDay=old+7,oldId=d.id,newId='day'+String(newDay).padStart(3,'0');d=JSON.parse(JSON.stringify(d).replaceAll(oldId,newId));d.day=newDay;d.week=3;for(const r of d.review.intervals){r.sourceDay+=7;if(r.sourceDayId)r.sourceDayId='day'+String(r.sourceDay).padStart(3,'0');}return d;});
+future.days=future.days.map(d=>{const old=d.day,newDay=old+7,oldId=d.id,newId='day'+String(newDay).padStart(3,'0');d=JSON.parse(JSON.stringify(d).replaceAll(oldId,newId));d.day=newDay;d.week=3;for(const kind of ['vocabulary','grammar'])for(const x of d[kind])x.mode='review';d.counts.newVocabulary=0;d.counts.newGrammar=0;d.counts.reviewVocabulary=d.vocabulary.length;d.counts.reviewGrammar=d.grammar.length;d.date=new Date(Date.parse(d.date)+7*86400000).toISOString().slice(0,10);for(const r of d.review.intervals){r.sourceDay+=7;if(r.sourceDayId)r.sourceDayId='day'+String(r.sourceDay).padStart(3,'0');}return d;});
 const withFuture={...files,'data/week03.json':JSON.stringify(future)};assert.equal(R.validate(withFuture).weeks.length,3);
 assert.equal(JSON.parse(R.metadata(withFuture)['data/index.json']).weeks[2].days[0],'day015');
 // Isolated local remote exercises real Git without publishing test content to GitHub.
