@@ -1,3 +1,7 @@
+# Current feature status (2026-09-15)
+
+Plan Lab is ready on feature/plan-lab-v1 only; see [Plan Lab verification](plan-lab-readiness.md). Existing formal Week01-03 are preserved. No Week04 or real experiment was generated. Main was not merged or deployed. Sections below describe the earlier infrastructure milestone; their Week03 first-invocation instructions are historical and must not be repeated.
+
 # System readiness
 
 READY FOR WORK
