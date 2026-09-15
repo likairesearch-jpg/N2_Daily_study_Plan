@@ -30,7 +30,7 @@ function synchronize(){return locked(()=>{
    // Revalidate the actual staged bytes, not mutable working files.
    const staged={};
    // git() trims text; use raw blob reads to preserve exact hashes and whitespace.
-   for(const p of Object.keys(files)){const out=cp.spawnSync('git',['show',':'+p],{cwd:R.ROOT,encoding:'utf8',windowsHide:true,env:{...process.env,...env}});if(out.status!==0)throw Error('Cannot read staged '+p);staged[p]=out.stdout;}
+   for(const p of Object.keys(files)){const out=cp.spawnSync('git',['show',':'+p],{cwd:R.ROOT,encoding:'utf8',maxBuffer:Buffer.byteLength(files[p],'utf8')+65536,windowsHide:true,env:{...process.env,...env}});if(out.status!==0)throw Error('Cannot read staged '+p+': '+(out.error?.message||out.stderr));staged[p]=out.stdout;}
    const stagedMeta=R.metadata(staged);if(stagedMeta['version.json']!==meta['version.json'])throw Error('Staged snapshot changed');
    head=git(['commit-tree',tree,'-p',before],{input:'Publish course '+JSON.parse(meta['version.json']).courseVersion.slice(0,12)+'\n'});
    if(git(['diff','--cached','--name-only']))throw Error('Manual staging detected during publication; retry after completing it');
