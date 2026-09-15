@@ -21,3 +21,11 @@ const remoteDir=path.join(temp,'.cache/reference-sources/fixture');fs.mkdirSync(
 const failedFetch=cp.spawnSync(process.execPath,['tools/reference.cjs','update'],{cwd:temp,encoding:'utf8',windowsHide:true,env:{...process.env,NODE_PATH:path.join(R.ROOT,'node_modules')}});assert.notEqual(failedFetch.status,0);assert(failedFetch.stderr.includes('fetch'),failedFetch.stderr);assert.equal(fs.readFileSync(path.join(temp,'data/reference/index.json'),'utf8'),sentinel);
 assert.equal(course.signature(course.capture()),before);
 console.log('PASS reference schema, provenance, conflicts, examples, failed refresh preserves previous snapshot, formal courses untouched; '+index.version.slice(0,12));
+
+const covered=R.formalCoverage(),select=args=>R.selectCandidates(rows,args,covered);
+const first=select(['--type=vocab','--level=N2','--limit=2']);assert.equal(first.records.length,2);assert.equal(first.nextOffset,2);assert.notEqual(first.records[0].id,select(['--type=vocab','--level=N2','--limit=2','--offset=2']).records[0].id);
+for(const flag of ['true','false']){const r=select(['--type=vocab','--covered='+flag]);assert(r.total>0);assert(r.records.every(x=>x.covered===(flag==='true')));}
+const clean=select(['--type=grammar','--level=N2','--covered=false','--conflict=false','--confidence=medium']);assert(clean.total>0);assert(clean.records.every(x=>!x.covered&&!x.conflict&&x.confidence==='medium'));
+const hit=clean.records[0];assert.equal(select(['--id='+hit.id]).records[0].id,hit.id);assert(select(['--keyword='+hit.surface]).total>0);
+assert.throws(()=>select(['--type=kanji','--covered=false']),/unknown/);assert.throws(()=>select(['--limit=51']),/limit/);assert.throws(()=>select(['--limit=NaN']),/limit/);assert(select(['--type=kanji']).records.every(x=>x.covered===null));
+console.log('PASS local bounded query, filters, pagination and coverage semantics');

@@ -13,7 +13,10 @@
     "refs:update": "node tools/reference.cjs update",
     "refs:validate": "node tools/reference.cjs validate",
     "refs:query": "node tools/reference.cjs query",
-    "stats:coverage": "node tools/reference.cjs coverage"
+    "stats:coverage": "node tools/reference.cjs coverage",
+    "sync": "node tools/sync.cjs once",
+    "sync:start": "node tools/sync.cjs start",
+    "sync:stop": "node tools/sync.cjs stop"
   },
   "engines": {
     "node": ">=22"

@@ -43,7 +43,10 @@ function synchronize(){return locked(()=>{
  }finally{if(fs.existsSync(indexFile))fs.unlinkSync(indexFile);}
  });}
 const mode=process.argv[2]||'once';
-if(mode==='status'){console.log(fs.existsSync(statusFile)?fs.readFileSync(statusFile,'utf8'):'No sync run yet');}
+if(['status','start','stop','install','restart'].includes(mode)){
+ if(process.platform!=='win32'){if(mode==='status')console.log(fs.existsSync(statusFile)?fs.readFileSync(statusFile,'utf8'):'No sync run yet');else{console.error('Automatic task controls require Windows');process.exitCode=1;}}
+ else{const result=cp.spawnSync('powershell.exe',['-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',path.join(__dirname,'sync-service.ps1'),mode],{stdio:'inherit',windowsHide:true});process.exitCode=result.status??1;}
+}
 else if(mode==='recover'){const file=path.join(dir,'publish.lock');if(!fs.existsSync(file))console.log('No stale lock');else{const pid=Number(fs.readFileSync(file,'utf8'));let alive=true;try{process.kill(pid,0);}catch(e){if(e.code==='ESRCH')alive=false;}if(alive){console.error('PID is active or cannot be verified; refusing to remove lock');process.exitCode=1;}else{fs.unlinkSync(file);console.log('Removed stale lock for exited PID '+pid);}}}
 else if(mode==='once'){try{synchronize();}catch(e){status('error',e.message);process.exitCode=1;}}
 else if(mode==='poll'){try{const p=path.join(dir,'observed.json'),signature=R.signature(R.capture());const old=fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):null;if(!old||old.signature!==signature){fs.writeFileSync(p,JSON.stringify({signature,observedAt:Date.now()}));status('waiting','Waiting for stable course files until the next scheduled poll');}else if(Date.now()-old.observedAt>=30000)synchronize();else status('waiting','Course files need 30 seconds of stability');}catch(e){status('error',e.message);process.exitCode=1;}}

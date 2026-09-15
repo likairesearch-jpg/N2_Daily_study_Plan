@@ -534,3 +534,6 @@ npm run stats:coverage
 - 不把用户学习进度存进会被课程刷新覆盖的文件。
 - 不把 GitHub token / password / key 写入 repo。
 - 不在 validator 失败时自动发布。
+
+## Manual reference policy
+Reference updates are manual only: never schedule or invoke update during normal Work/course generation, App opening, course sync, or UI startup. Query local data in bounded batches. Only explicit user update commands/buttons authorize upstream refresh. Course task runs daily at 16:00 local time.

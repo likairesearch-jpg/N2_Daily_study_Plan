@@ -46,3 +46,23 @@ Reference JSON is available in the repository for Work, but excluded from the le
 ## Future maintenance
 
 A license change requires a fresh source review. An upstream format change requires an adapter change and tests. These are intentional stops, not permission to silently import unknown content.
+
+## Local candidate queries and network boundary
+
+Work must query small batches locally; do not read whole records.json files into the conversation and do not refresh/download references for each Week. The program reads the local snapshot in its own process; only bounded selected records enter Work's context. Default 10, maximum 50 per query; paginate with --offset=10. Normal local generation does not require GitHub access.
+
+`node tools/reference.cjs query --type=vocab --level=N2 --covered=false --conflict=false --confidence=medium --limit=10`
+
+Filters: --type=vocab|kanji|grammar|examples, --level=N5..N1 (any source label), --keyword=text (or a positional keyword), --confidence=medium|review|high|low, --conflict=true|false, --covered=true|false, --id=stable-id. --review is an alias for --confidence=review. Actual current sources use medium/review; asking for high may return zero. Resolve example IDs with --id=... --type=examples --limit=1.
+
+Covered means surface matched in formal Day001 and weekly vocabulary/grammar, not personal mastery. It cannot distinguish all homographs/senses. --covered requires vocab or grammar; kanji/examples have no reliable formal coverage and return null instead of falsely claiming unlearned. Personal browser progress is separate and inaccessible to this tool.
+
+Storage: data/reference/index.json points to data/reference/snapshots/<version>/{vocab,kanji,grammar,examples}/records.json and metadata. All standardized records already exist locally. .cache/reference-sources/ contains ignored upstream clones.
+
+No network: query, coverage, validate, update --offline, sync status/start/stop. Internet: reference update without --offline clones/fetches upstream; sync once and the daily task fetch/push the course repository (even no-change sync checks remote state); GitHub Actions performs cloud build/deploy; learner App fetches Pages updates. A reference refresh is explicit, never part of the daily course task. Work should only request a refresh if separately instructed or the local library lacks needed data, and must report missing candidates rather than invent a source.
+
+## Windows management window
+
+Double-click **N2 Sync Manager.vbs** in the project folder. No terminal commands are needed. Buttons: sync courses now, stop/start daily course sync, show sync status, manually update Reference, and show local Reference snapshot/source information. Closing the window leaves the daily task enabled unless you stopped it. Course sync runs daily at 16:00 Windows local time (currently Japan). Reference has NO scheduled refresh. The learner App does not download the reference library; Work uses local bounded queries.
+
+Reference update is explicitly manual: GUI button, or `node tools/reference.cjs update` / `npm run refs:update`. Latest snapshot is in `data/reference/index.json`, and commit/version/fetchedAt are in its `metadata/registry.json` and `sources/registry.json`; the GUI Reference info button displays them. fetchedAt stays unchanged when the pinned upstream commit stays unchanged. Failures or changed license/attribution evidence leave the last usable snapshot intact.

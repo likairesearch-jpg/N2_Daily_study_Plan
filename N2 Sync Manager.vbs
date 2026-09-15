@@ -1,0 +1,7 @@
+Option Explicit
+Dim shell, fso, root, command
+Set shell = CreateObject("WScript.Shell")
+Set fso = CreateObject("Scripting.FileSystemObject")
+root = fso.GetParentFolderName(WScript.ScriptFullName)
+command = "powershell.exe -NoProfile -STA -ExecutionPolicy Bypass -WindowStyle Hidden -File " & Chr(34) & root & "\tools\sync-manager.ps1" & Chr(34)
+shell.Run command, 0, False
