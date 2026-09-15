@@ -10,6 +10,11 @@
       "sha256": "02af4e067a10795ccd60e39019983888817192e253652af3cf62048f990bc48e",
       "approvedAt": "2026-09-15T08:13:53.605Z",
       "method": "existing-formal-baseline"
+    },
+    "data/week03.json": {
+      "sha256": "301e3d86af7d3596ae23ec7dc3eb2e56b4f2f643c3d03d2d1a42dde2bef7644b",
+      "approvedAt": "2026-09-15T09:11:27.815Z",
+      "method": "validated-draft-promotion"
     }
   }
 }
