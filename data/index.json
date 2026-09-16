@@ -25,6 +25,19 @@
         "day013",
         "day014"
       ]
+    },
+    {
+      "week": 3,
+      "url": "data/week03.json",
+      "days": [
+        "day015",
+        "day016",
+        "day017",
+        "day018",
+        "day019",
+        "day020",
+        "day021"
+      ]
     }
   ],
   "files": [
@@ -47,6 +60,10 @@
     {
       "url": "data/week02.json",
       "sha256": "02af4e067a10795ccd60e39019983888817192e253652af3cf62048f990bc48e"
+    },
+    {
+      "url": "data/week03.json",
+      "sha256": "301e3d86af7d3596ae23ec7dc3eb2e56b4f2f643c3d03d2d1a42dde2bef7644b"
     }
   ]
 }
