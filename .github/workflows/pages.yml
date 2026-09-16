@@ -27,6 +27,7 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: node tests/browser.cjs
+      - run: node tests/plan-browser.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

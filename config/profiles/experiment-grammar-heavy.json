@@ -1,0 +1,20 @@
+{
+  "id": "experiment-grammar-heavy",
+  "name": "语法加强实验",
+  "mode": "experiment",
+  "targetJlptLevel": "N2",
+  "vocabularyPerDay": 12,
+  "grammarPerDay": 5,
+  "readingQuestionsPerDay": 2,
+  "listeningQuestionsPerDay": 1,
+  "vocabularyWeight": "normal",
+  "grammarWeight": "high",
+  "readingWeight": "normal",
+  "listeningWeight": "normal",
+  "readingStyle": "jlpt-n2",
+  "listeningStyle": "jlpt-n2",
+  "reviewPriority": "high",
+  "createdAt": "2026-09-15T10:05:29.811Z",
+  "updatedAt": "2026-09-15T10:05:29.824Z",
+  "schemaVersion": 1
+}

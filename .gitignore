@@ -15,3 +15,6 @@ data/*.tmp
 data/drafts/
 reports/work-context.json
 reports/learner-state.json
+
+/reports/experiment-contexts/
+/reports/formal-contexts/

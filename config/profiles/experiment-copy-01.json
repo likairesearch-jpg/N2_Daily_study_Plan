@@ -1,0 +1,20 @@
+{
+  "id": "experiment-copy-01",
+  "name": "均衡实验（副本）",
+  "mode": "experiment",
+  "targetJlptLevel": "N2",
+  "vocabularyPerDay": 16,
+  "grammarPerDay": 5,
+  "readingQuestionsPerDay": 2,
+  "listeningQuestionsPerDay": 1,
+  "vocabularyWeight": "normal",
+  "grammarWeight": "normal",
+  "readingWeight": "normal",
+  "listeningWeight": "normal",
+  "readingStyle": "jlpt-n2",
+  "listeningStyle": "jlpt-n2",
+  "reviewPriority": "high",
+  "createdAt": "2026-09-16T03:43:52.7373011Z",
+  "updatedAt": "2026-09-16T04:02:18.377Z",
+  "schemaVersion": 1
+}

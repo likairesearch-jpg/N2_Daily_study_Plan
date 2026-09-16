@@ -1,0 +1,20 @@
+{
+  "id": "experiment-20260916124126",
+  "name": "新实验计划",
+  "mode": "experiment",
+  "targetJlptLevel": "N2",
+  "vocabularyPerDay": 15,
+  "grammarPerDay": 5,
+  "readingQuestionsPerDay": 2,
+  "listeningQuestionsPerDay": 1,
+  "vocabularyWeight": "normal",
+  "grammarWeight": "normal",
+  "readingWeight": "normal",
+  "listeningWeight": "normal",
+  "readingStyle": "jlpt-n2",
+  "listeningStyle": "jlpt-n2",
+  "reviewPriority": "high",
+  "createdAt": "2026-09-16T03:41:26.1357872Z",
+  "updatedAt": "2026-09-16T03:41:37.258Z",
+  "schemaVersion": 1
+}

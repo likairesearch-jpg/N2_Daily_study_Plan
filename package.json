@@ -6,7 +6,7 @@
     "validate": "node tools/release.cjs validate",
     "prepare:course": "node tools/release.cjs prepare",
     "build": "node tools/release.cjs build",
-    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs && node tests/reference.cjs && node tests/work-context.cjs",
+    "test": "node tests/smoke.cjs && node tests/weekly-integration.cjs && node tests/week01-integration.cjs && node tests/infrastructure.cjs && node tests/reference.cjs && node tests/work-context.cjs && node tests/manager.cjs && node tests/draft-manager.cjs && node tests/experiment-release.cjs",
     "publish:course": "node tools/sync.cjs once",
     "sync:status": "node tools/sync.cjs status",
     "serve": "node tools/serve.cjs",

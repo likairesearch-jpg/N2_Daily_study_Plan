@@ -13,7 +13,7 @@ const R=require('../tools/release.cjs'),dist=path.join(R.ROOT,'dist');
  const originals={};for(const p of ['version.json','data/index.json','data/course-policy.json','service-worker.js'])originals[p]=fs.readFileSync(path.join(dist,p),'utf8');
  try{
   await page.goto(url);await page.waitForSelector('#card h1');await page.evaluate(()=>navigator.serviceWorker.ready);await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
-  assert.equal(await page.locator('#week option').count(),R.validate(R.capture()).weeks.length);
+  assert.equal(await page.locator('#week > option').count(),R.validate(R.capture()).weeks.length);
   await page.selectOption('#week','2');await page.selectOption('#day','day008');await page.click('[data-status="green"]');
   const saved=await page.evaluate(()=>localStorage.getItem('n2-daily-v1'));
   fs.mkdirSync(path.join(R.ROOT,'.sync'),{recursive:true});await page.screenshot({path:path.join(R.ROOT,'.sync/desktop.png'),fullPage:true});

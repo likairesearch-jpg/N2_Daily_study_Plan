@@ -1,0 +1,187 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "mode",
+    "targetJlptLevel",
+    "vocabularyPerDay",
+    "grammarPerDay",
+    "readingQuestionsPerDay",
+    "listeningQuestionsPerDay",
+    "vocabularyWeight",
+    "grammarWeight",
+    "readingWeight",
+    "listeningWeight",
+    "readingStyle",
+    "listeningStyle",
+    "reviewPriority",
+    "createdAt",
+    "updatedAt",
+    "schemaVersion"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,63}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "mode": {
+      "enum": [
+        "official",
+        "experiment"
+      ]
+    },
+    "targetJlptLevel": {
+      "enum": [
+        "N5",
+        "N4",
+        "N3",
+        "N2",
+        "N1"
+      ]
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T"
+    },
+    "updatedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kanjiEmphasis": {
+          "enum": [
+            "low",
+            "normal",
+            "high"
+          ]
+        },
+        "speakingEmphasis": {
+          "enum": [
+            "low",
+            "normal",
+            "high"
+          ]
+        },
+        "reviewRatio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "mockFrequencyDays": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 90
+        },
+        "maxDailyMinutes": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 480
+        },
+        "reviewWeights": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "d1": {
+              "type": "number",
+              "minimum": 0
+            },
+            "d3": {
+              "type": "number",
+              "minimum": 0
+            },
+            "d7": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "vocabularyPerDay": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "grammarPerDay": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "readingQuestionsPerDay": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "listeningQuestionsPerDay": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "vocabularyWeight": {
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    "grammarWeight": {
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    "readingWeight": {
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    "listeningWeight": {
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    "reviewPriority": {
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    "readingStyle": {
+      "enum": [
+        "jlpt-n5",
+        "jlpt-n4",
+        "jlpt-n3",
+        "jlpt-n2",
+        "jlpt-n1"
+      ]
+    },
+    "listeningStyle": {
+      "enum": [
+        "jlpt-n5",
+        "jlpt-n4",
+        "jlpt-n3",
+        "jlpt-n2",
+        "jlpt-n1"
+      ]
+    }
+  }
+}

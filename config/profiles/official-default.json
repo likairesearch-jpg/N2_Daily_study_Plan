@@ -1,0 +1,20 @@
+{
+  "id": "official-default",
+  "name": "正式计划（现有 Week03 基线）",
+  "mode": "official",
+  "targetJlptLevel": "N2",
+  "vocabularyPerDay": 15,
+  "grammarPerDay": 5,
+  "readingQuestionsPerDay": 2,
+  "listeningQuestionsPerDay": 1,
+  "vocabularyWeight": "normal",
+  "grammarWeight": "normal",
+  "readingWeight": "normal",
+  "listeningWeight": "normal",
+  "readingStyle": "jlpt-n2",
+  "listeningStyle": "jlpt-n2",
+  "reviewPriority": "high",
+  "createdAt": "2026-09-15T10:05:29.811Z",
+  "updatedAt": "2026-09-16T03:41:10.068Z",
+  "schemaVersion": 1
+}

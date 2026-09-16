@@ -8,7 +8,7 @@
  async function network(url){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);try{const r=await fetch(new URL(url,base),{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error('HTTP '+r.status);return await r.text();}finally{clearTimeout(timer);}}
  function mergedKnowledge(data){const k=structuredClone(data['data/knowledge-index.json']);for(const kind of ['vocabulary','grammar']){const map=new Map(k[kind].map(x=>[x.id,x]));for(const w of Object.values(data).filter(x=>Array.isArray(x.days)))for(const d of w.days)for(const v of d[kind]||[]){const id=v.conceptId||v.knowledgeId;if(!id||map.has(id))continue;map.set(id,kind==='vocabulary'?{id,word:v.word.display,text:v.word,reading:v.reading,meaningZh:v.word.translationZh}:{id,form:v.form.display,formText:v.form,meaningZh:v.meaningZh,examples:v.examples});}k[kind]=[...map.values()];}return k;}
  let current=null,busy=false,started=false;
- function apply(snapshot){const legacyChanged=started&&JSON.stringify(window.N2_DAY)!==JSON.stringify(snapshot.data['data/day001.json']);window.N2_DAY=snapshot.data['data/day001.json'];window.N2_WEEKS=snapshot.index.weeks.map(w=>snapshot.data[w.url]);window.N2_KNOWLEDGE=mergedKnowledge(snapshot.data);current=snapshot;if(legacyChanged){location.reload();return;}if(started&&window.N2RefreshCourses)window.N2RefreshCourses();}
+ function apply(snapshot){const legacyChanged=started&&JSON.stringify(window.N2_DAY)!==JSON.stringify(snapshot.data['data/day001.json']);window.N2_DAY=snapshot.data['data/day001.json'];window.N2_WEEKS=snapshot.index.weeks.map(w=>snapshot.data[w.url]);window.N2_KNOWLEDGE=mergedKnowledge(snapshot.data);window.N2_DICTIONARY=snapshot.data['data/client-dictionary.json'];window.N2_EXPERIMENTS=(snapshot.index.experiments||[]).map(e=>snapshot.data[e.url]);current=snapshot;if(legacyChanged){location.reload();return;}if(started&&window.N2RefreshCourses)window.N2RefreshCourses();}
  async function check(){if(busy)return;busy=true;try{
   const version=JSON.parse(await network('version.json?t='+Date.now()));
   if(version.schemaVersion!==1||!/^[a-f0-9]{64}$/.test(version.indexSha256)||version.index!=='data/index.json'||version.courseVersion!==version.indexSha256)throw Error('Invalid version metadata');
@@ -16,7 +16,7 @@
   const indexText=await network(version.index+'?v='+version.courseVersion);
   if(await digest(indexText)!==version.indexSha256)throw Error('Index hash mismatch');
   const index=JSON.parse(indexText);if(index.schemaVersion!==1||!Array.isArray(index.files)||!Array.isArray(index.weeks))throw Error('Unsupported course index');
-  const data={};await Promise.all(index.files.map(async f=>{if(!/^data\/(week[0-9]{2,}\.json|day001\.json|knowledge-index\.json|course-policy\.json)$/.test(f.url)||!/^[a-f0-9]{64}$/.test(f.sha256))throw Error('Invalid course file path');const text=await network(f.url+'?v='+f.sha256);if(await digest(text)!==f.sha256)throw Error(f.url+': hash mismatch');data[f.url]=JSON.parse(text.replace(/^\uFEFF/,''));}));
+  const data={};await Promise.all(index.files.map(async f=>{if(!/^data\/(week[0-9]{2,}\.json|day001\.json|knowledge-index\.json|course-policy\.json|client-dictionary\.json|experiments\/experiment-[a-z0-9-]+\.json)$/.test(f.url)||!/^[a-f0-9]{64}$/.test(f.sha256))throw Error('Invalid course file path');const text=await network(f.url+'?v='+f.sha256);if(await digest(text)!==f.sha256)throw Error(f.url+': hash mismatch');data[f.url]=JSON.parse(text.replace(/^\uFEFF/,''));}));
   if(!data['data/day001.json']||!data['data/knowledge-index.json']||index.weeks.some(w=>!data[w.url]))throw Error('Incomplete course snapshot');
   const snapshot={version,index,data};
   let cached=true;try{const cache=await caches.open(cacheName);await cache.put(key,new Response(JSON.stringify(snapshot),{headers:{'Content-Type':'application/json'}}));}catch{cached=false;}
@@ -26,7 +26,7 @@
  async function start(){
   if(location.protocol==='file:'){await script('data/day001.js');await script('data/course-bundle.js');status('本地文件模式：不支持自动更新/PWA，请使用网站地址');}
   else {try{const cache=await caches.open(cacheName),r=await cache.match(key);if(r)apply(await r.json());}catch{}await check();if(!current){document.querySelector('#retry-load').hidden=false;return;}}
-  await script('weekly.js');await script('app.js');started=true;
+  await script('plan-client.js');await script('weekly.js');await script('app.js');started=true;
   if(location.protocol!=='file:'){setInterval(check,5*60*1000);window.addEventListener('online',check);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')check();});}
  }
  window.N2CheckUpdates=check;

@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "experiments": [],
   "weeks": [
     {
       "week": 1,
@@ -41,6 +42,10 @@
     }
   ],
   "files": [
+    {
+      "url": "data/client-dictionary.json",
+      "sha256": "e94910c969d17ae29f954527e532725a053e8effe605e208c5959a17cc1ac37f"
+    },
     {
       "url": "data/course-policy.json",
       "sha256": "663abad047d7329eea23af9a6ecbaa9bebe8e41c641eeb05acde79c74570ae24"

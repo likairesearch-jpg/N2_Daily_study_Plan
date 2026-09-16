@@ -1,94 +1,66 @@
-﻿param([switch]$SmokeTest,[ValidateSet('reference','sync','stop','start','status')][string]$SmokeAction='reference')
+﻿param([switch]$SmokeTest,[ValidateSet('profiles','drafts','publish','reference')][string]$SmokePage='publish')
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
-[System.Windows.Forms.Application]::EnableVisualStyles()
-$root=Split-Path $PSScriptRoot -Parent
-Set-Location -LiteralPath $root
-$runtimeFile=Join-Path $root '.sync/runtime.json'
-if(Test-Path $runtimeFile){$runtime=Get-Content -Raw -LiteralPath $runtimeFile | ConvertFrom-Json; $node=$runtime.NodePath; $env:PATH=$runtime.GitFolder+';'+$env:PATH}else{$node=(Get-Command node -ErrorAction Stop).Source}
-$form=New-Object System.Windows.Forms.Form
-$form.Text='N2 Daily · 同步管理'
-$form.Size=New-Object System.Drawing.Size(900,780)
-$form.MinimumSize=New-Object System.Drawing.Size(900,700)
-$form.StartPosition='CenterScreen'
-$form.Font=New-Object System.Drawing.Font('Microsoft YaHei UI',10)
-$form.BackColor=[System.Drawing.Color]::FromArgb(245,247,250)
-$title=New-Object System.Windows.Forms.Label
-$title.Text='课程发布与本地资料库'
-$title.Font=New-Object System.Drawing.Font('Microsoft YaHei UI',18,[System.Drawing.FontStyle]::Bold)
-$title.SetBounds(24,18,820,40)
-$form.Controls.Add($title)
-$hint=New-Object System.Windows.Forms.Label
-$hint.Text='课程每天 16:00 自动同步（电脑本地时间）。Reference 仅在点击按钮时联网更新。'
-$hint.SetBounds(24,65,830,30)
-$form.Controls.Add($hint)
-$script:buttons=@()
-function Add-ActionButton($text,$left,$top,$scriptFile,$mode){
- $button=New-Object System.Windows.Forms.Button
- $button.Text=$text; $button.SetBounds($left,$top,190,42)
- $button.Tag=@($scriptFile,$mode)
- $button.Add_Click({$mode=$this.Tag[1];if($this.Tag[0] -eq 'tools/workflow.cjs'){$mode+=' --week='+$weekPicker.Value};Start-JobUI $this.Tag[0] $mode $this.Text})
- $form.Controls.Add($button);$script:buttons+=,$button
-}
-Add-ActionButton '立即同步课程' 24 108 'tools/sync.cjs' 'once'
-Add-ActionButton '停止自动同步' 230 108 'tools/sync.cjs' 'stop'
-Add-ActionButton '开启自动同步' 436 108 'tools/sync.cjs' 'start'
-Add-ActionButton '查看同步状态' 642 108 'tools/dashboard.cjs' 'local'
-Add-ActionButton '手动更新 Reference' 24 164 'tools/reference.cjs' 'update'
-Add-ActionButton '查看 Reference 信息' 230 164 'tools/reference.cjs' 'status'
-Add-ActionButton '检查 Pages 版本' 436 164 'tools/dashboard.cjs' 'pages'
-Add-ActionButton '生成 Work Context' 24 218 'tools/workflow.cjs' 'context'
-Add-ActionButton '校验课程草稿' 230 218 'tools/workflow.cjs' 'validate'
-Add-ActionButton '完成草稿并晋升' 436 218 'tools/workflow.cjs' 'promote'
-$weekPicker=New-Object System.Windows.Forms.NumericUpDown
-$weekPicker.Minimum=1;$weekPicker.Maximum=200;$weekPicker.SetBounds(642,228,80,30)
-$courseIndex=Get-Content -Raw -LiteralPath (Join-Path $root 'data/index.json') | ConvertFrom-Json
-$weekPicker.Value=1+($courseIndex.weeks | Measure-Object -Property week -Maximum).Maximum
-$form.Controls.Add($weekPicker)
-$weekLabel=New-Object System.Windows.Forms.Label;$weekLabel.Text='Week';$weekLabel.SetBounds(734,228,80,30);$form.Controls.Add($weekLabel)
-$note=New-Object System.Windows.Forms.Label
-$note.Text='开启只恢复每日计划；立即同步随时可用。停止不撤回已发布内容。资料更新不会发布课程。'
-$note.SetBounds(24,274,830,38)
-$form.Controls.Add($note)
-$script:output=New-Object System.Windows.Forms.TextBox
-$script:output.Multiline=$true;$script:output.ReadOnly=$true;$script:output.ScrollBars='Both';$script:output.WordWrap=$false
-$script:output.Font=New-Object System.Drawing.Font('Consolas',10)
-$script:output.SetBounds(24,320,808,340);$script:output.Anchor='Top,Bottom,Left,Right'
-$form.Controls.Add($script:output)
-$script:state=New-Object System.Windows.Forms.Label
-$script:state.SetBounds(24,690,808,28);$script:state.Anchor='Bottom,Left,Right';$script:state.Text='就绪 · 关闭窗口不影响每日计划任务'
-$form.Controls.Add($script:state)
-$script:job=$null;$script:smokeExit=1
-function Start-JobUI($scriptFile,$mode,$label){
- if($script:job){return}
- try{
-  $info=New-Object System.Diagnostics.ProcessStartInfo
-  $info.FileName=$node;$info.Arguments=$scriptFile+' '+$mode;$info.WorkingDirectory=$root
-  $info.UseShellExecute=$false;$info.CreateNoWindow=$true;$info.RedirectStandardOutput=$true;$info.RedirectStandardError=$true
-  $info.StandardOutputEncoding=[System.Text.Encoding]::UTF8;$info.StandardErrorEncoding=[System.Text.Encoding]::UTF8
-  $script:job=New-Object System.Diagnostics.Process;$script:job.StartInfo=$info
-  [void]$script:job.Start()
-  $script:stdout=$script:job.StandardOutput.ReadToEndAsync();$script:stderr=$script:job.StandardError.ReadToEndAsync()
-  $script:output.Text=$label+' …'+[Environment]::NewLine+'操作完成后显示结果。网络下载可能需要几分钟。'
-  $script:state.Text='运行中 · '+$label
-  foreach($button in $script:buttons){$button.Enabled=$false}
- }catch{$script:job=$null;$script:output.Text=$_.Exception.Message;$script:state.Text='未能启动，请检查 Node/Git 路径'}
-}
-$timer=New-Object System.Windows.Forms.Timer;$timer.Interval=250
-$timer.Add_Tick({
- if($script:job -and $script:job.HasExited -and $script:stdout.IsCompleted -and $script:stderr.IsCompleted){
-  $code=$script:job.ExitCode
-  $script:output.Text=($script:stdout.Result+[Environment]::NewLine+$script:stderr.Result) -replace "`r?`n","`r`n"
-  $script:state.Text=if($code -eq 0){'已完成 · '+(Get-Date -Format 'HH:mm:ss')}else{'失败 · 退出码 '+$code+' · 请查看上方错误；原有资料不会因失败而删除'}
-  $script:job.Dispose();$script:job=$null
-  foreach($button in $script:buttons){$button.Enabled=$true}
-  if($SmokeTest){$script:smokeExit=$code;$form.Refresh();$bmp=New-Object System.Drawing.Bitmap($form.Width,$form.Height);$form.DrawToBitmap($bmp,$form.ClientRectangle);$bmp.Save((Join-Path $root '.sync/manager-preview.png'));$bmp.Dispose();$form.Close()}
- }
-})
-$form.Add_FormClosing({if($script:job){$_.Cancel=$true;[void][System.Windows.Forms.MessageBox]::Show('请等待当前操作完成，再关闭窗口。','操作正在运行')}})
-$form.Add_Shown({if($SmokeTest){$indices=@{sync=0;stop=1;start=2;status=3;reference=5};$script:buttons[$indices[$SmokeAction]].PerformClick()}else{Start-JobUI 'tools/dashboard.cjs' 'local' '本地系统状态'}})
-$timer.Start()
-[void]$form.ShowDialog()
-$timer.Stop();$timer.Dispose();$form.Dispose()
-if($SmokeTest){exit $script:smokeExit}
+[Windows.Forms.Application]::EnableVisualStyles()
+$root=Split-Path $PSScriptRoot -Parent;Set-Location -LiteralPath $root
+$runtime=Get-Content -LiteralPath (Join-Path $root '.sync/runtime.json') -Raw | ConvertFrom-Json
+$node=$runtime.NodePath;$env:PATH=$runtime.GitFolder+';'+$env:PATH
+$script:isMain=(git -C $root branch --show-current) -eq 'main'
+$form=New-Object Windows.Forms.Form;$form.Text=if($script:isMain){'N2 Daily · 主目录管理器'}else{'N2 Daily · 开发测试版（禁止发布和任务控制）'}
+$form.Size=New-Object Drawing.Size(960,900);$form.MinimumSize=$form.Size;$form.StartPosition='CenterScreen';$form.Font=New-Object Drawing.Font('Microsoft YaHei UI',10)
+$tabs=New-Object Windows.Forms.TabControl;$tabs.SetBounds(10,10,922,620);$tabs.Anchor='Top,Left,Right';$form.Controls.Add($tabs)
+$planTab=New-Object Windows.Forms.TabPage;$planTab.Text='学习计划';$tabs.TabPages.Add($planTab)
+$draftTab=New-Object Windows.Forms.TabPage;$draftTab.Text='课程草稿';$tabs.TabPages.Add($draftTab)
+$publishTab=New-Object Windows.Forms.TabPage;$publishTab.Text='发布与同步';$tabs.TabPages.Add($publishTab)
+$referenceTab=New-Object Windows.Forms.TabPage;$referenceTab.Text='参考资料库';$tabs.TabPages.Add($referenceTab)
+$script:output=New-Object Windows.Forms.TextBox;$script:output.Multiline=$true;$script:output.ReadOnly=$true;$script:output.ScrollBars='Both';$script:output.SetBounds(20,645,900,165);$script:output.Anchor='Top,Bottom,Left,Right';$form.Controls.Add($script:output)
+$script:state=New-Object Windows.Forms.Label;$script:state.SetBounds(20,823,900,30);$script:state.Anchor='Bottom,Left,Right';$form.Controls.Add($script:state)
+$script:buttons=@();$script:job=$null;$script:afterJob=$null;$script:requestPath=$null;$script:managerResult=$null
+function UI-Button($parent,$text,$x,$y,$width,$handler){$b=New-Object Windows.Forms.Button;$b.Text=$text;$b.SetBounds($x,$y,$width,36);$b.Add_Click($handler);$parent.Controls.Add($b);$script:buttons+=,$b;return $b}
+function UI-Text($parent,$text,$x,$y,$width,$height){$l=New-Object Windows.Forms.Label;$l.Text=$text;$l.SetBounds($x,$y,$width,$height);$parent.Controls.Add($l);return $l}
+function Start-JobUI($file,$arguments,$label){if($script:job){return};try{$p=New-Object Diagnostics.ProcessStartInfo;$p.FileName=$node;$p.Arguments=$file+' '+$arguments;$p.WorkingDirectory=$root;$p.UseShellExecute=$false;$p.CreateNoWindow=$true;$p.RedirectStandardOutput=$true;$p.RedirectStandardError=$true;$p.StandardOutputEncoding=[Text.Encoding]::UTF8;$p.StandardErrorEncoding=[Text.Encoding]::UTF8;$script:job=New-Object Diagnostics.Process;$script:job.StartInfo=$p;[void]$script:job.Start();$script:stdout=$script:job.StandardOutput.ReadToEndAsync();$script:stderr=$script:job.StandardError.ReadToEndAsync();foreach($b in $script:buttons){$b.Enabled=$false};$draftMode.Enabled=$false;$draftList.Enabled=$false;$script:state.Text='运行中：'+$label;$script:output.Text='请等待操作完成。'}catch{$script:job=$null;$script:state.Text=$_.Exception.Message}}
+function Invoke-Manager($q,$label,$after=$null){if($script:job){return};$script:requestPath=Join-Path $root ('.sync/manager-request-'+[guid]::NewGuid()+'.json');$q | ConvertTo-Json -Depth 20 | Set-Content -LiteralPath $script:requestPath -Encoding UTF8;$script:afterJob=$after;Start-JobUI 'tools/manager.cjs' ('"'+$script:requestPath+'"') $label}
+function Get-DraftMode {if($draftMode.SelectedIndex -eq 0){return 'official'};return 'experiment'}
+function Selected-Draft {if($draftList.SelectedIndex -lt 0){throw 'Select a draft first'};return $script:drafts[$draftList.SelectedIndex]}
+function Refresh-Drafts { $draftPreview.Clear();$draftCopy.Enabled=$false;Invoke-Manager @{action='list';mode=(Get-DraftMode)} '读取草稿列表' {$script:drafts=@($script:managerResult | Where-Object {$null -ne $_});$draftList.Items.Clear();$draftDetails.Clear();foreach($d in $script:drafts){[void]$draftList.Items.Add($d.name)};if($script:drafts.Count){$draftList.SelectedIndex=0}} }
+$draftMode=New-Object Windows.Forms.ComboBox;$draftMode.DropDownStyle='DropDownList';$draftMode.Items.AddRange(@('正式课程','实验课程'));$draftMode.SetBounds(20,20,160,30);$draftTab.Controls.Add($draftMode)
+$draftList=New-Object Windows.Forms.ComboBox;$draftList.DropDownStyle='DropDownList';$draftList.SetBounds(195,20,490,30);$draftTab.Controls.Add($draftList)
+[void](UI-Button $draftTab '刷新列表' 700 18 170 {Refresh-Drafts})
+$draftDetails=New-Object Windows.Forms.TextBox;$draftDetails.Multiline=$true;$draftDetails.ReadOnly=$true;$draftDetails.SetBounds(20,62,850,68);$draftTab.Controls.Add($draftDetails)
+[void](UI-Text $draftTab '实验完成后总节数' 20 142 165 28)
+$draftCount=New-Object Windows.Forms.NumericUpDown;$draftCount.Minimum=1;$draftCount.Maximum=7;$draftCount.SetBounds(190,138,70,30);$draftTab.Controls.Add($draftCount)
+[void](UI-Text $draftTab '正式草稿使用正式默认方案；实验草稿使用学习计划页当前已保存配置。' 280 142 600 40)
+[void](UI-Button $draftTab '新建草稿' 20 190 150 {try{$m=Get-DraftMode;if($m -eq 'experiment' -and ($script:planNew -or (Test-PlanDirty))){throw 'Save the selected experiment Profile first'};$q=@{action='new';mode=$m};if($m -eq 'experiment'){$q.profile=$script:planProfile.id;$q.id=[Microsoft.VisualBasic.Interaction]::InputBox('实验 ID，以 experiment- 开头','新建实验草稿','experiment-new');if(!$q.id){return}};Invoke-Manager $q '新建空草稿' {$script:output.Text=$script:managerResult.message+[Environment]::NewLine+$script:managerResult.file}}catch{$script:output.Text=$_.Exception.Message}})
+[void](UI-Button $draftTab '生成 Work 指令' 185 190 165 {try{$d=Selected-Draft;Invoke-Manager @{action='generate';mode=(Get-DraftMode);file=$d.file;count=[int]$draftCount.Value} '生成专用 Context 与指令' {$draftPreview.Text=$script:managerResult.prompt -replace "`r?`n","`r`n";$draftCopy.Enabled=$true;$script:output.Text='材料已生成，复制给 Work 执行；此操作不会自动生成课程。'+[Environment]::NewLine+$script:managerResult.contextPath}}catch{$script:output.Text=$_.Exception.Message}})
+$draftCopy=UI-Button $draftTab '复制指令' 365 190 140 {if($draftPreview.Text){[Windows.Forms.Clipboard]::SetText($draftPreview.Text);$script:state.Text='已复制指令，请粘贴给 Work。'}}
+[void](UI-Button $draftTab '仅校验' 520 190 140 {try{$d=Selected-Draft;Invoke-Manager @{action='validate';mode=(Get-DraftMode);file=$d.file} '校验所选草稿'}catch{$script:output.Text=$_.Exception.Message}})
+[void](UI-Button $draftTab '晋升到本地待发布区' 675 190 195 {try{$d=Selected-Draft;if([Windows.Forms.MessageBox]::Show('校验并晋升以下草稿？晋升后允许每日同步发布。'+[Environment]::NewLine+$d.file,'确认本地晋升','YesNo') -eq 'Yes'){Invoke-Manager @{action='promote';mode=(Get-DraftMode);file=$d.file} '本地晋升'}}catch{$script:output.Text=$_.Exception.Message}})
+[void](UI-Button $draftTab '删除草稿' 20 238 150 {try{$d=Selected-Draft;if([Windows.Forms.MessageBox]::Show('移入回收站？已晋升课程不受影响。'+[Environment]::NewLine+$d.file,'删除草稿','YesNo') -eq 'Yes'){Invoke-Manager @{action='delete';mode=(Get-DraftMode);file=$d.file;confirm=$true} '删除草稿'}}catch{$script:output.Text=$_.Exception.Message}})
+[void](UI-Button $draftTab '导出当前类型模板' 185 238 210 {$f=New-Object Windows.Forms.SaveFileDialog;$f.Filter='Template (*.md)|*.md';$f.FileName=(Get-DraftMode)+'-prompt-template.md';if($f.ShowDialog() -eq 'OK'){Invoke-Manager @{action='template-export';mode=(Get-DraftMode);file=$f.FileName} '导出模板'};$f.Dispose()})
+[void](UI-Button $draftTab '导入当前类型模板' 410 238 210 {$f=New-Object Windows.Forms.OpenFileDialog;$f.Filter='Template (*.md;*.txt)|*.md;*.txt';if($f.ShowDialog() -eq 'OK'){if([Windows.Forms.MessageBox]::Show('校验占位符、备份并替换当前类型模板？','导入模板','YesNo') -eq 'Yes'){Invoke-Manager @{action='template-import';mode=(Get-DraftMode);file=$f.FileName;confirm=$true} '导入模板' {$draftPreview.Clear();$draftCopy.Enabled=$false}}};$f.Dispose()})
+$draftPreview=New-Object Windows.Forms.TextBox;$draftPreview.Multiline=$true;$draftPreview.ReadOnly=$true;$draftPreview.ScrollBars='Both';$draftPreview.SetBounds(20,290,850,275);$draftTab.Controls.Add($draftPreview)
+$script:drafts=@();$draftList.Add_SelectedIndexChanged({$draftPreview.Clear();$draftCopy.Enabled=$false;if($draftList.SelectedIndex -ge 0){$d=Selected-Draft;$draftDetails.Text=$d.file+[Environment]::NewLine+'绑定配置：'+$d.profile+'；已有节数：'+$d.sessions+'；'+$d.error;$draftCount.Value=[Math]::Min(7,[Math]::Max(1,[int]$d.sessions))}})
+$draftCount.Add_ValueChanged({$draftPreview.Clear();$draftCopy.Enabled=$false})
+$draftMode.SelectedIndex=0;$draftCount.Enabled=$false;$draftMode.Add_SelectedIndexChanged({$draftCount.Enabled=(Get-DraftMode) -eq 'experiment';Refresh-Drafts})
+. (Join-Path $PSScriptRoot 'plan-panel.ps1')
+$officialBadge=UI-Text $planTab '' 220 418 650 48
+function Refresh-OfficialBadge {$o=Get-Content -LiteralPath (Join-Path $root 'config/profiles/official-default.json') -Raw -Encoding UTF8 | ConvertFrom-Json;$officialBadge.Text='当前正式默认：'+$o.name+'（新词 '+$o.vocabularyPerDay+' / 语法 '+$o.grammarPerDay+'）'+[Environment]::NewLine+'仅用于以后新建的正式草稿；已有草稿使用自己的快照。'}
+Refresh-OfficialBadge
+function Adopt-Official {if($script:planNew -or (Test-PlanDirty)){[void][Windows.Forms.MessageBox]::Show('请先保存 Profile。');return};Invoke-Manager @{action='adopt-preview';id=$script:planProfile.id} '比较正式方案差异' {$v=$script:managerResult;$lines=($v.changes | ForEach-Object {$_.field+': '+$_.before+' → '+$_.after}) -join [Environment]::NewLine;if(!$lines){$lines='学习参数相同。'};if([Windows.Forms.MessageBox]::Show($lines+[Environment]::NewLine+'备份并设为正式默认方案？仅影响以后新建的正式草稿。','确认正式方案','YesNo') -eq 'Yes'){Invoke-Manager @{action='adopt';id=$v.source;sourceHash=$v.sourceHash;officialHash=$v.officialHash;confirm=$true} '设置正式学习方案' {Fill-Profile $script:managerResult.profile;Refresh-OfficialBadge;$script:output.Text=$script:managerResult.message+[Environment]::NewLine+'备份：'+$script:managerResult.backup}}}}
+[void](UI-Text $publishTab '只发布已晋升内容。推送、Actions 部署、客户端更新是不同阶段。' 20 20 850 40)
+[void](UI-Button $publishTab '立即同步已批准课程' 20 75 220 {if([Windows.Forms.MessageBox]::Show('同步全部已批准的待发布课程变化？','确认同步','YesNo') -eq 'Yes'){Invoke-Manager @{action='sync'} '同步已批准课程'}})
+[void](UI-Button $publishTab '撤下实验版本' 260 75 185 {$f=New-Object Windows.Forms.OpenFileDialog;$f.InitialDirectory=Join-Path $root 'data/experiments';$f.Filter='Experiment JSON|experiment-*.json';if($f.ShowDialog() -eq 'OK'){if([Windows.Forms.MessageBox]::Show('备份、撤下并同步？此操作也同步其他已批准变化。'+[Environment]::NewLine+$f.FileName,'确认撤下','YesNo') -eq 'Yes'){Invoke-Manager @{action='withdraw';file=$f.FileName;confirm=$true} '撤下实验版本'}};$f.Dispose()})
+[void](UI-Button $publishTab '开启每日同步' 465 75 190 {Invoke-Manager @{action='start'} '开启每日同步'})
+[void](UI-Button $publishTab '停止每日同步' 675 75 190 {Invoke-Manager @{action='stop'} '停止每日同步'})
+[void](UI-Button $publishTab '刷新发布状态（联网）' 20 125 260 {Invoke-Manager @{action='status';online=$true} '读取本地与 Pages 状态' {Render-PublishStatus}})
+$publishStatus=New-Object Windows.Forms.TextBox;$publishStatus.Multiline=$true;$publishStatus.ReadOnly=$true;$publishStatus.ScrollBars='Both';$publishStatus.SetBounds(20,185,850,370);$publishTab.Controls.Add($publishStatus)
+function Render-PublishStatus {$r=$script:managerResult;$pending=($r.pending.changes | ForEach-Object {$_.state+'：'+$_.file}) -join [Environment]::NewLine;if(!$pending){$pending='没有未提交的课程变化。'};$publishStatus.Text=$pending+[Environment]::NewLine+'本地未推送提交数：'+$r.pending.unpushedCommits+[Environment]::NewLine+$r.pending.validation+[Environment]::NewLine+$r.status}
+[void](UI-Text $referenceTab 'Reference 是本地参考库，默认不自动刷新。只有手动更新才访问上游网站。' 20 20 850 65)
+[void](UI-Button $referenceTab '查看本地资料信息' 20 95 240 {Invoke-Manager @{action='reference-status'} '本地 Reference 信息'})
+[void](UI-Button $referenceTab '手动更新 Reference' 280 95 240 {if([Windows.Forms.MessageBox]::Show('联网检查和下载参考资料更新？不会生成或发布课程。','确认手动更新','YesNo') -eq 'Yes'){Invoke-Manager @{action='reference-update';confirm=$true} '更新 Reference'}})
+$timer=New-Object Windows.Forms.Timer;$timer.Interval=200
+$timer.Add_Tick({if($script:job -and $script:job.HasExited -and $script:stdout.IsCompleted -and $script:stderr.IsCompleted){$code=$script:job.ExitCode;$raw=$script:stdout.Result;$script:output.Text=$raw+[Environment]::NewLine+$script:stderr.Result;$script:job.Dispose();$script:job=$null;$script:lastJobCode=$code;$script:state.Text=if($code -eq 0){'操作完成'}else{'操作失败，请查看错误说明'};foreach($b in $script:buttons){$b.Enabled=$true};$draftCopy.Enabled=[bool]$draftPreview.Text;$draftMode.Enabled=$true;$draftList.Enabled=$true;if(!$script:isMain){foreach($b in $publishTab.Controls){if($b -is [Windows.Forms.Button] -and $b.Text -ne '刷新发布状态（联网）'){$b.Enabled=$false}}};if($script:requestPath){Remove-Item -LiteralPath $script:requestPath -ErrorAction SilentlyContinue;$script:requestPath=$null};try{$script:managerResult=ConvertFrom-Json $raw;if($script:managerResult.message){$script:output.Text=$script:managerResult.message}}catch{};$callback=$script:afterJob;$script:afterJob=$null;if($code -eq 0 -and $callback){& $callback};if($SmokeTest -and !$script:job){$form.Refresh();$bmp=New-Object Drawing.Bitmap($form.Width,$form.Height);$form.DrawToBitmap($bmp,$form.ClientRectangle);$bmp.Save((Join-Path $root ('.sync/manager-'+$SmokePage+'.png')));$bmp.Dispose();$script:smokeCode=$code;$form.Close()}}})
+$form.Add_FormClosing({if($script:job){$_.Cancel=$true;[void][Windows.Forms.MessageBox]::Show('请等待当前操作完成。')}})
+$form.Add_Shown({$script:smokeCode=1;if($SmokeTest -and $SmokePage -eq 'drafts'){$tabs.SelectedTab=$draftTab;Refresh-Drafts}elseif($SmokeTest -and $SmokePage -eq 'profiles'){$tabs.SelectedTab=$planTab;Start-JobUI 'tools/plan.cjs' 'list' '读取配置'}elseif($SmokeTest -and $SmokePage -eq 'reference'){$tabs.SelectedTab=$referenceTab;Invoke-Manager @{action='reference-status'} '读取本地资料'}else{$tabs.SelectedTab=$publishTab;Invoke-Manager @{action='status';online=$false} '本地状态' {Render-PublishStatus}}})
+$timer.Start();[void]$form.ShowDialog();$timer.Stop();$timer.Dispose();$form.Dispose();if($SmokeTest){exit $script:smokeCode}

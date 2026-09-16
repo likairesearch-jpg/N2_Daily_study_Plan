@@ -65,3 +65,7 @@ Reference update is explicitly manual: GUI button, or `node tools/reference.cjs 
 ## Work readiness
 
 Work writes `data/drafts/weekXX.json`, validates, then explicitly promotes. Only hash-approved formal weeks can publish. Use the manager context/draft buttons or `npm run work:context -- --week=3`. See docs/COURSE_SCHEMA.md and reports/system-readiness.md. Opening the manager reads local status; checking Pages is an explicit network action.
+
+## 主目录管理器
+
+双击根目录 `N2 Sync Manager.vbs`，使用“学习计划 → 课程草稿 → 发布与同步”流程。Reference 在独立“参考资料库”页手动更新。实验方案可通过“设为正式方案”用于以后新建的正式草稿，不改变旧课程。详见 [管理器说明](docs/SYNC_MANAGER_GUIDE.zh-CN.md)。

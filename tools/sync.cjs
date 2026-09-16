@@ -15,7 +15,8 @@ function synchronize(){return locked(()=>{
  const before=git(['rev-parse','HEAD']);
  const files=R.capture();R.assertPublished(files);const meta=R.metadata(files),snapshot={...files,...meta};
  const tracked=git(['ls-files','--','data','version.json']).split('\n').filter(p=>R.AUTO(p));
- for(const p of tracked)if(!(p in snapshot))throw Error('Automatic deletion is prohibited: '+p);
+ const removed=tracked.filter(p=>!(p in snapshot)),withdrawals=JSON.parse(files['data/publication.json']).withdrawals||{};
+ for(const p of removed){if(!/^data\/experiments\/experiment-[a-z0-9-]+\.json$/.test(p)||withdrawals[p]?.method!=='explicit-experiment-withdrawal')throw Error('Automatic deletion is prohibited: '+p);const raw=cp.spawnSync('git',['show',before+':'+p],{cwd:R.ROOT,encoding:'utf8',maxBuffer:32*1024*1024,windowsHide:true});if(raw.status!==0||R.hash(raw.stdout)!==withdrawals[p].baseSha256)throw Error('Withdrawal approval does not match committed experiment: '+p);}
  // Fetch may fail without losing or resetting any local data. Retry next cycle.
  git(['fetch','origin','main']);const upstream=git(['rev-parse','origin/main']);
  try{git(['merge-base','--is-ancestor',upstream,before]);}catch{throw Error('Remote main has diverged/advanced; reconcile it manually. No reset or force push was performed.');}
@@ -23,20 +24,20 @@ function synchronize(){return locked(()=>{
  for(const commit of pending){const changed=git(['diff-tree','-m','--no-commit-id','--name-only','-r',commit]).split('\n').filter(Boolean);if(changed.some(p=>!R.AUTO(p)))throw Error('Unpushed engineering commit detected; publish it manually once before enabling course sync');}
  const indexFile=path.join(dir,'publish-index-'+process.pid),env={GIT_INDEX_FILE:indexFile};
  try{
-  git(['read-tree',before],{env});const blobs=[];
+  git(['read-tree',before],{env});for(const p of removed)git(['update-index','--force-remove','--',p],{env});const blobs=[];
   for(const [p,text]of Object.entries(snapshot)){const blob=git(['hash-object','-w','--stdin'],{input:text});git(['update-index','--add','--cacheinfo','100644',blob,p],{env});blobs.push([p,blob]);}
   const tree=git(['write-tree'],{env});let head=before;
   if(tree!==git(['rev-parse',before+'^{tree}'])){
    // Revalidate the actual staged bytes, not mutable working files.
    const staged={};
    // git() trims text; use raw blob reads to preserve exact hashes and whitespace.
-   for(const p of Object.keys(files)){const out=cp.spawnSync('git',['show',':'+p],{cwd:R.ROOT,encoding:'utf8',windowsHide:true,env:{...process.env,...env}});if(out.status!==0)throw Error('Cannot read staged '+p);staged[p]=out.stdout;}
+   for(const p of Object.keys(files)){const out=cp.spawnSync('git',['show',':'+p],{cwd:R.ROOT,encoding:'utf8',maxBuffer:Buffer.byteLength(files[p],'utf8')+65536,windowsHide:true,env:{...process.env,...env}});if(out.status!==0)throw Error('Cannot read staged '+p+': '+(out.error?.message||out.stderr));staged[p]=out.stdout;}
    const stagedMeta=R.metadata(staged);if(stagedMeta['version.json']!==meta['version.json'])throw Error('Staged snapshot changed');
    head=git(['commit-tree',tree,'-p',before],{input:'Publish course '+JSON.parse(meta['version.json']).courseVersion.slice(0,12)+'\n'});
    if(git(['diff','--cached','--name-only']))throw Error('Manual staging detected during publication; retry after completing it');
    git(['update-ref','refs/heads/main',head,before]);
    // Align only our approved paths in the ordinary index; unrelated working files stay untouched.
-   for(const [p,blob]of blobs)git(['update-index','--add','--cacheinfo','100644',blob,p]);
+   for(const [p,blob]of blobs)git(['update-index','--add','--cacheinfo','100644',blob,p]);for(const p of removed)git(['update-index','--force-remove','--',p]);
    if(R.signature(R.capture())===R.signature(files)){R.writeChanged(R.ROOT,meta);R.bundle(R.ROOT,files);}
   }
   git(['push','origin',head+':refs/heads/main']);status('ok',head===before&&before===upstream?'No course changes; already synchronized':'Published '+head.slice(0,12));
