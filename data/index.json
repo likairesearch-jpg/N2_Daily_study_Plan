@@ -39,12 +39,25 @@
         "day020",
         "day021"
       ]
+    },
+    {
+      "week": 4,
+      "url": "data/week04.json",
+      "days": [
+        "day022",
+        "day023",
+        "day024",
+        "day025",
+        "day026",
+        "day027",
+        "day028"
+      ]
     }
   ],
   "files": [
     {
       "url": "data/client-dictionary.json",
-      "sha256": "e94910c969d17ae29f954527e532725a053e8effe605e208c5959a17cc1ac37f"
+      "sha256": "a168aee817a07852d310299955b1496f8586e9575c4dacf19a7d66c12067e9f2"
     },
     {
       "url": "data/course-policy.json",
@@ -69,6 +82,10 @@
     {
       "url": "data/week03.json",
       "sha256": "301e3d86af7d3596ae23ec7dc3eb2e56b4f2f643c3d03d2d1a42dde2bef7644b"
+    },
+    {
+      "url": "data/week04.json",
+      "sha256": "81f6bc2711db048568561326dc2301898bf2ec7b3920db6f9a401d4a55d47858"
     }
   ]
 }

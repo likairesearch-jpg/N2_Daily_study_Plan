@@ -15,6 +15,11 @@
       "sha256": "301e3d86af7d3596ae23ec7dc3eb2e56b4f2f643c3d03d2d1a42dde2bef7644b",
       "approvedAt": "2026-09-15T09:11:27.815Z",
       "method": "validated-draft-promotion"
+    },
+    "data/week04.json": {
+      "sha256": "81f6bc2711db048568561326dc2301898bf2ec7b3920db6f9a401d4a55d47858",
+      "approvedAt": "2026-09-20T06:05:20.081Z",
+      "method": "validated-draft-promotion"
     }
   }
 }
