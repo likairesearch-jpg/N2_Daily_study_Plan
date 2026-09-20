@@ -6,3 +6,10 @@ body.hide-kana h1 + .translation[lang="ja"]{visibility:hidden}
 .side-bottom button{display:block;width:100%;margin-top:8px;font-size:12px;padding:7px 8px}.side-bottom button[hidden]{display:none}.side-bottom input[type=file]{max-width:100%;font-size:11px;margin-top:6px}#update-status,#app-status{overflow-wrap:anywhere;line-height:1.6}@media(min-width:901px){aside{position:sticky;top:0;height:100dvh;overflow-y:auto}main{align-self:start;margin:0 auto;padding-top:32px}article{min-height:440px}}
 
 .jlpt-badge{font-size:14px;display:inline-block;margin-left:12px;padding:3px 8px;background:#e2eee9;border-radius:5px;color:#264d43}.word-token{padding:0 2px;border:0;border-bottom:1px dashed currentColor;background:none;color:#265e51;font:inherit;cursor:pointer}.sentence-audio{margin-right:10px}.word-detail{border:1px solid #c5d6cd;border-radius:10px;padding:16px;margin-top:18px;background:#f6faf7}.word-detail h2{font-size:16px}.reading-sentence{display:inline;line-height:2.3;border-bottom:1px dashed currentColor;cursor:pointer;margin-right:.25em}
+
+/* Reserve a left gutter for fixed desktop page controls. */
+@media(min-width:901px){main{padding-left:140px;padding-right:32px}.page-controls{position:fixed;z-index:10;top:145px;left:calc(250px + max(0px, (100vw - 1500px)/2) + 16px);display:flex;flex-direction:column;gap:12px;width:108px}.page-controls button{width:100%;min-height:52px;padding:10px 6px}}
+@media(max-width:900px){main{padding-bottom:92px}.page-controls{position:fixed;z-index:10;bottom:16px;left:214px;display:flex;gap:8px;padding:6px;background:#edf1f7;border-radius:12px;box-shadow:0 2px 12px #223c6120}}
+@media(max-width:650px){.page-controls{left:18px}}
+.word-token:hover,.word-token.playing{color:#2864d9}
+main,aside{min-width:0}aside select{max-width:100%;min-width:0}#card,#word-detail{overflow-wrap:anywhere}@media(max-width:650px){aside{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
