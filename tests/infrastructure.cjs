@@ -16,7 +16,7 @@ assert.throws(()=>R.validate(edit(w=>w.days[0].counts.newVocabulary++)),/count/)
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'n2-infra-')),repo=path.join(temp,'repo'),remote=path.join(temp,'remote.git');fs.mkdirSync(repo);
 const run=(cmd,args,cwd=repo,ok=true)=>{const r=cp.spawnSync(cmd,args,{cwd,encoding:'utf8',windowsHide:true,env:{...process.env,NODE_PATH:path.join(R.ROOT,'node_modules'),GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:path.join(temp,'empty-config'),GIT_TERMINAL_PROMPT:'0'}});if(ok&&r.status!==0)throw Error(r.stdout+r.stderr);return r;};
 const git=(...args)=>run('git',args).stdout.trim();
-for(const p of ['tools/release.cjs','tools/sync.cjs','tools/workflow.cjs','tools/reference.cjs','weekly.js','schemas/course.schema.json']){fs.mkdirSync(path.dirname(path.join(repo,p)),{recursive:true});fs.copyFileSync(path.join(R.ROOT,p),path.join(repo,p));}
+for(const p of ['tools/release.cjs','tools/sync.cjs','tools/workflow.cjs','tools/reference.cjs','tools/plan.cjs','weekly.js','schemas/course.schema.json']){fs.mkdirSync(path.dirname(path.join(repo,p)),{recursive:true});fs.copyFileSync(path.join(R.ROOT,p),path.join(repo,p));}
 fs.cpSync(path.join(R.ROOT,'data/reference'),path.join(repo,'data/reference'),{recursive:true});
 R.writeChanged(repo,{...files,...meta,'.gitignore':'.sync/\ndata/*.js\n'});
 git('init','-b','main');git('config','user.name','Infrastructure Test');git('config','user.email','test@example.invalid');git('add','.');git('commit','-m','Test baseline');
