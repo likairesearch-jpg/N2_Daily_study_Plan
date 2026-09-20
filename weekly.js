@@ -39,7 +39,7 @@ window.N2BuildCards = function(day, h) {
     add(prefix,label,'D+'+interval.offsetDays,()=>'<h2>D+'+interval.offsetDays+' · Day '+String(interval.sourceDay).padStart(3,'0')+'</h2>'+note(day.review.instructionsZh)+'<p>'+interval.vocabularyIds.length+' 个词汇 · '+interval.grammarIds.length+' 个语法</p>');
     for(const id of interval.vocabularyIds){const v=index.vocabulary.find(x=>x.id===id);if(!v)continue;
      const key=prefix+'-'+id;
-     add(key,label,v.word,()=>'<p class="eyebrow">D+'+interval.offsetDays+' · 3秒提取</p><h1>'+ (show(key)?text(v.text):esc(v.word.replace(/（[ぁ-ゖァ-ヺー\s]+）|\([ぁ-ゖァ-ヺー\s]+\)/g,'').trim()))+'</h1>'+ (show(key)?'<p class="meaning">'+esc(v.reading)+' · '+esc(v.meaningZh)+'</p>':reveal(key,'显示读音与意思')));
+     add(key,label,v.word,()=>'<p class="eyebrow">D+'+interval.offsetDays+' · 3秒提取</p><h1>'+ (show(key)?text(v.text):esc(v.word.replace(/（[ぁ-ゖァ-ヺー\s]+）|\([ぁ-ゖァ-ヺー\s]+\)/g,'').trim()))+'</h1>'+ (show(key)?'<p class="meaning">'+esc(v.reading)+' · '+esc(v.meaningZh)+'</p>'+(window.N2PlanClient?.partOfSpeech(id,v.word)||''):reveal(key,'显示读音与意思')));
     }
     for(const id of interval.grammarIds){const g=index.grammar.find(x=>x.id===id);if(!g)continue;const key=prefix+'-'+id;
      add(key,label,g.form,()=>'<h2>'+text(g.formText)+'</h2>'+note('先说中文意义，再造一句。')+(show(key)?note(g.meaningZh)+examples(g.examples):reveal(key,'核对意义与例句')));
@@ -47,7 +47,7 @@ window.N2BuildCards = function(day, h) {
    }
   }
   if(module.type==='vocabulary'){
-   for(const v of day.vocabulary)add(v.id,label,v.word.display,()=>'<p class="eyebrow">'+(v.mode==='new'?'今日新词':'复习词')+'</p><h1>'+text(v.word)+(window.N2PlanClient?.badge(v.id,v.word.display)||'')+'</h1><p class="translation" lang="ja">'+jp(v.reading,v.reading)+'</p><p class="meaning">'+esc(v.word.translationZh)+'</p>'+(window.N2PlanClient?window.N2PlanClient.examples(v.id,v.examples||v.collocations.map(c=>c.text)):examples(v.examples||v.collocations.map(c=>c.text))));
+   for(const v of day.vocabulary)add(v.id,label,v.word.display,()=>'<p class="eyebrow">'+(v.mode==='new'?'今日新词':'复习词')+'</p><h1>'+text(v.word)+(window.N2PlanClient?.badge(v.id,v.word.display)||'')+'</h1><p class="translation" lang="ja">'+jp(v.reading,v.reading)+'</p>'+(window.N2PlanClient?.partOfSpeech(v.id,v.word.display)||'')+'<p class="meaning">'+esc(v.word.translationZh)+'</p>'+(window.N2PlanClient?window.N2PlanClient.examples(v.id,v.examples||v.collocations.map(c=>c.text)):examples(v.examples||v.collocations.map(c=>c.text))));
    const linked=new Set(day.vocabulary.flatMap(v=>v.collocations.map(c=>c.id)));
    for(const c of day.collocations.filter(c=>!linked.has(c.id)))add(c.id,label,'重点搭配',()=>'<h2>'+text(c.text)+'</h2>'+translated(c.text));
   }

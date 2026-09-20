@@ -13,3 +13,5 @@ body.hide-kana h1 + .translation[lang="ja"]{visibility:hidden}
 @media(max-width:650px){.page-controls{left:18px}}
 .word-token:hover,.word-token.playing{color:#2864d9}
 main,aside{min-width:0}aside select{max-width:100%;min-width:0}#card,#word-detail{overflow-wrap:anywhere}@media(max-width:650px){aside{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+.part-of-speech{font-size:15px;color:#526986;line-height:1.6;margin:8px 0 14px}
