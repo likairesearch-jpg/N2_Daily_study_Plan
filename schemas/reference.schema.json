@@ -35,6 +35,14 @@
         "examples"
       ]
     },
+    "partsOfSpeech": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "surface": {
       "type": "string",
       "minLength": 1

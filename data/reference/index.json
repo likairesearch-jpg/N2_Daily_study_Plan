@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "version": "6ab38257b036b0ded183a334f7ec12b20c26551df1f233575492f3a2ba808895",
-  "snapshot": "snapshots/6ab38257b036b0ded183a334f7ec12b20c26551df1f233575492f3a2ba808895",
+  "version": "6bd9cd1c07bf0abbbb7d1b1b0dfb4d1f3f1098cd78a9cf0530836b17dbd1d7c9",
+  "snapshot": "snapshots/6bd9cd1c07bf0abbbb7d1b1b0dfb4d1f3f1098cd78a9cf0530836b17dbd1d7c9",
   "files": {
     "examples/records.json": "535f3bc42e25809151dfb6dc211e27054f432443c37411221b3d2c3532c35ce8",
     "grammar/records.json": "0b35ac0ddc5ff08a6adf3cefa190d70850ca04607e691eddc4b9eb7815a28f13",
     "kanji/records.json": "1b4a6840d6a6b2ce073899dca35a8dcd843f9b6b900e3c0b5be2edee280bf229",
     "metadata/ATTRIBUTION.md": "5a6dd7fcb35ee9ff92ad5d65a096695c7d22ce00d316643693b22d9a402e5823",
     "metadata/LICENSE.txt": "0bdfb0201d1803634f268cdff0993b8349d2c70e956a06dbb667c8dd65254ec5",
-    "metadata/conflicts.json": "45bc6080b828e7321ab8c4410312ca06d7d10692589ce8cb1146eb678837b4dd",
+    "metadata/conflicts.json": "059f2ca8777f5ec89b7d32d3a62a1dde47b4b32cf2bae1045c76ce700a50ef53",
     "metadata/licenses/nihongo-mono/LICENSE": "6bffa8432531e16d76ce3d7878654cb65cec6dfa8a8d9918154331705cbb1a64",
     "metadata/licenses/nihongo-mono/LICENSE-DATA.md": "09ab792cb0d4f2ba7b3113a9e5f41129685586d021bfaea1164ae7f831047fbd",
     "metadata/licenses/nihongo-mono/README.md": "73026803e22352863b7b352f85e4ce694dfec3802fd72176e2aa1e4ff8c8bda6",
@@ -18,7 +18,7 @@
     "metadata/licenses/openjlpt/README.md": "a377ba7c2366f5d2b62db10903cb2318b3aaa8e4a77184c81ba5040e3d2181f0",
     "metadata/licenses/openjlpt/sources/grammar/README.md": "364cf05d2eb2298a4a7ce4e5fb83d0c030546e49e999fc99993acbc67050de8d",
     "metadata/registry.json": "dc75aef2ef842895d7f0e9dc6fcda71eaf3e688df30b4306238352264e53bf53",
-    "metadata/summary.json": "5baeb0b666ea84137d6f4bfbadf8217fe6680c29d3195a127f762c56b2fa35c4",
-    "vocab/records.json": "7be031b5166311419cf43a252bd7d0043ca2a4b507b70f93a5891e362cdac2c0"
+    "metadata/summary.json": "3e173b15301623a4d472bb8174ecbf3a446272cbe3ec8f02d980c50e14190d24",
+    "vocab/records.json": "972bb0dafab2c1a3373e7b025125ef173d11a06276bc20dc27f3fccf9d96572c"
   }
 }

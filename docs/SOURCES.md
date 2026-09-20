@@ -2,7 +2,6 @@
 
 Reference is a LOCAL library and never refreshes on a schedule. Only an explicit GUI click or node tools/reference.cjs update (npm run refs:update) accesses upstream. Local status: node tools/reference.cjs status. Current snapshot: data/reference/index.json; upstream commit/version/fetchedAt: snapshot metadata/registry.json and sources/registry.json. Unchanged upstream keeps its fetchedAt; it is the recorded snapshot source-fetch time, not the last check time. Failed updates and changed license/attribution evidence preserve the previous snapshot and require review.
 
-
 Generated from the reviewed source policy and pinned upstream revisions. No reference data becomes formal teaching content automatically.
 
 ## JLPT Benkyo repository
@@ -84,5 +83,7 @@ Generated from the reviewed source policy and pinned upstream revisions. No refe
 - Data: manual-reference
 - Attribution: JLPT official public study and test-section pages
 - Audit: Use public sample/test-section pages for human reference only; no questions, audio, workbooks or unpublished tests imported. See https://www.jlpt.jp/e/guideline/testsections.html .
+
+Vocabulary partsOfSpeech retains upstream pos tags or the explicit verbs directory classification. Source variants retain those values; disagreements remain review flags. No word-form inference is used. update --offline re-normalizes the audited local cache without contacting upstream.
 
 Normalized combined reference records are distributed under CC BY-SA 4.0; original MIT notices remain attached. English meanings are upstream, not generated Chinese translations. JLPT labels are unofficial, and shared upstream lineage does not increase confidence. Grammar pattern matching is conservative; differences are review flags, not corrections. Full evidence and notices are included in each immutable snapshot.

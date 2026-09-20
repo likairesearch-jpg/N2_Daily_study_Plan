@@ -3,6 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('nod
 const R=require('../tools/reference.cjs'),course=require('../tools/release.cjs'),before=course.signature(course.capture());
 const {index,rows}=R.load();assert(rows.length>30000);assert.equal(new Set(rows.map(x=>x.id)).size,rows.length);
 assert.deepEqual(R.recordSchema,JSON.parse(fs.readFileSync(path.join(R.ROOT,'schemas/reference.schema.json'))));
+for(const [surface,pos]of [['職場','noun'],['新しい','adj-i'],['断定する','verb']]){const r=rows.find(r=>r.type==='vocab'&&r.surface===surface);assert(r.partsOfSpeech.includes(pos));assert(r.variants.some(v=>v.partsOfSpeech?.includes(pos)));assert(r.sources.some(s=>s.id==='nihongo-mono'));}
 assert(rows.some(r=>r.conflict));assert(rows.some(r=>r.type==='grammar'&&r.structure.length&&r.explanation));assert(rows.some(r=>r.type==='vocab'&&r.examples.length));assert(rows.some(r=>r.type==='kanji'&&r.onyomi.length));
 assert(rows.every(r=>r.sources.every(s=>['openjlpt','nihongo-mono'].includes(s.id))));
 const bad=structuredClone(rows[0]);bad.sources[0].license='UNKNOWN';assert.throws(()=>R.validateRows([bad]),/license/);
